@@ -130,8 +130,6 @@ figure {
 }
 
 hr {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
 
@@ -189,8 +187,6 @@ input::-moz-focus-inner {
 
 input[type="checkbox"],
 input[type="radio"] {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin-right: 0.4375em;
     padding: 0;
@@ -419,8 +415,6 @@ big {
  */
 
 html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -428,8 +422,6 @@ html {
 *:before,
 *:after {
     /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
 
@@ -662,7 +654,6 @@ textarea:focus {
 
 input[type="search"].search-field {
     border-radius: 2px 0 0 2px;
-    width: -webkit-calc(100% - 42px);
     width: calc(100% - 42px);
 }
 
@@ -751,8 +742,6 @@ a:active {
 
 .site-header-menu {
     display: none;
-    -webkit-flex: 0 1 100%;
-    -ms-flex: 0 1 100%;
     flex: 0 1 100%;
     margin: 0.875em 0;
 }
@@ -1524,14 +1513,8 @@ blockquote:after,
 }
 
 .site-header-main {
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -1802,9 +1785,6 @@ a.post-thumbnail:focus {
 .post-navigation .post-title,
 .entry-title,
 .comments-title {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
     hyphens: auto;
 }
 
@@ -2795,7 +2775,6 @@ p > video {
     .entry-content blockquote.alignright {
         border-width: 4px 0 0 0;
         padding: 0.9473684211em 0 0;
-        width: -webkit-calc(50% - 0.736842105em);
         width: calc(50% - 0.736842105em);
     }
 
@@ -2904,15 +2883,11 @@ p > video {
     }
 
     .site-header-main {
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
         align-items: flex-start;
     }
 
     .site-header-menu {
         display: block;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
         flex: 0 1 auto;
     }
 
@@ -3021,9 +2996,6 @@ p > video {
     .main-navigation ul ul .menu-item-has-children > a:after {
         right: 0.5625em;
         top: 0.875em;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
         transform: rotate(90deg);
     }
 
@@ -3210,7 +3182,6 @@ p > video {
     }
 
     .widget input[type="search"].search-field {
-        width: -webkit-calc(100% - 35px);
         width: calc(100% - 35px);
     }
 
@@ -3265,29 +3236,19 @@ p > video {
     }
 
     .site-footer {
-        -webkit-align-items: center;
-        -ms-flex-align: center;
         align-items: center;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         padding: 0 4.5455% 3.5em;
     }
 
     .site-footer .social-navigation {
         margin: 0;
-        -webkit-order: 2;
-        -ms-flex-order: 2;
         order: 2;
     }
 
     .site-info {
         margin: 0.538461538em auto 0.538461538em 0;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
         order: 1;
     }
 
@@ -3470,7 +3431,6 @@ p > video {
 
     body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
         margin-left: -40%;
-        width: -webkit-calc(60% - 1.4736842105em);
         width: calc(60% - 1.4736842105em);
     }
 
@@ -3887,7 +3847,6 @@ p > video {
     .entry-content blockquote.alignright {
         border-width: 4px 0 0 0;
         padding: 0.9473684211em 0 0;
-        width: -webkit-calc(50% - 0.736842105em);
         width: calc(50% - 0.736842105em);
     }
 
