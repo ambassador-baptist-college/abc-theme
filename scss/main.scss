@@ -72,10 +72,13 @@ html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    background-color: $color-body-text;
 }
 
 body {
     margin: 0;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 article,
@@ -2625,11 +2628,7 @@ p > video {
 
 @media screen and (min-width: 44.375em) {
     .site {
-        margin: 21px;
-    }
-
-    .site-main {
-        margin-bottom: 5.25em;
+        margin: 21px 21px 0;
     }
 
     .site-header {
