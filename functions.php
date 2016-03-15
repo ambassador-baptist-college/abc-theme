@@ -28,4 +28,4 @@ function abc_webfonts_add() {
 }
 
 // add custom image sizes
-set_post_thumbnail_size( 1600, 360, true );
+set_post_thumbnail_size( 2400, 540, true );
