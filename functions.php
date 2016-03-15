@@ -27,3 +27,6 @@ function abc_webfonts_add() {
       })(document);
     </script><?php
 }
+
+// add custom image sizes
+set_post_thumbnail_size( 1600, 360, true );
