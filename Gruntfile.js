@@ -25,6 +25,7 @@ module.exports = function (grunt) {
         options: {
             map: {
                 inline: false,
+                annotation: 'css/',
             },
 
             processors: [
