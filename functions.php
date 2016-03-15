@@ -12,7 +12,6 @@ add_action( 'wp_enqueue_scripts', 'abc_webfonts_remove', 20 );
 function abc_webfonts_remove() {
     wp_deregister_style( 'twentysixteen-style' );
     wp_deregister_style( 'twentysixteen-fonts' );
-    wp_deregister_style( 'open-sans' );
 }
 add_action( 'wp_footer', 'abc_webfonts_add' );
 function abc_webfonts_add() {
