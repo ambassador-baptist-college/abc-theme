@@ -25,4 +25,16 @@ if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) ) 
             <?php dynamic_sidebar( 'sidebar-3' ); ?>
         </div><!-- .widget-area -->
     <?php endif; ?>
+
+    <?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+        <div class="widget-area">
+            <?php dynamic_sidebar( 'sidebar-4' ); ?>
+        </div><!-- .widget-area -->
+    <?php endif; ?>
+
+    <?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
+        <div class="widget-area">
+            <?php dynamic_sidebar( 'sidebar-5' ); ?>
+        </div><!-- .widget-area -->
+    <?php endif; ?>
 </aside><!-- .content-bottom-widgets -->
