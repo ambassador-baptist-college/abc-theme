@@ -1544,6 +1544,8 @@ blockquote:after,
     text-align: center;
 }
 
+.site-branding, .entry-header { width: 100%; }
+
 .site-title {
     font-family: $font-stack-serif;
     font-size: 23px;
@@ -1576,8 +1578,9 @@ blockquote:after,
     font-size: 13px;
     font-size: 0.8125rem;
     margin: 1.076923077em auto;
-    padding: 0.769230769em;
+    padding: .84375em .875em .78125em;
     display: block;
+    transition: all $transition-duration ease;
 
     .no-js & { display: none; }
 
@@ -2967,7 +2970,7 @@ p > video {
     }
 
     .site-content {
-        padding: 0 4.5455%;
+        padding: 0 4.5455% 1em;
     }
 
     .content-area {
