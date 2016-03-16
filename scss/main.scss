@@ -2054,10 +2054,6 @@ body.search-no-results .page-header {
     margin-bottom: 0;
 }
 
-.content-bottom-widgets {
-    margin: 0 7.6923%;
-}
-
 .content-bottom-widgets .widget-area {
     margin-bottom: 3.5em;
 }
@@ -2721,8 +2717,7 @@ p > video {
     .image-navigation,
     .post-navigation,
     .page-header,
-    .page-content,
-    .content-bottom-widgets {
+    .page-content {
         margin-right: 23.0769%;
     }
 
@@ -2996,8 +2991,7 @@ p > video {
     .post-navigation,
     .pagination,
     .page-header,
-    .page-content,
-    .content-bottom-widgets {
+    .page-content {
         margin-right: 0;
         margin-left: 0;
     }
@@ -3193,14 +3187,22 @@ p > video {
         margin-top: 3.2307692308em;
     }
 
-    .content-bottom-widgets .widget-area:nth-child(1):nth-last-child(2),
-    .content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1) {
-        float: left;
-        margin-right: 7.1428571%;
-        width: 46.42857145%;
+    .content-bottom-widgets {
+        width: 100%;
+
+        .widget-area {
+            &:nth-child(1):nth-last-child(4),
+            &:nth-child(2):nth-last-child(3),
+            &:nth-child(3):nth-last-child(2),
+            &:nth-child(4):nth-last-child(1) {
+                float: left;
+                margin-right: 7.1428571%;
+                width: 19.642857175%;
+            }
+        }
     }
 
-    .content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1):last-of-type {
+    .content-bottom-widgets .widget-area:nth-child(4):nth-last-child(1):last-of-type {
         margin-right: 0;
     }
 
@@ -3236,8 +3238,7 @@ p > video {
     .no-sidebar .post-navigation,
     .no-sidebar .pagination,
     .no-sidebar .page-header,
-    .no-sidebar .page-content,
-    .no-sidebar .content-bottom-widgets {
+    .no-sidebar .page-content {
         margin-right: 15%;
         margin-left: 15%;
     }

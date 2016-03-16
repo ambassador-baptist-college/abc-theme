@@ -44,8 +44,6 @@ if ( has_post_thumbnail( $post->ID ) ) {
 
 	</main><!-- .site-main -->
 
-	<?php get_sidebar( 'content-bottom' ); ?>
-
 </div><!-- .content-area -->
 
 <?php get_sidebar(); ?>
