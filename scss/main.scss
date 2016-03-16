@@ -61,6 +61,8 @@ $color-gray:                     #D7D7D7;
     );
 }
 
+$transition-duration:            0.2s;
+
 /**
  * 1.0 - Normalize
  *
@@ -705,21 +707,13 @@ input[type="search"].search-field {
 a {
     color: $color-blue;
     text-decoration: none;
-}
+    transition: all $transition-duration ease;
 
-a:hover,
-a:focus,
-a:active {
-    color: $color-body-text-secondary;
-}
+    &:hover, &:focus, &:active { color: $color-body-text-secondary; }
 
-a:focus {
-    outline: thin dotted;
-}
+    &:focus { outline: thin dotted; }
 
-a:hover,
-a:active {
-    outline: 0;
+    &:hover, &:active { outline: 0; }
 }
 
 .entry-content a,
@@ -732,23 +726,8 @@ a:active {
 .entry-footer a:hover,
 .site-info a:hover {
     box-shadow: 0 1px 0 0 currentColor;
-}
 
-.entry-content a:hover,
-.entry-content a:focus,
-.entry-summary a:hover,
-.entry-summary a:focus,
-.taxonomy-description a:hover,
-.taxonomy-description a:focus,
-.logged-in-as a:hover,
-.logged-in-as a:focus,
-.comment-content a:hover,
-.comment-content a:focus,
-.pingback .comment-body > a:hover,
-.pingback .comment-body > a:focus,
-.textwidget a:hover,
-.textwidget a:focus {
-    box-shadow: none;
+    &:hover, &:focus { box-shadow: none; }
 }
 
 
@@ -786,16 +765,17 @@ a:active {
 }
 
 .main-navigation a {
-    color: $color-body-text;
+    color: #fff;
     display: block;
     line-height: 1.3125;
     outline-offset: -1px;
     padding: 0.84375em 0;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
-    color: $color-blue;
+.main-navigation .sub-menu a {
+    transition: all $transition-duration ease;
+
+    &:hover, &:active { color: $color-orange; }
 }
 
 .main-navigation .current-menu-item > a,
@@ -806,6 +786,8 @@ a:active {
 .main-navigation ul ul {
     display: none;
     margin-left: 0.875em;
+    opacity: 0;
+    transition: all $transition-duration ease;
 }
 
 .no-js .main-navigation ul ul {
@@ -814,6 +796,7 @@ a:active {
 
 .main-navigation ul .toggled-on {
     display: block;
+    opacity: 1;
 }
 
 .main-navigation .primary-menu {
@@ -828,7 +811,7 @@ a:active {
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    color: $color-body-text;
+    color: #fff;
     content: "";
     height: 48px;
     padding: 0;
@@ -837,35 +820,35 @@ a:active {
     text-transform: none;
     top: 0;
     width: 48px;
-}
 
-.dropdown-toggle:after {
-    border: 0 solid $color-gray;
-    border-left-width: 1px;
-    content: "\f431";
-    font-size: 24px;
-    left: 1px;
-    position: relative;
-    width: 48px;
-}
+    &:after {
+        border: 0 solid $color-gray;
+        border-left-width: 1px;
+        content: "\f431";
+        font-size: 24px;
+        left: 1px;
+        position: relative;
+        width: 48px;
+    }
 
-.dropdown-toggle:hover,
-.dropdown-toggle:focus {
-    background-color: transparent;
-    color: $color-blue;
-}
+    &:hover, &:focus {
+        background-color: transparent;
+        color: $color-blue;
+        padding: 0;
+    }
 
-.dropdown-toggle:focus {
-    outline: thin dotted;
-    outline-offset: -1px;
-}
+    &:focus {
+        outline: thin dotted;
+        outline-offset: -1px;
 
-.dropdown-toggle:focus:after {
-    border-color: transparent;
-}
+        &:after {
+            border-color: transparent;
+        }
+    }
 
-.dropdown-toggle.toggled-on:after {
-    content: "\f432";
+    &.toggled-on:after {
+        content: "\f432";
+    }
 }
 
 .site-header .main-navigation + .social-navigation {
@@ -1500,6 +1483,8 @@ blockquote:after,
 
 .site-content {
     word-wrap: break-word;
+
+    .site-inner & { padding-top: 4.5455%; }
 }
 
 /* Do not show the outline on the skip link target. */
@@ -1521,10 +1506,18 @@ blockquote:after,
  */
 
 .site-header {
-    padding: 2.625em 7.6923%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    .site-inner.site-content { width: 100%; }
+
+    .no-featured-image & { background-color: $color-blue; }
 }
 
 .site-header-main {
+    padding: 2.625em 7.6923%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.25));
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -1532,6 +1525,7 @@ blockquote:after,
 
 .site-branding {
     margin: 0.875em auto 0.875em 0;
+    text-align: center;
 }
 
 .site-title {
@@ -1544,12 +1538,9 @@ blockquote:after,
 }
 
 .site-branding .site-title a {
-    color: $color-body-text;
-}
+    color: #fff;
 
-.site-branding .site-title a:hover,
-.site-branding .site-title a:focus {
-    color: $color-blue;
+    &:hover, &:focus { color: $color-blue; }
 }
 
 .site-description {
@@ -1564,39 +1555,37 @@ blockquote:after,
 
 .menu-toggle {
     background-color: transparent;
-    border: 1px solid $color-gray;
-    color: $color-body-text;
+    border: 1px solid $color-orange;
+    color: $color-orange;
     font-size: 13px;
     font-size: 0.8125rem;
-    margin: 1.076923077em 0;
+    margin: 1.076923077em auto;
     padding: 0.769230769em;
-}
+    display: block;
 
-.no-js .menu-toggle {
-    display: none;
-}
+    .no-js & { display: none; }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-    background-color: transparent;
-    border-color: $color-blue;
-    color: $color-blue;
-}
+    &:hover, &:focus {
+        background-color: transparent;
+        border: 1px solid transparent;
+        color: $color-orange;
+    }
 
-.menu-toggle.toggled-on,
-.menu-toggle.toggled-on:hover,
-.menu-toggle.toggled-on:focus {
-    background-color: $color-body-text;
-    border-color: $color-body-text;
-    color: #fff;
-}
+    &.toggled-on {
+        &, &:hover, &:focus {
+            background-color: $color-orange;
+            border-color: $color-orange;
+            color: #fff;
+        }
+    }
 
-.menu-toggle:focus {
-    outline: 0;
-}
+    &:focus {
+        outline: 0;
+    }
 
-.menu-toggle.toggled-on:focus {
-    outline: thin dotted;
+    &.toggled-on:focus {
+        outline: thin dotted;
+    }
 }
 
 .header-image {
@@ -1671,6 +1660,13 @@ a.post-thumbnail:focus {
 .entry-content,
 .entry-summary {
     border-color: $color-gray;
+}
+
+.site-header .entry-header h1 {
+    margin-bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
 }
 
 .entry-content h1,
@@ -2627,8 +2623,8 @@ p > video {
  */
 
 @media screen and (min-width: 44.375em) {
-    .site-header {
-        padding: 3.9375em 7.6923%;
+    .site-header-main {
+        padding: 1em 7.6923% 3.9375em;
     }
 
     .site-branding {
@@ -2649,7 +2645,7 @@ p > video {
     .menu-toggle {
         font-size: 16px;
         font-size: 1.0rem;
-        margin: 1.3125em 0;
+        margin: 1.3125em auto;
         padding: 0.8125em 0.875em 0.6875em;
     }
 
@@ -2692,7 +2688,6 @@ p > video {
         margin-bottom: 5.25em;
     }
 
-    .entry-header,
     .post-thumbnail,
     .entry-content,
     .entry-summary,
@@ -2816,12 +2811,9 @@ p > video {
  */
 
 @media screen and (min-width: 56.875em) {
-    .site-header {
+    .site-header-main {
         padding-right: 4.5455%;
         padding-left: 4.5455%;
-    }
-
-    .site-header-main {
         align-items: flex-start;
     }
 
@@ -2852,6 +2844,13 @@ p > video {
     .main-navigation li:hover > a,
     .main-navigation li.focus > a {
         color: $color-blue;
+        background-color: $color-gray;
+    }
+
+    .main-navigation .sub-menu a {
+        color: $color-blue;
+
+        &:hover, &:focus { background-color: $color-gray; }
     }
 
     .main-navigation ul ul {
@@ -2908,12 +2907,14 @@ p > video {
     .main-navigation li.focus > ul {
         left: auto;
         right: 0;
+        opacity: 1;
     }
 
     .main-navigation ul ul li:hover > ul,
     .main-navigation ul ul li.focus > ul {
         left: auto;
         right: 100%;
+        opacity: 1;
     }
 
     .main-navigation .menu-item-has-children > a {
@@ -2944,6 +2945,10 @@ p > video {
     .site-header .social-navigation,
     .site-footer .main-navigation {
         display: none;
+    }
+
+    .site-header .entry-header h1 {
+        font-size: 3em;
     }
 
     .site-content {
@@ -3224,12 +3229,16 @@ p > video {
  */
 
 @media screen and (min-width: 61.5625em) {
+    .site-branding {
+        text-align: left;
+    }
+
     .site-main {
         margin-bottom: 7.0em;
     }
 
-    .site-header {
-        padding: 5.25em 4.5455%;
+    .site-header-main {
+        padding: 1em 4.5455% 5.25em;
     }
 
     .site-branding,
@@ -3237,6 +3246,10 @@ p > video {
     .header-image {
         margin-top: 1.75em;
         margin-bottom: 1.75em;
+    }
+
+    .site-header .entry-header h1 {
+        font-size: 4em;
     }
 
     .image-navigation {
@@ -3444,6 +3457,10 @@ p > video {
  */
 
 @media screen and (min-width: 75em) {
+    .site-header .entry-header h1 {
+        font-size: 6em;
+    }
+
     body:not(.search-results) .entry-summary {
         font-size: 23px;
         font-size: 1.4375rem;
