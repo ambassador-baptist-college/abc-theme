@@ -1507,6 +1507,7 @@ blockquote:after,
 
 .site-header {
     position: relative;
+    background-color: $color-body-text;
 
     &:before, &:after {
         display: block;
@@ -1524,6 +1525,7 @@ blockquote:after,
         background-position: top center;
         background-size: cover;
         overflow: hidden;
+        filter: blur(1px);
     }
 
     &:after { background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.25)); }
