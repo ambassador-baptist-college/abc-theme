@@ -18,7 +18,7 @@ if ( has_post_thumbnail( $post->ID ) ) {
     // output image
     add_action( 'wp_footer', 'abc_add_page_thumb' );
     function abc_add_page_thumb() {
-        echo '<style type="text/css">.site-header { background-image: url(' . get_the_post_thumbnail_url() . '); }</style>';
+        echo '<style type="text/css">.site-header:before { background-image: url(' . get_the_post_thumbnail_url() . '); }</style>';
     }
 }
 
