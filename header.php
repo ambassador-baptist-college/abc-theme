@@ -65,7 +65,13 @@
                 </div><!-- .site-header-menu -->
             <?php endif; ?>
             <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                <?php
+                if ( is_home() ) {
+                    echo '<h1 class="entry-title">News Archive</h1>';
+                } else {
+                    the_title( '<h1 class="entry-title">', '</h1>' );
+                }
+                ?>
             </header><!-- .entry-header -->
         </div><!-- .site-header-main -->
     </header><!-- .site-header -->

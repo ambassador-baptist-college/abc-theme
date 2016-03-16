@@ -1845,6 +1845,11 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .more-link {
     white-space: nowrap;
+
+    &:before {
+        display: block;
+        content: '';
+    }
 }
 
 .author-info {
