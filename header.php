@@ -9,15 +9,6 @@
  * @since Twenty Sixteen 1.0
  */
 
-if ( ! has_post_thumbnail() ) {
-    // add body class
-    add_filter( 'body_class', 'abc_body_classes' );
-    function abc_body_classes( $classes ) {
-        $classes[] = 'no-featured-image';
-        return $classes;
-    }
-}
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>

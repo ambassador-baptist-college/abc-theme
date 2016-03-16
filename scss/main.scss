@@ -1506,13 +1506,12 @@ blockquote:after,
  */
 
 .site-header {
+    background-color: $color-blue;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
 
     .site-inner.site-content { width: 100%; }
-
-    .no-featured-image & { background-color: $color-blue; }
 }
 
 .site-header-main {
