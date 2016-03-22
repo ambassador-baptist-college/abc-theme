@@ -65,13 +65,17 @@
                 </div><!-- .site-header-menu -->
             <?php endif; ?>
             <header class="entry-header">
+                <h1 class="entry-title">
                 <?php
                 if ( is_home() ) {
-                    echo '<h1 class="entry-title">News Archive</h1>';
+                    echo 'News Archive';
+                } elseif ( is_archive() ) {
+                    echo ucfirst( get_post_type() ) . ' Archive';
                 } else {
-                    the_title( '<h1 class="entry-title">', '</h1>' );
+                    the_title();
                 }
                 ?>
+                </h1>
             </header><!-- .entry-header -->
         </div><!-- .site-header-main -->
     </header><!-- .site-header -->
