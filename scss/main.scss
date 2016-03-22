@@ -21,6 +21,7 @@
  *    11.4 - Comments
  *    11.5 - Sidebar
  *    11.6 - Footer
+ *    11.7 - Specific content
  * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
@@ -714,6 +715,13 @@ a {
     &:focus { outline: thin dotted; }
 
     &:hover, &:active { outline: 0; }
+
+    &[href*="tel"]:after {
+        content: "\f525";
+        font-family: dashicons;
+        font-size: 75%;
+        padding-left: .3em;
+    }
 }
 
 .entry-content a,
