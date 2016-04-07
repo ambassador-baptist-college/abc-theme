@@ -322,6 +322,8 @@ h6 {
     font-weight: 700;
     margin: 0;
     text-rendering: optimizeLegibility;
+
+    .faculty-member & { clear: none; }
 }
 
 p {
@@ -2373,6 +2375,10 @@ body.search-no-results .page-header {
 /**
  * 11.7 - Specific Content
  */
+.faculty-member {
+    clear: both;
+}
+
 #map {
     h1 { font-size: 150%; }
     h2 { font-size: 125%; }
