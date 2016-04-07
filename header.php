@@ -70,9 +70,9 @@
                 if ( is_home() ) {
                     echo 'News Archive';
                 } elseif ( is_archive() ) {
-                    echo ucfirst( get_post_type() ) . ' Archive';
+                    echo apply_filters( 'custom_title', ucfirst( get_post_type() ) . ' Archive' );
                 } else {
-                    the_title();
+                    apply_filters( 'custom_title', the_title() );
                 }
                 ?>
                 </h1>
