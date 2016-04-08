@@ -2375,6 +2375,22 @@ body.search-no-results .page-header {
 /**
  * 11.7 - Specific Content
  */
+.newsletter-pdf.dashicons-before {
+    background-color: $color-gray;
+    padding: 1em;
+    margin-bottom: 1em;
+
+    &:before {
+        width: 1em;
+        height: 1em;
+        font-size: 2.5em;
+        float: left;
+    }
+
+    h2 { clear: none; }
+    p { margin-bottom: 0; }
+}
+
 .faculty-member {
     clear: both;
 }
