@@ -80,3 +80,35 @@ function abc_add_extra_footer_widgets() {
         'after_title'   => '</h2>',
     ) );
 }
+
+// add shortcode for semesters on info request form
+add_action( 'wpcf7_init', 'abc_semester_list_init' );
+function abc_semester_list_init() {
+    wpcf7_add_shortcode( array( 'semester_list' ), 'abc_semester_list_shortcode_handler', true );
+}
+function abc_semester_list_shortcode_handler() {
+    $semester_choices = '<span class="wpcf7-form-control-wrap semester">
+        <span class="wpcf7-form-control wpcf7-checkbox">
+        ';
+
+    //   determine whether the coming semester is Fall or Spring
+    if ( ( date( 'n' ) >= 1 ) AND ( date( 'n' ) <= 8 ) ) {
+        $semester_choices .= '<span class="wpcf7-list-item first"><label><input type="checkbox" name="semester[]" value="Fall ' . date ( 'Y' ) . '">&nbsp;<span class="wpcf7-list-item-label">Fall ' . date( 'Y' ) . '</span></label></span>
+        <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Spring ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
+        <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Fall ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Fall ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
+        <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Spring ' . ( date ( 'Y' ) + 2 ) . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 2 ) . '</span></label></span>
+        ';
+    }
+    elseif ((date('n') >= 8) AND (date('n') <= 12)) {
+        $semester_choices .= '<span class="wpcf7-list-item first"><label><input type="checkbox" name="semester[]" value="Spring ' . date ( 'Y' ) + 1 . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
+        <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Fall ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Fall ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
+        <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Spring ' . ( date ( 'Y' ) + 2 ) . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 2 ) . '</span></label></span>
+        <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Fall ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Fall ' . ( date( 'Y' ) + 2 ) . '</span></label></span>
+        ';
+    }
+    $semester_choices .= '<span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Other">&nbsp;<span class="wpcf7-list-item-label">Other</span></label></span>
+    </span>
+    </span>';
+
+    return $semester_choices;
+}
