@@ -1937,13 +1937,6 @@ body:not(.search-results) .entry-summary > :last-child,
     color: $color-blue;
 }
 
-.entry-footer > span:not(:last-child):after {
-    content: "\002f";
-    display: inline-block;
-    opacity: 0.7;
-    padding: 0 0.538461538em;
-}
-
 .entry-footer .avatar {
     height: 21px;
     margin: -0.1538461538em 0.5384615385em 0 0;
