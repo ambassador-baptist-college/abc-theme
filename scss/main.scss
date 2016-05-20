@@ -1550,6 +1550,8 @@ blockquote:after,
     &:after { background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.25)); }
 
     .site-inner.site-content { width: 100%; }
+
+    .course-code, .credit-hours { display: none; }
 }
 
 .site-header-main {
@@ -2398,6 +2400,16 @@ body.search-no-results .page-header {
 }
 
 .meeting a[href^="tel"] { display: block; }
+
+.credit-hours {
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: $color-blue;
+    color: white;
+    padding: .5em 1em;
+    border-radius: .5em;
+    vertical-align: middle;
+}
 
 /**
  * 12.0 - Media
