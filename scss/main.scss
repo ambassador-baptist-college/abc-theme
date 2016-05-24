@@ -2410,6 +2410,19 @@ body.search-no-results .page-header {
     }
 }
 
+form[name="courses"] {
+    margin-bottom: 2.4347826087em;
+
+    @media screen and (min-width: 61.5625em) { margin-bottom: 2em; }
+}
+
+.courses-container {
+    .entry-header, .entry-content, .entry-footer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .credit-hours {
     display: inline-block;
     font-size: 1rem;
