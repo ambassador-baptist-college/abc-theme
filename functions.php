@@ -4,14 +4,13 @@
 add_action( 'wp_enqueue_scripts', 'abc_minified_css', 5 );
 function abc_minified_css() {
     // add minified stylesheet
-    wp_enqueue_style( 'abc-style', get_stylesheet_directory_uri() . '/css/main.min.css' );
+    wp_enqueue_style( 'twentysixteen-style', get_stylesheet_directory_uri() . '/css/main.min.css' );
 }
 
 // replace default fonts and stylesheet
 add_action( 'wp_enqueue_scripts', 'abc_webfonts_remove', 20 );
 function abc_webfonts_remove() {
-    wp_deregister_style( 'twentysixteen-style' );
-    wp_deregister_style( 'twentysixteen-fonts' );
+    wp_dequeue_style( 'twentysixteen-fonts' );
 }
 add_action( 'wp_footer', 'abc_webfonts_add' );
 function abc_webfonts_add() {
