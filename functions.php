@@ -120,4 +120,4 @@ function signature_image_size( $sizes ) {
     return array_merge( $sizes, $new_sizes );
 }
 add_filter( 'image_size_names_choose', 'signature_image_size' );
-add_image_size( 'signature', 60, 300 );
+add_image_size( 'signature', 300, 60 );
