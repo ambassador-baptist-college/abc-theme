@@ -5,3 +5,4 @@
 /node_modules/
 .sass-cache/*
 css/*.css*
+/update-database-from-dev.sh
