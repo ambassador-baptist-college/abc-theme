@@ -517,6 +517,10 @@ img {
     max-width: 100%;
     /* Adhere to container width. */
     vertical-align: middle;
+
+    @media screen and (max-width: 31.25em) {
+        &.size-medium { max-width: 50%; }
+    }
 }
 
 del {
@@ -1661,6 +1665,7 @@ blockquote:after,
 .page-content {
     margin-right: 7.6923%;
     margin-left: 7.6923%;
+    width: auto;
 }
 
 .entry-title {
