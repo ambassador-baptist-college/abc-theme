@@ -1508,6 +1508,12 @@ blockquote:after,
     word-wrap: break-word;
 
     .site-inner & { padding-top: 4.5455%; }
+
+    /* don’t wrap words in titles */
+    .entry-title, .entry-title * {
+        hyphens: none;
+        word-wrap: normal;
+    }
 }
 
 /* Do not show the outline on the skip link target. */
