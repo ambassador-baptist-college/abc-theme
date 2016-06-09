@@ -1795,7 +1795,7 @@ a.post-thumbnail:focus {
     }
 }
 
-.entry-content > p:first-child:first-letter {
+.entry-content > p:first-of-type:first-letter {
     float: left;
     font-size: 3.5em;
     line-height: 1em;
