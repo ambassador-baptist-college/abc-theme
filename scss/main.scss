@@ -2397,8 +2397,16 @@ body.search-no-results .page-header {
         float: left;
     }
 
-    h2 { clear: none; }
-    p { margin-bottom: 0; }
+    h2 {
+        clear: none;
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+
+        &.filesize { color: $color-body-text-secondary; }
+    }
 }
 
 .faculty-member {
