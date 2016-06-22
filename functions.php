@@ -139,3 +139,18 @@ function abc_add_page_thumb() {
     }
 }
 add_action( 'wp_footer', 'abc_add_page_thumb' );
+
+// Modify the sermon archive title
+function filter_sermon_page_title( $title, $id = NULL ) {
+    global $post;
+    if ( is_post_type_archive( 'wpfc_sermon' ) ) {
+        $title = 'Sermon Archive';
+    } elseif ( is_tax() && 'wpfc_sermon' == $post->post_type ) {
+        global $wp_query;
+        $term = $wp_query->get_queried_object();
+        $title = 'Sermons: ' . $term->name;
+    }
+    return $title;
+}
+add_filter( 'custom_title', 'filter_sermon_page_title' );
+add_filter( 'get_the_archive_title', 'filter_sermon_page_title' );
