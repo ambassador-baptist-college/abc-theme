@@ -28,7 +28,12 @@ function abc_webfonts_add() {
 }
 
 // add custom image sizes
-set_post_thumbnail_size( 2400, 600, true );
+// default thumbnail
+add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
+function abc_custom_image_sizes() {
+    set_post_thumbnail_size( 2400, 600, true );
+    add_image_size( 'thumbnail-tall', 2400, 1280, true );
+}
 
 // override default post meta
 function twentysixteen_entry_meta() {

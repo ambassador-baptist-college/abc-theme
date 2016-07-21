@@ -21,7 +21,15 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( $post->post_name ); ?>>
+<?php
+    if ( 'page' == get_post_type() && get_field( 'tall_header_image' ) ) {
+        $body_class_string = ' tall';
+    } else {
+        $body_class_string = NULL;
+    }
+?>
+
+<body <?php body_class( $post->post_name . $body_class_string ); ?>>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
     <header id="masthead" class="site-header" role="banner">
