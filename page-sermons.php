@@ -63,7 +63,7 @@ get_header(); ?>
                                 $sermons_query->the_post(); ?>
 
                                 <h2><a id="latest_sermon_title" title="<?php echo esc_attr( get_the_title() ); ?>" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                                <span class="meta">
+                                <p class="meta">
                                     <?php
                                     // preacher
                                     the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span> | ' );
@@ -73,7 +73,7 @@ get_header(); ?>
 
                                     // Bible passage
                                     wpfc_sermon_meta( 'bible_passage', ' | <span class="bible_passage">', '</span>' ); ?>
-                                </span>
+                                </p>
                                 <?php wpfc_sermon_files();
 
                                 // increment counter

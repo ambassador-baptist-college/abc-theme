@@ -2454,6 +2454,35 @@ form[name="courses"] {
     white-space: nowrap;
 }
 
+.sermons {
+    .sermon-block {
+        display: block;
+        background: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-bottom-width: .3rem;
+        border-bottom-style: solid;
+
+        .entry-title {
+            border-bottom: .1rem solid $color-gray;
+        }
+    }
+
+    .latest {
+        border-bottom-color: $color-orange;
+
+        .entry-title {
+            text-align: center;
+            border-bottom: none;
+        }
+
+        .wp-audio-shortcode { margin-bottom: 0; }
+    }
+    .date { border-bottom-color: $color-blue; }
+    .event { border-bottom-color: $color-green; }
+    .book { border-bottom-color: $color-orange; }
+}
+
 /**
  * 12.0 - Media
  */
