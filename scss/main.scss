@@ -2385,6 +2385,39 @@ body.search-no-results .page-header {
 /**
  * 11.7 - Specific Content
  */
+ul.columns {
+    column-gap: 2rem;
+
+    &, li {
+        list-style-type: none;
+        margin-left: 0;
+    }
+
+    &.two {
+        @media (min-width: 600px) { columns: 2; }
+    }
+    &.three {
+        @media (min-width: 768px) { columns: 2; }
+        @media (min-width: 960px) { columns: 3; }
+    }
+    &.four {
+        @media (min-width: 600px) { columns: 2; }
+        @media (min-width: 960px) { columns: 4; }
+    }
+
+    li {
+        white-space: nowrap;
+
+        a {
+            max-width: 100%;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+}
+
 .download.dashicons-before {
     background-color: $color-gray;
     padding: 1em;
