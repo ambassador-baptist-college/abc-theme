@@ -1581,9 +1581,6 @@ blockquote:after,
 
 .site-header-main {
     padding: 2.625em 7.6923%;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     z-index: 1;
 
     .tall & {
@@ -3023,7 +3020,6 @@ p > video {
     .site-header-main {
         padding-right: 4.5455%;
         padding-left: 4.5455%;
-        align-items: flex-start;
     }
 
     .site-header-menu {
