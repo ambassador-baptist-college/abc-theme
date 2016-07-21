@@ -21,7 +21,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( $post->post_name ); ?>>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
     <header id="masthead" class="site-header" role="banner">
