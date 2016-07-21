@@ -110,7 +110,7 @@ get_header(); ?>
                             'taxonomy'      => 'wpfc_sermon_series',
                             'orderby'       => 'term_order',
                             'order'         => 'DESC',
-                            'number'        => 9,
+                            'number'        => 12,
                         ));
 
                         if ( $events ) {
