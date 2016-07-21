@@ -1507,8 +1507,6 @@ blockquote:after,
     margin: 0 auto;
     max-width: 1320px;
     position: relative;
-
-    .tall & { z-index: 5; }
 }
 
 .site-content {
@@ -1544,6 +1542,14 @@ blockquote:after,
 .site-header {
     position: relative;
     background-color: $color-body-text;
+    background-repeat: no-repeat;
+
+    .tall & {
+        filter: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+    }
 
     &:before, &:after {
         display: block;
@@ -1563,14 +1569,19 @@ blockquote:after,
         overflow: hidden;
         filter: blur(1px);
 
-        .tall & { filter: none; }
+        .tall & {
+            filter: none;
+            background-color: transparent;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0));
+        }
     }
 
     &:after {
         background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.25));
 
         .tall & {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0));
+            display: none;
+            background-image: none;
         }
     }
 
@@ -1581,7 +1592,6 @@ blockquote:after,
 
 .site-header-main {
     padding: 2.625em 7.6923%;
-    z-index: 1;
 
     .tall & {
         padding-bottom: 13.625em;
