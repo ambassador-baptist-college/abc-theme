@@ -599,7 +599,8 @@ input {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.button {
 
     &, &:hover, &:focus {
         background: $color-body-text;
@@ -2386,6 +2387,37 @@ body.search-no-results .page-header {
 /**
  * 11.7 - Specific Content
  */
+.home {
+    .content-area { width: 100%; }
+
+    &.tall .content-area { background-color: transparent; }
+
+    .entry-content {
+        color: white;
+
+        h2 {
+            margin: 0;
+            font-family: $font-stack-sans-serif;
+            font-style: italic;
+            font-weight: 300;
+            text-shadow: -0.1rem 0.1rem 0 rgba(0,0,0,0.5);
+            font-size: 2.25rem;
+
+            & + h2 {
+                font-size: 3rem;
+                margin: 0 0 1rem 30%;
+            }
+        }
+
+        p { text-align: center; }
+
+        .button {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+}
+
 .tall {
     .content-area,
     .sidebar .widget {
