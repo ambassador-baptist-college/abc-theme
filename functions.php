@@ -140,7 +140,7 @@ add_image_size( 'signature', 300, 60 );
 // Add page header if exists
 function abc_add_page_thumb() {
     if ( ! is_archive() && ! is_search() && has_post_thumbnail( $post->ID ) ) {
-        echo '<style type="text/css">.site-header:before, .tall .site-header { background-image: url(' . get_the_post_thumbnail_url() . '); }</style>';
+        echo '<style type="text/css">.site-header, .tall .site-header { background-image: url(' . get_the_post_thumbnail_url() . '); }</style>';
     }
 }
 add_action( 'wp_footer', 'abc_add_page_thumb' );
