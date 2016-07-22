@@ -1375,11 +1375,6 @@ blockquote:after,
     border-top: 4px solid $color-body-text;
     margin-bottom: 3.5em;
     padding-top: 1.75em;
-
-    .tall .sidebar & {
-        background-color: white;
-        padding: 2rem;
-    }
 }
 
 .widget-area > :last-child,
@@ -2391,6 +2386,19 @@ body.search-no-results .page-header {
 /**
  * 11.7 - Specific Content
  */
+.tall {
+    .content-area,
+    .sidebar .widget {
+        background-color: white;
+        padding: 2rem;
+    }
+
+    &.sermons .content-area {
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
 ul.columns {
     column-gap: 2rem;
 
