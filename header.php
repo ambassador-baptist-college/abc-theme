@@ -75,7 +75,8 @@
             <header class="entry-header">
                 <h1 class="entry-title">
                 <?php
-                if ( is_home() ) {
+                if ( is_front_page() ) {
+                } elseif ( is_home() ) {
                     echo 'News Archive';
                 } elseif ( is_archive() ) {
                     echo apply_filters( 'custom_title', ucfirst( get_post_type() ) . ' Archive' );
