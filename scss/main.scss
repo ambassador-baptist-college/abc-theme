@@ -601,11 +601,15 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
+    .entry-content & {
+        border: 1px solid darken($color-blue, 20%);
+
+        &, &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-blue, 20%),0.5); }
+    }
 
     &, &:hover, &:focus {
-        background: $color-body-text;
-        border: 0;
-        border-radius: 2px;
+        background: linear-gradient(to bottom, darken($color-blue, 5%), darken($color-blue, 12%));
+        border-radius: 0.2rem;
         color: #fff;
         font-family: $font-stack-sans-serif;
         font-weight: 700;
@@ -613,10 +617,11 @@ input[type="submit"],
         line-height: 1;
         padding: 0.84375em 0.875em 0.78125em;
         text-transform: uppercase;
+        transition: all $transition-duration ease;
     }
 
     &:hover, &:focus {
-        background: $color-blue;
+        background: linear-gradient(to bottom, darken($color-blue, 15%), darken($color-blue, 22%));
     }
 
     &:focus {
