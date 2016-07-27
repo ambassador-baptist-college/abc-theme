@@ -2441,6 +2441,109 @@ body.search-no-results .page-header {
             font-size: 1.3em;
         }
     }
+
+    .home-stripe {
+        margin-bottom: 2rem;
+
+        h2 { font-size: 2rem; }
+
+        & > h2 { text-align: center; }
+
+        &.apply {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            * { margin: 0 1rem; }
+
+            h2 { text-align: center; }
+        }
+
+        &.video {
+            background-color: $color-orange;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &, & * { color: white; }
+
+            .video-content { margin: 0 2rem 2rem 0; }
+
+            .video-link {
+                &, iframe { margin: 0; }
+            }
+
+            @media (min-width: 48em) {
+                flex-wrap: nowrap;
+
+                .video-link { max-width: 66%; }
+            }
+        }
+    }
+
+    &-features {
+        section {
+            background-color: white;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 2rem;
+            border-bottom: .3rem solid;
+
+            * { width: 100%; }
+
+            &.events { border-bottom-color: $color-orange; }
+            &.news { border-bottom-color: $color-yellow; }
+            &.info { border-bottom-color: $color-magenta; }
+        }
+
+        .read-more {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 48em) {
+            display: flex;
+
+            section {
+                width: 33%;
+
+                & + section { margin-left: 1rem; }
+            }
+        }
+
+        @media (max-width: 47.999em) {
+            section + section { margin-top: 1rem; }
+        }
+    }
+
+    .simcal-default-calendar-list .simcal-events {
+        & { margin: 0; }
+    }
+
+    .simcal-event-details {
+        p {
+            font-size: 1rem;
+            line-height: inherit;
+            display: inline;
+
+            &:last-child { display: none; }
+        }
+
+        .simcal-event-title:after {
+            display: inline;
+            content: ":";
+        }
+    }
+
+    .news {
+        ul, li {
+            list-style-type: none;
+            margin-left: 0;
+        }
+    }
 }
 
 .tall {

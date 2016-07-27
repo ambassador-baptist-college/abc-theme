@@ -58,7 +58,7 @@ get_header(); ?>
         <section class="home-features home-stripe">
             <section class="events">
                 <header>
-                    <h1 class="entry-title">Events</h1>
+                    <h2 class="entry-title">Events</h2>
                 </header>
                 <?php
                     if ( get_field( 'events_content' ) ) {
@@ -71,7 +71,7 @@ get_header(); ?>
             </section>
             <section class="news">
                 <header>
-                    <h1 class="entry-title">News</h1>
+                    <h2 class="entry-title">News</h2>
                 </header>
                 <?php
                     // WP_Query arguments
@@ -98,7 +98,7 @@ get_header(); ?>
             </section>
             <section class="info">
                 <header>
-                    <h1 class="entry-title">Info</h1>
+                    <h2 class="entry-title">Info</h2>
                 </header>
                 <?php
                     if ( get_field( 'contact_info_content' ) ) {
@@ -125,10 +125,10 @@ get_header(); ?>
         <section class="video home-stripe">
         <?php
             if ( get_field( 'video_content' ) ) {
-                the_field( 'video_content' );
+                echo '<div class="video-content">' . get_field( 'video_content' ) . '</div>';
             }
             if ( get_field( 'video_link' ) ) {
-                the_field( 'video_link' );
+                echo '<div class="video-link">' . get_field( 'video_link' ) . '</div>';
             }
         ?>
         </section><!-- .video -->
@@ -161,7 +161,7 @@ get_header(); ?>
                     while ( $sermons_query->have_posts() && $counter == 0) {
                         $sermons_query->the_post();
 
-                        echo '<h2><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a></h2>
+                        echo '<h3><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a></h3>
                         <p class="meta">';
                             // preacher
                             the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span> | ' );
