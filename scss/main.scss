@@ -601,11 +601,18 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-    .entry-content & {
+    &, .entry-content & {
         border: 1px solid darken($color-blue, 20%);
 
-        &, &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-blue, 20%),0.5); }
+        &, &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-blue, 20%), 0.5); }
     }
+
+    &.green, .entry-content &.green {
+        border-color: darken($color-green, 20%);
+
+        &, &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-green, 20%), 0.5); }
+    }
+
 
     &, &:hover, &:focus {
         background: linear-gradient(to bottom, darken($color-blue, 5%), darken($color-blue, 12%));
@@ -618,10 +625,14 @@ input[type="submit"],
         padding: 0.84375em 0.875em 0.78125em;
         text-transform: uppercase;
         transition: all $transition-duration ease;
+
+        &.green { background: linear-gradient(to bottom, darken($color-green, 5%), darken($color-green, 12%)); }
     }
 
     &:hover, &:focus {
         background: linear-gradient(to bottom, darken($color-blue, 15%), darken($color-blue, 22%));
+
+        &.green { background: linear-gradient(to bottom, darken($color-green, 15%), darken($color-green, 22%)); }
     }
 
     &:focus {
