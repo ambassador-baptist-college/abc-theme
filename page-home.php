@@ -67,6 +67,9 @@ get_header(); ?>
                     if ( get_field( 'events_link' ) ) {
                         echo '<p class="read-more"><a href="' . get_field( 'events_link' ) . '">Read more</a></p>';
                     }
+                    if ( get_field( 'events_background' ) ) {
+                        $home_features_styles .= '.home-features .events { background-image: url(\'' . get_field( 'events_background' ) . '\'); }';
+                    }
                 ?>
             </section>
             <section class="news">
@@ -88,12 +91,15 @@ get_header(); ?>
                         echo '<ul>';
                         while ( $news_query->have_posts() ) {
                             $news_query->the_post();
-                            echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+                            echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
                         }
                         echo '</ul>
                         <p class="read-more"><a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '">Read More</a></p>';
                     }
                     wp_reset_postdata();
+                    if ( get_field( 'news_background' ) ) {
+                        $home_features_styles .= '.home-features .news { background-image: url(\'' . get_field( 'news_background' ) . '\'); }' . "\n";
+                    }
                 ?>
             </section>
             <section class="info">
@@ -107,6 +113,15 @@ get_header(); ?>
                     if ( get_field( 'contact_info_link' ) ) {
                         echo '<p class="read-more"><a href="' . get_field( 'contact_info_link' ) . '">Read more</a></p>';
                     }
+                    if ( get_field( 'contact_info_background' ) ) {
+                        $home_features_styles .= '.home-features .info { background-image: url(\'' . get_field( 'contact_info_background' ) . '\'); }' . "\n";
+                    }
+
+                    if ( $home_features_styles ) { ?>
+                    <style type="text/css">
+                        <?php echo $home_features_styles; ?>
+                    </style>
+                    <?php }
                 ?>
             </section>
         </section><!-- .home-features -->
