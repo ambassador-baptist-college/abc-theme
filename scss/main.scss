@@ -1509,8 +1509,17 @@ blockquote:after,
 }
 
 /* Social Media widget */
-.mg-wpsi li a {
-    box-shadow: none;
+.mg-wpsi {
+    margin: 0;
+    display: flex;
+
+    @media (min-width: 56.875em) { justify-content: space-between; }
+
+    li a {
+        box-shadow: none;
+
+        i { font-size: 40px !important; }
+    }
 }
 
 
@@ -2421,6 +2430,9 @@ body.search-no-results .page-header {
 .site-footer .widget {
     border-top: none;
     padding-top: 0;
+    font-size: 1.25rem;
+
+    &, a { color: $color-body-text-secondary; }
 
     &-title {
         font-family: $font-stack-serif;
@@ -3379,9 +3391,11 @@ p > video {
         font-size: 3em;
     }
 
-    .site-content {
+    .site-content, .site-footer .site-inner {
         padding: 0 4.5455% 1em;
+    }
 
+    .site-content {
         .tall & {
             padding-bottom: 16em;
             margin-bottom: -15em;
