@@ -2506,20 +2506,6 @@ body.search-no-results .page-header {
                 &, iframe { margin: 0; }
             }
 
-            &:before, &:after {
-                display: block;
-                content: '';
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: $color-orange;
-            }
-
-            &:before { left: -100%; }
-
-            &:after { right: -100%; }
-
             @media (min-width: 48em) {
                 flex-wrap: nowrap;
 
