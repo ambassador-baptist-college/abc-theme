@@ -2476,9 +2476,8 @@ body.search-no-results .page-header {
 
             & + h2 {
                 font-size: 3em;
-                margin: 0 0 1rem 0;
+                margin: 0 0 1rem 15%;
 
-                @media (min-width: 30em) { margin-left: 15%; }
                 @media (min-width: 37.5em) { margin-left: 30%; }
             }
         }
