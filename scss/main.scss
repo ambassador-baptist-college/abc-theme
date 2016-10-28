@@ -2527,7 +2527,10 @@ body.search-no-results .page-header {
 
             .video-link {
                 border: 3px solid darken($color-orange, 5%);
-                &, iframe { margin: 0; }
+                &, iframe {
+                    margin: 0;
+                    height: auto;
+                }
             }
 
             @media (min-width: 48em) {
