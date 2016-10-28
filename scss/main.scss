@@ -805,6 +805,11 @@ a {
 .main-navigation li {
     border-top: 1px solid $color-gray;
     position: relative;
+
+    .site-header & {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0 0.84375em;
+    }
 }
 
 .main-navigation a {
@@ -813,6 +818,8 @@ a {
     line-height: 1.3125;
     outline-offset: -1px;
     padding: 0.84375em 0;
+
+    .site-footer & { color: $color-body-text-secondary; }
 }
 
 .main-navigation .sub-menu a {
@@ -851,7 +858,7 @@ a {
 }
 
 .dropdown-toggle {
-    background-color: transparent;
+    background: transparent;
     border: 0;
     border-radius: 0;
     color: #fff;
@@ -875,8 +882,8 @@ a {
     }
 
     &:hover, &:focus {
-        background-color: transparent;
-        color: $color-blue;
+        background: transparent;
+        color: white;
         padding: 0;
     }
 
@@ -885,7 +892,7 @@ a {
         outline-offset: -1px;
 
         &:after {
-            border-color: transparent;
+            border: transparent;
         }
     }
 
