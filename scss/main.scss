@@ -62,6 +62,12 @@ $color-gray:                     #D7D7D7;
     );
 }
 
+%one-liner {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 $transition-duration:            0.2s;
 
 /**
@@ -626,7 +632,6 @@ input[type="submit"],
         letter-spacing: 0.046875em;
         line-height: 1;
         padding: 0.84375em 0.875em 0.78125em;
-        text-transform: uppercase;
         transition: all $transition-duration ease;
 
         &.green { background: linear-gradient(to bottom, darken($color-green, 5%), darken($color-green, 12%)); }
@@ -2592,6 +2597,12 @@ body.search-no-results .page-header {
             margin-bottom: 0;
         }
 
+        a {
+            color: $color-body-text;
+
+            &:hover { color: $color-blue; }
+        }
+
         @media (min-width: 48em) {
             display: flex;
 
@@ -2607,8 +2618,23 @@ body.search-no-results .page-header {
         }
     }
 
-    .simcal-default-calendar-list .simcal-events {
-        & { margin: 0; }
+    .simcal-default-calendar-list {
+        padding: 0;
+
+        .simcal-events {
+            & { margin: 0; }
+        }
+    }
+
+    .simcal-day-label {
+        border: none !important;
+        margin-bottom: 0 !important;
+
+        & > span {
+            padding: 0 !important;
+            background-color: transparent !important;
+            color: $color-body-text !important;
+        }
     }
 
     .simcal-event-details {
@@ -2617,12 +2643,11 @@ body.search-no-results .page-header {
             line-height: inherit;
             display: inline;
 
-            &:last-child { display: none; }
+            &:not(:first-child) { display: none; }
         }
 
-        .simcal-event-title:after {
-            display: inline;
-            content: ":";
+        .simcal-event-title {
+            @extend %one-liner;
         }
     }
 
@@ -2630,6 +2655,7 @@ body.search-no-results .page-header {
         ul, li {
             list-style-type: none;
             margin-left: 0;
+            @extend %one-liner;
         }
     }
 }
