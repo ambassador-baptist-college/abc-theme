@@ -173,19 +173,17 @@ get_header(); ?>
                 $sermons_query = new WP_Query( $args );
                 // The Loop
                 if ( $sermons_query->have_posts() ) {
+                    // remove some mediaJS features
+                    wp_localize_script( 'wp-mediaelement', '_wpmejsSettings', array(
+                        'features'  => array( 'playpause', 'progress' )
+                    ));
+
                     while ( $sermons_query->have_posts() && $counter == 0) {
                         $sermons_query->the_post();
 
-                        echo '<h3><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a></h3>
-                        <p class="meta">';
+                        echo '<p><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, preached by ';
                             // preacher
-                            the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span> | ' );
-
-                            // sermon date
-                            wpfc_sermon_date( get_option( 'date_format' ) );
-
-                            // Bible passage
-                            wpfc_sermon_meta( 'bible_passage', ' | <span class="bible_passage">', '</span>' );
+                            the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span>' );
                         echo '</p>';
                         wpfc_sermon_files();
                     }
