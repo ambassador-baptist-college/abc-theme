@@ -2369,7 +2369,11 @@ body.search-no-results .page-header {
 
 .required {
     color: $color-blue;
-    font-family: $font-stack-serif;
+
+    &:after {
+        display: inline-block;
+        content: ' *';
+    }
 }
 
 .comment-reply-title small {
