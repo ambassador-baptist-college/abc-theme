@@ -117,7 +117,7 @@ function abc_semester_list_shortcode_handler() {
         ';
     }
     elseif ((date('n') >= 8) AND (date('n') <= 12)) {
-        $semester_choices .= '<span class="wpcf7-list-item first"><label><input type="checkbox" name="semester[]" value="Spring ' . date ( 'Y' ) + 1 . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
+        $semester_choices .= '<span class="wpcf7-list-item first"><label><input type="checkbox" name="semester[]" value="Spring ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
         <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Fall ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Fall ' . ( date( 'Y' ) + 1 ) . '</span></label></span>
         <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Spring ' . ( date ( 'Y' ) + 2 ) . '">&nbsp;<span class="wpcf7-list-item-label">Spring ' . ( date( 'Y' ) + 2 ) . '</span></label></span>
         <span class="wpcf7-list-item"><label><input type="checkbox" name="semester[]" value="Fall ' . ( date ( 'Y' ) + 1 ) . '">&nbsp;<span class="wpcf7-list-item-label">Fall ' . ( date( 'Y' ) + 2 ) . '</span></label></span>
