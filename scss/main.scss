@@ -2583,6 +2583,10 @@ body.search-no-results .page-header {
         }
 
         &.latest-sermon {
+            @media (min-width: 31.25em) {
+                p:not(.latest-sermon) { column-count: 2; }
+            }
+
             .mejs-container,
             .mejs-container .mejs-controls {
                 background: transparent;

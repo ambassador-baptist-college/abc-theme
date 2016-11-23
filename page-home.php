@@ -183,7 +183,7 @@ get_header(); ?>
                     while ( $sermons_query->have_posts() && $counter == 0) {
                         $sermons_query->the_post();
 
-                        echo '<p><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, preached by ';
+                        echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, preached by ';
                             // preacher
                             the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span>' );
                         echo '</p>';
