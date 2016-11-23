@@ -138,14 +138,16 @@ get_header(); ?>
         </section><!-- .apply -->
 
         <section class="video home-stripe">
-        <?php
-            if ( get_field( 'video_content' ) ) {
-                echo '<div class="video-content">' . get_field( 'video_content' ) . '</div>';
-            }
-            if ( get_field( 'video_link' ) ) {
-                echo '<div class="video-link">' . get_field( 'video_link' ) . '</div>';
-            }
-        ?>
+            <div class="container">
+            <?php
+                if ( get_field( 'video_content' ) ) {
+                    echo '<div class="video-content">' . get_field( 'video_content' ) . '</div>';
+                }
+                if ( get_field( 'video_link' ) ) {
+                    echo '<div class="video-link">' . get_field( 'video_link' ) . '</div>';
+                }
+            ?>
+            </div>
         </section><!-- .video -->
 
         <section class="latest-sermon home-stripe">

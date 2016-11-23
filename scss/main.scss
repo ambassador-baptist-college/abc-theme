@@ -2467,6 +2467,29 @@ body.search-no-results .page-header {
 
     &.tall .content-area { background-color: transparent; }
 
+    .site-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .site-inner, .site-content, &.tall .content-area, .site-main {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .site-header-main, article, .home-stripe:not(.video), .home-stripe.video .container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1136px;
+    }
+
+    article, .home-stripe:not(.video), .home-stripe.video .container {
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
     .entry-content {
         color: white;
 
@@ -2521,10 +2544,13 @@ body.search-no-results .page-header {
         &.video {
             background-color: $color-orange;
             padding: 2rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
             position: relative;
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
 
             &, & * { color: white; }
 
@@ -3306,6 +3332,7 @@ p > video {
 
     .main-navigation {
         margin: 0 -0.875em;
+        width: 100%;
     }
 
     .main-navigation .primary-menu,
