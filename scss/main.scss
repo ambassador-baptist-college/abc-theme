@@ -2452,11 +2452,12 @@ body.search-no-results .page-header {
 
     @media (max-width: 320px) { font-size: 1rem; }
 
-    &, a { color: $color-body-text-secondary; }
+    &, a { color: darken($color-body-text-secondary, 10%); }
+    a { &:hover, &:active, &:focus { color: $color-blue; } }
 
     &-title {
         font-family: $font-stack-serif;
-        color: $color-body-text-secondary;
+        color: darken($color-body-text-secondary, 10%);
     }
 }
 
