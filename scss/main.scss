@@ -2450,6 +2450,8 @@ body.search-no-results .page-header {
     padding-top: 0;
     font-size: 1.25rem;
 
+    @media (max-width: 320px) { font-size: 1rem; }
+
     &, a { color: $color-body-text-secondary; }
 
     &-title {
@@ -2507,6 +2509,10 @@ body.search-no-results .page-header {
                 font-size: 3em;
                 margin: 0 0 1rem 15%;
 
+                @media (max-width: 320px) {
+                    font-size: 2rem;
+                    margin-left: 0;
+                }
                 @media (min-width: 37.5em) { margin-left: 30%; }
             }
         }
@@ -2526,6 +2532,9 @@ body.search-no-results .page-header {
         h2 {
             font-size: 3rem;
             margin-bottom: 1rem;
+
+            @media (max-width: 480px) { font-size: 2rem; }
+            @media (max-width: 320px) { font-size: 1.5rem; }
         }
 
         & > h2 { text-align: center; }
