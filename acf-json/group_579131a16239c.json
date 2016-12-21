@@ -1,0 +1,217 @@
+{
+    "key": "group_579131a16239c",
+    "title": "Special Events",
+    "fields": [
+        {
+            "display_format": "m\/d\/Y",
+            "return_format": "Ymd",
+            "first_day": 0,
+            "key": "field_57475aebce71b",
+            "label": "Begin Date",
+            "name": "begin_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "display_format": "m\/d\/Y",
+            "return_format": "Ymd",
+            "first_day": 0,
+            "key": "field_57475b41ce71c",
+            "label": "End Date",
+            "name": "end_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "12:00 PM",
+            "prepend": "",
+            "append": "",
+            "key": "field_5747a5e8a1ae4",
+            "label": "Begin Time",
+            "name": "begin_time",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "12:00 PM",
+            "prepend": "",
+            "append": "",
+            "key": "field_5747a60aa1ae5",
+            "label": "End Time",
+            "name": "end_time",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "height": 300,
+            "center_lat": "35.318675",
+            "center_lng": "-81.658641",
+            "zoom": "",
+            "key": "field_57475bfece71e",
+            "label": "Location",
+            "name": "location",
+            "type": "google_map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "https:\/\/register.ambassadors.edu\/\u2026",
+            "prepend": "",
+            "append": "",
+            "key": "field_57475c67ce720",
+            "label": "Registration URL",
+            "name": "registration_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": 6,
+            "key": "field_57475cccce721",
+            "label": "Custom CSS",
+            "name": "custom_css",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "post_type": [
+                "special_speaker"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "return_format": "id",
+            "key": "field_574c6a38b05b6",
+            "label": "Keynote Speaker(s)",
+            "name": "keynote_speaker",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [
+                "special_speaker"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "return_format": "id",
+            "key": "field_57475ed09b868",
+            "label": "Special Speaker(s)",
+            "name": "special_speaker",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "special_event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1482336349
+}

@@ -1,0 +1,180 @@
+{
+    "key": "group_579131a11e473",
+    "title": "Master of Ministries Modules",
+    "fields": [
+        {
+            "display_format": "m\/d\/Y",
+            "return_format": "Ymd",
+            "first_day": 0,
+            "key": "field_570d66c9edc73",
+            "label": "Course Begin Date",
+            "name": "course_begin_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "display_format": "m\/d\/Y",
+            "return_format": "Ymd",
+            "first_day": 0,
+            "key": "field_570d6711edc74",
+            "label": "Course End Date",
+            "name": "course_end_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "John Doe",
+            "prepend": "",
+            "append": "",
+            "key": "field_570d674dedc76",
+            "label": "Instructor Name",
+            "name": "instructor_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "return_format": "array",
+            "preview_size": "faculty",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "",
+            "key": "field_570d675aedc77",
+            "label": "Instructor Photo",
+            "name": "instructor_photo",
+            "type": "image",
+            "instructions": "3&times;4 ratio, at least 900&times;1200px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
+            "key": "field_570d676fedc78",
+            "label": "Instructor Bio",
+            "name": "instructor_bio",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
+            "key": "field_570d677dedc79",
+            "label": "Cost",
+            "name": "cost",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "array",
+            "library": "all",
+            "min_size": 0,
+            "max_size": 0,
+            "mime_types": "",
+            "key": "field_570d678aedc7a",
+            "label": "Application",
+            "name": "application",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "message": "Add the description of the course, along with housing and any other details in the main content editor below",
+            "esc_html": 0,
+            "new_lines": "wpautop",
+            "key": "field_570d6798edc7b",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "master_module"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "custom_fields"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1482336354
+}

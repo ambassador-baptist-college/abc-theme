@@ -1,0 +1,198 @@
+{
+    "key": "group_579131a103563",
+    "title": "Faculty\/Staff",
+    "fields": [
+        {
+            "message": "<h2>Instructions<\/h2>\n\nChoose \u201cAdministration,\u201d \u201cFaculty,\u201d or \u201cStaff\u201d from the \u201cTypes\u201d\u00a0category box to the right.\n\nUse the \u201cFeatured Photo\u201d and upload an image <em>at least<\/em> 900&times;1200px.\n\n<h2>General guide for cropping photos<\/h2>\n<ul>\n    <li>Using the rule of thirds, put the vertical third lines at the outside edges of the person&rsquo;s eyes<\/li>\n    <li>Using the rule of thirds, put the person&rsquo;s eyes just below the top third line so there&rsquo;s some space above their head and the top of the photo<\/li>\n    <li>Example:<br\/><a href=\"http:\/\/dev.ambassadors.edu\/wp-content\/uploads\/2016\/03\/people-cropping-sample.png\" target=\"_blank\"><img src=\"http:\/\/dev.ambassadors.edu\/wp-content\/uploads\/2016\/03\/people-cropping-sample-150x150.png\"\/><br\/>(Click for larger version)<\/a><\/li>\n<\/ul>",
+            "esc_html": 0,
+            "new_lines": "wpautop",
+            "key": "field_56fc43a6d319a",
+            "label": "Notes",
+            "name": "",
+            "type": "message",
+            "instructions": "Choose \u201cAdministration,\u201d \u201cFaculty,\u201d or \u201cStaff\u201d from the category to the right.\n\nUse the \u201cFeatured Photo\u201d and upload an image <em>at least<\/em> 900&times;1200px.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_56fc39d528912",
+            "label": "Position",
+            "name": "position",
+            "type": "text",
+            "instructions": "President, Executive Assistant, Maintenance, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "default_value": "",
+            "min": 1989,
+            "max": "",
+            "step": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_56fc39ff28913",
+            "label": "Begin Year",
+            "name": "begin_year",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_56fc3a1e28914",
+            "label": "Email Address",
+            "name": "email_address",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "multiple": 0,
+            "allow_null": 1,
+            "choices": {
+                "Professor": "Professor",
+                "Instructor": "Instructor"
+            },
+            "default_value": [],
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "key": "field_56fc3a4328915",
+            "label": "Teacher Type",
+            "name": "teacher_type",
+            "type": "select",
+            "instructions": "Professor: generally reserved for those with a doctorate<br\/>\nInstructor: other teachers",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_56fc3aa228916",
+            "label": "Department",
+            "name": "department",
+            "type": "text",
+            "instructions": "Comma-separated list of subjects taught: Bible, English, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 0,
+            "key": "field_56fc42eac0616",
+            "label": "Qualifications",
+            "name": "qualifications",
+            "type": "wysiwyg",
+            "instructions": "Bullet-point qualifications",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_56fc3c680213a",
+            "label": "Last Name",
+            "name": "last_name",
+            "type": "text",
+            "instructions": "Used for sorting only",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "formatting": "html",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "faculty"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1482336357
+}
