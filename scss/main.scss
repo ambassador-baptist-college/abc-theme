@@ -134,8 +134,6 @@ abbr[title] {
 b,
 strong {
     font-weight: 700;
-
-    .wf-arvo-n4-active & { font-weight: 400; }
 }
 
 small {
@@ -331,7 +329,6 @@ h6 {
     margin: 0;
     text-rendering: optimizeLegibility;
 
-    .wf-arvo-n4-active & { font-weight: 400; }
     .faculty-member & { clear: none; }
 }
 
@@ -1647,8 +1644,6 @@ blockquote:after,
     font-weight: 700;
     line-height: 1.2173913043;
     margin: 0;
-
-    .wf-arvo-n4-active & { font-weight: 400; }
 }
 
 .site-branding .site-title a {
@@ -1744,8 +1739,6 @@ blockquote:after,
     font-weight: 700;
     line-height: 1.25;
     margin-bottom: 1em;
-
-    .wf-arvo-n4-active & { font-weight: 400; }
 }
 
 .entry-title a {
@@ -1854,8 +1847,6 @@ a.post-thumbnail:focus {
     h1, h2, h3, h4, h5, h6 {
         font-weight: 700;
 
-        .wf-arvo-n4-active & { font-weight: 400; }
-
         &:first-child {
             margin-top: 0;
         }
@@ -1869,8 +1860,6 @@ a.post-thumbnail:focus {
     padding-right: .1em;
     font-family: $font-stack-serif;
     font-weight: 700;
-
-    .wf-arvo-n4-active & { font-weight: 400; }
 }
 
 .post-navigation .post-title,
