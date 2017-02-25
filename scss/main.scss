@@ -658,7 +658,7 @@ textarea {
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     border: 1px solid $color-gray;
     border-radius: 2px;
-    color: $color-body-text-secondary;
+    color: $color-body-text;
     padding: 0.625em 0.4375em;
     width: 100%;
 
@@ -666,7 +666,6 @@ textarea {
     &:focus {
         background-color: #fff;
         border-color: $color-blue;
-        color: $color-body-text;
         outline: 0;
     }
 }
