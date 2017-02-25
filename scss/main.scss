@@ -2856,6 +2856,15 @@ form[name="courses"] {
     margin-bottom: 1em;
 }
 
+.schema_block {
+    div[property="schema:address"] { margin-bottom: 0; }
+
+    .city_state, .postalcode { display: inline-block; }
+    .city_state { margin-right: .3em; }
+
+    .country { display: none; }
+}
+
 /**
  * 12.0 - Media
  */
