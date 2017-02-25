@@ -2783,7 +2783,11 @@ ul.columns {
     h2 { font-size: 125%; }
 }
 
-.meeting a[href^="tel"] { display: block; }
+.meeting a[href^="tel"]:before {
+    display: block;
+    content: '';
+    clear: both;
+}
 
 .course-categories {
     list-style-type: none;
