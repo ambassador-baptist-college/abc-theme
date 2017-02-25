@@ -1,2 +1,6 @@
 css/main.min.css:scss/main.scss
 css/main.min.css.map:scss/main.scss
+
+css/chosen.min.cs:scss/chosen.scss
+
+js/chosen.min.js:js/chosen.js

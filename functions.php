@@ -30,6 +30,13 @@ function abc_webfonts_add() {
     wp_enqueue_style( 'dashicons' );
 }
 
+// add chosen.js
+add_action( 'wp_enqueue_scripts', 'abc_add_chosen' );
+function abc_add_chosen() {
+    wp_register_style( 'chosen', get_stylesheet_directory_uri() . '/css/chosen.min.css' );
+    wp_register_script( 'chosen', get_stylesheet_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ) );
+}
+
 // add custom image sizes
 // default thumbnail
 add_action( 'after_setup_theme', 'abc_custom_image_sizes' );

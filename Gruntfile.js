@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                 style: 'compressed'
             },
             files: {
+                "css/chosen.min.css" : "scss/chosen.scss",
                 "css/main.min.css" : "scss/main.scss",
             }
         }
@@ -41,7 +42,7 @@ module.exports = function (grunt) {
     uglify: {
         custom: {
             files: {
-//                'js/navigation.min.js': ['js/navigation.js'],
+                'js/chosen.jquery.min.js': ['js/chosen.jquery.js'],
             },
         },
     },
