@@ -123,6 +123,33 @@ get_header(); ?>
                         } ?>
                     </section>
 
+                    <section class="sermon-block speaker">
+                        <header>
+                            <h2 class="entry-title">By Speaker</h2>
+                        </header>
+                        <?php
+                        wp_enqueue_script( 'chosen' );
+                        wp_enqueue_style( 'chosen' );
+                        wp_add_inline_script( 'chosen', 'jQuery(document).ready(function($){ $("select.preachers").chosen();});' );
+
+                        $speakers = get_terms( array(
+                            'taxonomy'      => 'wpfc_preacher',
+                            'orderby'       => 'name',
+                            'order'         => 'ASC',
+                        ));
+
+                        if ( $speakers ) {
+                            echo '<form class="wpfc_speaker" action="' . home_url() . '" data-path="' . home_url( '/' . $sermons_slug . '/preacher/' ) . '">
+                            <select class="preachers" name="wpfc_preacher">';
+                            foreach ( $speakers as $speaker ) {
+                                echo '<option value="' . $speaker->slug . '">' . $speaker->name. '</option>';
+                            }
+                            echo '</select>
+                            <button type="submit">Go&rarr;</button>
+                            </form>';
+                        } ?>
+                    </section>
+
                     <section class="sermon-block book">
                         <header>
                             <h2 class="entry-title">By Book</h2>
