@@ -22,10 +22,11 @@ get_header(); ?>
             // Include the page content template. ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="entry-content">
-                    <?php
-                    // page content
-                    the_content();
+                    <div class="entry-content sermon-block">
+                        <?php the_content(); ?>
+                    </div>
 
+                    <?php
                     // get sermon archive slug
                     $sermons_options = get_option( 'wpfc_options' );
                     $sermons_slug = $sermons_options['archive_slug'];
