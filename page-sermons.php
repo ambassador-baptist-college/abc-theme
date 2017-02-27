@@ -128,10 +128,6 @@ get_header(); ?>
                             <h2 class="entry-title">By Speaker</h2>
                         </header>
                         <?php
-                        wp_enqueue_script( 'chosen' );
-                        wp_enqueue_style( 'chosen' );
-                        wp_add_inline_script( 'chosen', 'jQuery(document).ready(function($){ $("select.preachers").chosen();});' );
-
                         $speakers = get_terms( array(
                             'taxonomy'      => 'wpfc_preacher',
                             'orderby'       => 'name',

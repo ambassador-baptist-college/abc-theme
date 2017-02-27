@@ -6,3 +6,5 @@ css/main.min.css:scss/main.scss
 css/main.min.css.map:scss/main.scss
 
 js/chosen.min.js:js/chosen.js
+
+js/theme.min.js:js/theme.js
