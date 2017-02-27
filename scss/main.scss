@@ -2789,12 +2789,21 @@ ul.columns {
     clear: both;
 }
 
-.course-categories {
-    list-style-type: none;
+.courses-container[class*="active"] {
+    .cat-filter {
+        &.active { font-weight: 700; }
 
-    li {
-        display: inline-block;
-        padding-right: 1em;
+        &:not(.active) {
+            color: $color-body-text-secondary;
+            border-color: $color-body-text-secondary;
+        }
+
+        &.active, &:not(.active) {
+            &:hover, &:focus, &:active {
+                color: $color-blue;
+                border-color: $color-blue;
+            }
+        }
     }
 }
 
