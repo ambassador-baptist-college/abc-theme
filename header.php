@@ -80,6 +80,8 @@
                     echo 'News Archive';
                 } elseif ( is_archive() ) {
                     echo apply_filters( 'custom_title', ucfirst( get_post_type() ) . ' Archive' );
+                } elseif ( is_404() ) {
+                    echo 'Not Found';
                 } else {
                     apply_filters( 'custom_title', the_title() );
                 }
