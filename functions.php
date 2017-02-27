@@ -155,13 +155,45 @@ function abc_semester_list_shortcode_handler() {
     return $semester_choices;
 }
 
+// Add CPT archive headers
+function abc_cpt_archive_headers() {
+    if ( function_exists( 'acf_add_options_page' ) ) {
+        // add main options page
+        acf_add_options_page( array(
+            'page_title'    => 'Custom Post Type Archive Headers',
+            'menu_title'    => 'CPT Archive Headers',
+            'menu_slug'     => 'cpt-archive-headers',
+            'capability'    => 'edit_others_posts',
+            'redirect'      => false,
+        ));
+    }
+}
+add_action( 'init', 'abc_cpt_archive_headers' );
+
 // Add page header if exists
 function abc_add_page_thumb() {
-    if ( ! is_archive() && ! is_search() && has_post_thumbnail( $post->ID ) ) {
-        echo '<style type="text/css">.site-header, .tall .site-header { background-image: url(' . get_the_post_thumbnail_url() . '); }</style>';
+    // get CPT archive options
+    $cpt_headers = get_field( 'cpt_archive_headers', 'option' );
+
+    if ( is_archive() ) {
+        foreach( $cpt_headers as $cpt ) {
+            if ( get_post_type() == $cpt['post_type'] ) {
+                echo abc_header_image( $cpt['archive_image'] );
+            }
+        }
+    } elseif ( is_singular() ) {
+        // single posts
+        if ( has_post_thumbnail( $post->ID ) ) {
+            echo abc_header_image( get_the_post_thumbnail_url() );
+        }
     }
 }
 add_action( 'wp_footer', 'abc_add_page_thumb' );
+
+// Return CSS for page header image
+function abc_header_image( $post_thumbnail_URL ) {
+    return '<style type="text/css">.site-header, .tall .site-header { background-image: url(' . $post_thumbnail_URL . '); }</style>';
+}
 
 // Modify the sermon archive title
 function filter_sermon_page_title( $title, $id = NULL ) {
