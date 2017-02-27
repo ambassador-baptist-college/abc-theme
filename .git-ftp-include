@@ -1,6 +1,6 @@
-css/backend.min.cs:scss/backend.scss
+css/backend.min.css:scss/backend.scss
 
-css/chosen.min.cs:scss/chosen.scss
+css/chosen.min.css:scss/chosen.scss
 
 css/main.min.css:scss/main.scss
 css/main.min.css.map:scss/main.scss
