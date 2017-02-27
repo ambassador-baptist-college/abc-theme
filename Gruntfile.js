@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                 style: 'compressed'
             },
             files: {
+                "css/backend.min.css" : "scss/backend.scss",
                 "css/chosen.min.css" : "scss/chosen.scss",
                 "css/main.min.css" : "scss/main.scss",
             }

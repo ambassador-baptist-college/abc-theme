@@ -37,6 +37,16 @@ function abc_add_chosen() {
     wp_register_script( 'chosen', get_stylesheet_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ) );
 }
 
+// add backend styles
+add_action( 'admin_enqueue_scripts', 'abc_add_backend_styles' );
+function abc_add_backend_styles() {
+    wp_register_style( 'abc-backend', get_stylesheet_directory_uri() . '/css/backend.min.css' );
+
+    if ( 'wpfc_sermon' == get_post_type() ) {
+        wp_enqueue_style( 'abc-backend' );
+    }
+}
+
 // add custom image sizes
 // default thumbnail
 add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
