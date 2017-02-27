@@ -15,7 +15,8 @@
                         "master_module": "Master Modules",
                         "special_event": "Special Events",
                         "special_speaker": "Special Speakers",
-                        "wpfc_sermon": "Sermons"
+                        "wpfc_sermon": "Sermons",
+                        "404": "404 Page"
                     },
                     "default_value": [],
                     "ui": 0,
@@ -96,5 +97,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488214723
+    "modified": 1488232033
 }
