@@ -53,7 +53,15 @@ add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
 function abc_custom_image_sizes() {
     set_post_thumbnail_size( 2400, 600, true );
     add_image_size( 'thumbnail-tall', 2400, 1280, true );
+    add_image_size( 'signature', 300, 60 );
 }
+
+// Add signature custom image size
+function signature_image_size( $sizes ) {
+    $sizes['signature'] = 'Signature';
+    return $sizes;
+}
+add_filter( 'image_size_names_choose', 'signature_image_size' );
 
 // override default post meta
 function twentysixteen_entry_meta() {
@@ -146,16 +154,6 @@ function abc_semester_list_shortcode_handler() {
 
     return $semester_choices;
 }
-
-// Add signature custom image size
-function signature_image_size( $sizes ) {
-    $new_sizes = array(
-        'signature'       => 'Signature',
-    );
-    return array_merge( $sizes, $new_sizes );
-}
-add_filter( 'image_size_names_choose', 'signature_image_size' );
-add_image_size( 'signature', 300, 60 );
 
 // Add page header if exists
 function abc_add_page_thumb() {
