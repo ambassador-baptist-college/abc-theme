@@ -44,6 +44,7 @@ module.exports = function (grunt) {
         custom: {
             files: {
                 'js/chosen.jquery.min.js': ['js/chosen.jquery.js'],
+                'js/grad-offering.min.js': ['js/grad-offering.js'],
                 'js/theme.min.js': ['js/theme.js'],
             },
         },

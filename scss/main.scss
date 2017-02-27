@@ -2887,6 +2887,31 @@ form[name="courses"] {
     .country { display: none; }
 }
 
+.thermometer-wrapper {
+    padding: 1em;
+    background-color: #477EB5;
+    margin: 0 auto 1em;
+    color: white;
+    text-align: center;
+
+    svg {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #chart path { fill: rgba(white, 0.66); }
+
+    #meter {
+        stroke-dasharray: 835;
+        stroke-dashoffset: 835;
+        stroke: rgba(2, 55, 87, .75);
+        stroke-width: 20px;
+        transition: stroke-dashoffset 2s ease;
+    }
+}
+
+#legend text { fill: white; }
+
 /**
  * 11.8 - Forms
  */
