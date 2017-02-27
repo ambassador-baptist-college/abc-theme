@@ -2852,6 +2852,18 @@ form[name="courses"] {
     .book { border-bottom-color: $color-orange; }
 }
 
+.post-type-archive-special_event {
+    figure.event-speaker:nth-last-child(n+6),
+    figure.event-speaker:nth-last-child(n+6) ~ figure.event-speaker {
+        width: 50%;
+        padding: 0 1em 1em 0;
+        display: table-cell;
+        vertical-align: top;
+
+        &:nth-child(odd):before { @extend .clear; }
+    }
+}
+
 .event-speaker {
     margin-bottom: 1em;
 }
