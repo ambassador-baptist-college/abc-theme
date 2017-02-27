@@ -190,7 +190,7 @@ function abc_add_page_thumb() {
         }
     }
 }
-add_action( 'wp_footer', 'abc_add_page_thumb' );
+add_action( 'wp_head', 'abc_add_page_thumb' );
 
 // Return CSS for page header image
 function abc_header_image( $post_thumbnail_URL ) {
