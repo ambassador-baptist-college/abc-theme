@@ -2867,10 +2867,10 @@ form[name="courses"] {
     figure.event-speaker:nth-last-child(n+6) ~ figure.event-speaker {
         width: 50%;
         padding: 0 1em 1em 0;
-        display: table-cell;
+        display: inline-block;
         vertical-align: top;
 
-        &:nth-child(odd):before { @extend .clear; }
+        figcaption { font-size: smaller; }
     }
 }
 
