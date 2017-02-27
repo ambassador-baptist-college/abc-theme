@@ -22,6 +22,7 @@
  *    11.5 - Sidebar
  *    11.6 - Footer
  *    11.7 - Specific content
+ *    11.8 - Forms
  * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
@@ -2885,6 +2886,27 @@ form[name="courses"] {
 
     .country { display: none; }
 }
+
+/**
+ * 11.8 - Forms
+ */
+
+.wpcf7-form {
+    input[name="amount"],
+    input[name="cvv"],
+    input[name="expiration-month"],
+    input[name="expiration-year"] { max-width: 6em; }
+
+    input[name="amount-other"] { max-width: 8em; }
+
+    label[for="expiration-month"],
+    label[for="expiration-year"] {
+        margin-right: 0.25em;
+    }
+
+    .anonymous .wpcf7-list-item-label { display: none; }
+}
+
 
 /**
  * 12.0 - Media

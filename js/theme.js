@@ -16,5 +16,18 @@
             // handle button visual state
             $(this).find('span.dashicons').toggleClass('dashicons-arrow-up-alt2 dashicons-arrow-down-alt2')
         });
+
+        // handle preset and custom donation/payment amounts
+        $('.wpcf7-form input[name="amount-other"]').slideUp();
+        $('.wpcf7-form select[name="preset-amount"]').on('change', function(){
+            var presetAmount = $(this).val(),
+                otherField = $(this).parents('p').find('input[name="amount-other"]');
+
+            if (presetAmount == 'Other') {
+                otherField.slideDown().focus();
+            } else {
+                otherField.slideUp();
+            }
+        });
     });
 })(jQuery);
