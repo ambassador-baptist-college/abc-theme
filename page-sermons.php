@@ -75,7 +75,7 @@ get_header(); ?>
                                     // Bible passage
                                     wpfc_sermon_meta( 'bible_passage', ' | <span class="bible_passage">', '</span>' ); ?>
                                 </p>
-                                <?php wpfc_sermon_files();
+                                <?php echo wpfc_sermon_media();
 
                                 // increment counter
                                 $counter++;

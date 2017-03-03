@@ -220,4 +220,13 @@ function filter_sermon_page_title( $title, $id = NULL ) {
 add_filter( 'custom_title', 'filter_sermon_page_title' );
 add_filter( 'get_the_archive_title', 'filter_sermon_page_title' );
 
+// Remove some MediaJS features for sermons
+function abc_sermon_player() {
+    wp_localize_script( 'wp-mediaelement', '_wpmejsSettings', array(
+        'features'  => array( 'playpause', 'progress' )
+    ));
+}
+add_action( 'wp_footer', 'abc_sermon_player' );
+
+
 include( 'inc/shortcodes.php' );

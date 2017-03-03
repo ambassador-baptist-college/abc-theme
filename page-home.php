@@ -185,18 +185,13 @@ get_header(); ?>
                 // The Loop
                 if ( $sermons_query->have_posts() ) {
                     // remove some mediaJS features
-                    wp_localize_script( 'wp-mediaelement', '_wpmejsSettings', array(
-                        'features'  => array( 'playpause', 'progress' )
-                    ));
-
                     while ( $sermons_query->have_posts() && $counter == 0) {
                         $sermons_query->the_post();
 
                         echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, preached by ';
                             // preacher
                             the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span>' );
-                        echo '</p>';
-                        wpfc_sermon_files();
+                        echo '</p>' . wpfc_sermon_media();
                     }
                 }
                 // reset the query
