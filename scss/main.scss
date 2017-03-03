@@ -1628,6 +1628,24 @@ blockquote:after,
     }
 
     .home & { margin-bottom: -16em; }
+
+    // fix menu on medium screens
+    @media screen and (min-width: 61.5625em) {
+        &.site-content.site-inner {
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+    }
+
+    @media screen and (min-width: 44.375em) {
+        &.site-content.site-inner {
+            .site-branding, .site-header-menu {
+                padding-left: 5em;
+            }
+
+            .site-branding { padding-right: 5em; }
+        }
+    }
 }
 
 .site-branding {
