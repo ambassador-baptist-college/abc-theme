@@ -3,8 +3,6 @@
     "title": "Home Page",
     "fields": [
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_5796b4e9e04cf",
             "label": "Home Features Stripe",
             "name": "",
@@ -16,14 +14,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0,
             "key": "field_5796b4a0597aa",
             "label": "Events Content",
             "name": "events_content",
@@ -35,14 +30,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "allow_archives": 1,
             "key": "field_5796b5cad93f4",
             "label": "Events Link",
             "name": "events_link",
@@ -54,19 +49,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1
         },
         {
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
             "key": "field_5798d67e3f90f",
             "label": "Events Background",
             "name": "events_background",
@@ -78,9 +68,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
+            },
             "return_format": "url",
             "preview_size": "thumbnail",
             "library": "all",
@@ -90,7 +78,9 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5798d7783f910",
             "label": "News Background",
             "name": "news_background",
@@ -102,14 +92,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0,
             "key": "field_5796b4c8597ab",
             "label": "Contact Info Content",
             "name": "contact_info_content",
@@ -121,14 +116,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "allow_archives": 1,
             "key": "field_5796b5d5d93f5",
             "label": "Contact Info Link",
             "name": "contact_info_link",
@@ -140,19 +135,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1
         },
         {
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
             "key": "field_5798d7803f911",
             "label": "Contact Info Background",
             "name": "contact_info_background",
@@ -164,11 +154,19 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_5796b500e04d0",
             "label": "Application Stripe",
             "name": "",
@@ -180,14 +178,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0,
             "key": "field_5796b515e04d1",
             "label": "CTA headline",
             "name": "cta_headline",
@@ -199,14 +194,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "allow_archives": 1,
             "key": "field_5796b51fe04d2",
             "label": "CTA target",
             "name": "cta_target",
@@ -218,14 +213,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "allow_archives": 1
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_5796b53ce04d3",
             "label": "CTA button text",
             "name": "cta_button_text",
@@ -238,12 +233,15 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_5796b547e04d4",
             "label": "Video Stripe",
             "name": "",
@@ -255,14 +253,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0,
             "key": "field_5796b55ae04d5",
             "label": "Video Content",
             "name": "video_content",
@@ -274,11 +269,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "width": "",
-            "height": "",
             "key": "field_5796b570e04d6",
             "label": "Video",
             "name": "video_link",
@@ -290,11 +288,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "width": "",
+            "height": ""
         },
         {
-            "placement": "top",
-            "endpoint": 0,
             "key": "field_5796b592e04d7",
             "label": "Latest Sermon Stripe",
             "name": "",
@@ -306,14 +304,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "default_value": "",
-            "delay": 0,
             "key": "field_5796b59ce04d8",
             "label": "Latest Sermon",
             "name": "latest_sermon",
@@ -325,7 +320,47 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_58b98a5ea6eda",
+            "label": "Live Streaming Stripe",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58b98a68a6edb",
+            "label": "Live Streaming",
+            "name": "live_streaming",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
         }
     ],
     "location": [
@@ -345,5 +380,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482336362
+    "modified": 1488556697
 }

@@ -2455,6 +2455,12 @@ body.search-no-results .page-header {
  * 11.7 - Specific Content
  */
 .home {
+    &.on-air {
+        margin-top: 400px;
+
+        @media screen and (max-width: 48em) { margin-top: calc(33vh + 4em); }
+    }
+
     .content-area { width: 100%; }
 
     &.tall .content-area { background-color: transparent; }
@@ -2528,6 +2534,47 @@ body.search-no-results .page-header {
         }
 
         & > h2 { text-align: center; }
+
+        &.streaming.video {
+            &.off-air { display: none; }
+
+            position: fixed;
+            z-index: 50;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+            @media screen and (max-width: 48em) {
+                max-height: calc(33vh + 4em);
+
+                iframe { max-height: 33vh; }
+            }
+
+            &, & * { transition: all .5s ease; }
+
+            h2 {
+                max-height: 4em;
+
+                @media screen and (max-width: 48em) { display: none; }
+            }
+
+            iframe {
+                display: block;
+                margin: 0 auto;
+                transition: all .5s ease;
+            }
+
+            &.shrink {
+                h2 {
+                    max-height: 0;
+                    opacity: 0;
+                }
+
+                @media screen and (min-width: 48em) {
+                    width: calc(33vw + 4em);
+                }
+            }
+        }
 
         &.apply {
             display: flex;

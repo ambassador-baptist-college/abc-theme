@@ -1,5 +1,26 @@
 (function($){
     $(document).ready(function(){
+        // homepage live-streaming
+        var $streamingStripe = $('.home-stripe.streaming');
+
+        if ($streamingStripe.find('iframe').length > 0) {
+            $('.home-stripe.streaming').removeClass('off-air');
+            $('body').addClass('on-air');
+        } else {
+            $streamingStripe.addClass('off-air');
+            $('body').removeClass('on-air');
+        }
+
+        if ($streamingStripe.length > 0) {
+            $(document).on('scroll', function(){
+                if ($(document).scrollTop() > 400){
+                    $streamingStripe.addClass('shrink');
+                } else {
+                    $streamingStripe.removeClass('shrink');
+                }
+            });
+        }
+
         // chosen
         $('select.preachers, select[name="archive-dropdown"]').chosen();
 

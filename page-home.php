@@ -17,8 +17,17 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
         <?php
         // Start the loop.
-        while ( have_posts() ) : the_post();
+        while ( have_posts() ) : the_post(); ?>
 
+        <section class="video streaming home-stripe off-air">
+        <?php
+            if ( get_field( 'live_streaming' ) ) {
+                the_field( 'live_streaming' );
+            }
+        ?>
+        </section><!-- .apply -->
+
+            <?php
             // Include the page content template. ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="entry-content">
