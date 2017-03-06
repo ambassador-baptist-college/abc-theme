@@ -2476,7 +2476,13 @@ body.search-no-results .page-header {
     &.on-air {
         margin-top: 400px;
 
-        @media screen and (max-width: 48em) { margin-top: calc(33vh + 4em); }
+        &.logged-in { margin-top: 368px; }
+
+        @media screen and (max-width: 48em) {
+            margin-top: calc(33vh + 4em);
+
+            &.logged-in { margin-top: calc(33vh + 4em - 46px) }
+        }
     }
 
     .content-area { width: 100%; }
@@ -2561,6 +2567,7 @@ body.search-no-results .page-header {
             top: 0;
             width: 100%;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            background-color: $color-blue;
 
             @media screen and (max-width: 48em) {
                 height: calc(33vh + 4em);
