@@ -180,7 +180,7 @@ function abc_cpt_archive_headers() {
             'page_title'    => 'Custom Post Type Archive Headers',
             'menu_title'    => 'CPT Archive Headers',
             'menu_slug'     => 'cpt-archive-headers',
-            'capability'    => 'edit_others_posts',
+            'capability'    => 'manage_options',
             'redirect'      => false,
         ));
     }
