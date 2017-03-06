@@ -2563,7 +2563,7 @@ body.search-no-results .page-header {
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 
             @media screen and (max-width: 48em) {
-                max-height: calc(33vh + 4em);
+                height: calc(33vh + 4em);
 
                 iframe { max-height: 33vh; }
             }
