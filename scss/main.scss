@@ -2776,11 +2776,15 @@ ul.columns {
     li {
         white-space: nowrap;
 
+        .sermon-block.date & { margin-bottom: 1.75em; }
+
         a {
             max-width: 100%;
             display: inline-block;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            .sermon-block.date & { display: inline; }
         }
     }
 
@@ -2880,6 +2884,8 @@ form[name="courses"] {
         .entry-title {
             border-bottom: .1rem solid $color-gray;
         }
+
+        .date { font-size: smaller; }
     }
 
     .latest {

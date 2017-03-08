@@ -34,7 +34,7 @@ get_header(); ?>
                     // WP_Query arguments
                     $args = array (
                         'post_type'              => array( 'wpfc_sermon' ),
-                        'posts_per_page'         => '14',
+                        'posts_per_page'         => '11',
                         'post_status'            => 'publish',
                         'order'                  => 'DESC',
                         'orderby'                => 'meta_value',
@@ -60,7 +60,7 @@ get_header(); ?>
                         <?php
                         // The Loop
                         if ( $sermons_query->have_posts() ) {
-                            while ( $sermons_query->have_posts() && $counter == 0) {
+                            while ( $sermons_query->have_posts() && $counter == 0 ) {
                                 $sermons_query->the_post(); ?>
 
                                 <h2><a id="latest_sermon_title" title="<?php echo esc_attr( get_the_title() ); ?>" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
@@ -89,13 +89,16 @@ get_header(); ?>
                         </header>
                         <?php
                         if ( $sermons_query->have_posts() ) {
-                            echo '<ul class="columns three">';
-                            while ( $sermons_query->have_posts() && $counter >= 1) {
+                            echo '<ul class="columns two">';
+                            while ( $sermons_query->have_posts() ) {
                                 $sermons_query->the_post();
 
-                                echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+                                echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a><br/>
+                                <span class="preacher">' . get_the_term_list( $post->ID, 'wpfc_preacher' ) . '</span> | ';
 
-                                $counter++;
+                                wpfc_sermon_date( get_option( 'date_format' ) );
+
+                                echo '</li>';
                             }
                             echo '</ul>';
                         }
@@ -197,6 +200,8 @@ get_header(); ?>
 
             <?php // End of the loop.
         endwhile;
+
+        wp_reset_postdata();
         ?>
 
     </main><!-- .site-main -->
