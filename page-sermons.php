@@ -34,7 +34,7 @@ get_header(); ?>
                     // WP_Query arguments
                     $args = array (
                         'post_type'              => array( 'wpfc_sermon' ),
-                        'posts_per_page'         => '11',
+                        'posts_per_page'         => '51',
                         'post_status'            => 'publish',
                         'order'                  => 'DESC',
                         'orderby'                => 'meta_value',
@@ -83,31 +83,9 @@ get_header(); ?>
                         } ?>
                     </section>
 
-                    <section class="sermon-block date">
-                        <header>
-                            <h2 class="entry-title">By Date</h2>
-                        </header>
-                        <?php
-                        if ( $sermons_query->have_posts() ) {
-                            echo '<ul class="columns two">';
-                            while ( $sermons_query->have_posts() ) {
-                                $sermons_query->the_post();
-
-                                echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a><br/>
-                                <span class="preacher">' . get_the_term_list( $post->ID, 'wpfc_preacher' ) . '</span> | ';
-
-                                wpfc_sermon_date( get_option( 'date_format' ) );
-
-                                echo '</li>';
-                            }
-                            echo '</ul>';
-                        }
-                        ?>
-                    </section>
-
                     <section class="sermon-block event">
                         <header>
-                            <h2 class="entry-title">By Event</h2>
+                            <h2 class="entry-title">Events</h2>
                         </header>
                         <?php
                         $events = get_terms( array(
@@ -126,9 +104,9 @@ get_header(); ?>
                         } ?>
                     </section>
 
-                    <section class="sermon-block speaker">
+                    <section class="sermon-block search">
                         <header>
-                            <h2 class="entry-title">By Speaker</h2>
+                            <h2 class="entry-title">Search</h2>
                         </header>
                         <?php
                         $speakers = get_terms( array(
@@ -139,21 +117,16 @@ get_header(); ?>
 
                         if ( $speakers ) {
                             echo '<form class="wpfc_speaker" action="' . home_url() . '" data-path="' . home_url( '/' . $sermons_slug . '/preacher/' ) . '">
-                            <select class="preachers" name="wpfc_preacher">';
+                            <h3>Speakers</h3>
+                            <select class="sermon-search" name="wpfc_preacher">';
                             foreach ( $speakers as $speaker ) {
                                 echo '<option value="' . $speaker->slug . '">' . $speaker->name. '</option>';
                             }
                             echo '</select>
                             <button type="submit">Go&rarr;</button>
                             </form>';
-                        } ?>
-                    </section>
+                        }
 
-                    <section class="sermon-block book">
-                        <header>
-                            <h2 class="entry-title">By Book</h2>
-                        </header>
-                        <?php
                         $books = get_terms( array(
                             'taxonomy'      => 'wpfc_bible_book',
                             'orderby'       => 'term_order',
@@ -161,12 +134,44 @@ get_header(); ?>
                         ));
 
                         if ( $books ) {
-                            echo '<ul class="columns three">';
+                            echo '<form class="wpfc_book" action="' . home_url() . '" data-path="' . home_url( '/' . $sermons_slug . '/book/' ) . '">
+                            <h3>Books</h3>
+                            <select class="sermon-search" name="wpfc_book">';
                             foreach ( $books as $book ) {
-                                echo '<li><a href="' . home_url( '/' . $sermons_slug . '/book/' . $book->slug ) . '">' . $book->name. '</a></li>';
+                                echo '<option value="' . $book->slug . '">' . $book->name. '</option>';
                             }
-                            echo '</ul>';
+                            echo '</select>
+                            <button type="submit">Go&rarr;</button>
+                            </form>';
                         } ?>
+                    </section>
+
+                    <section class="sermon-block date">
+                        <header>
+                            <h2 class="entry-title">Recent Sermons</h2>
+                        </header>
+                        <?php
+                        if ( $sermons_query->have_posts() ) {
+                            while ( $sermons_query->have_posts() ) {
+                                $sermons_query->the_post();
+                                ?>
+
+                                <h2><a title="<?php echo esc_attr( get_the_title() ); ?>" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                                <p class="meta">
+                                    <?php
+                                    // preacher
+                                    the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span> | ' );
+
+                                    // sermon date
+                                    wpfc_sermon_date( get_option( 'date_format' ) );
+
+                                    // Bible passage
+                                    wpfc_sermon_meta( 'bible_passage', ' | <span class="bible_passage">', '</span>' ); ?>
+                                </p>
+                                <?php echo wpfc_sermon_media();
+                            }
+                        }
+                        ?>
                     </section>
 
                     <?php

@@ -22,7 +22,7 @@
         }
 
         // chosen
-        $('select.preachers, select[name="archive-dropdown"]').chosen();
+        $('select.sermon-search, select[name="archive-dropdown"]').chosen();
 
         // hide collapse-form and add toggle button
         $('.collapse-form').slideUp().before('<p><button type="button" class="toggle-form">Expand Form <span class="dashicons dashicons-arrow-down-alt2"></span></button></p>');
