@@ -23,13 +23,15 @@
 
 <?php
     if ( 'page' == get_post_type() && get_field( 'tall_header_image' ) ) {
-        $body_class_string = ' tall';
+        $body_class_string = $post->post_name . ' tall';
+    } elseif ( is_singular() ) {
+        $body_class_string = $post->post_name;
     } else {
-        $body_class_string = NULL;
+        $body_class_string = '';
     }
 ?>
 
-<body <?php body_class( $post->post_name . $body_class_string ); ?>>
+<body <?php body_class( $body_class_string ); ?>>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
     <header id="masthead" class="site-header" role="banner">
