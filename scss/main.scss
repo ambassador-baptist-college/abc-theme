@@ -1677,6 +1677,7 @@ blockquote:after,
 
     .abc-logo {
         max-width: 300px;
+        filter: drop-shadow(-0.1rem 0.1rem 0 rgba(0,0,0,.5));
 
         @media screen and (min-width: 56.875em) { display: none; }
         @media print { fill: black !important; }
