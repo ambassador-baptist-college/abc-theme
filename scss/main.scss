@@ -524,7 +524,8 @@ dd {
     margin: 0 0 1.75em;
 }
 
-img {
+img,
+svg {
     height: auto;
     /* Make sure images are scaled correctly. */
     max-width: 100%;
@@ -1277,6 +1278,20 @@ a {
     padding: 0 0.538461538em;
 }
 
+@media screen and (min-width: 56.875em) {
+    #menu-item-198 {
+        margin: 0 2%;
+        min-width: 150px;
+        flex-grow: 2;
+
+        a {
+            background: url('../img/ABC-logo.svg') no-repeat center / contain;
+            height: 8em;
+        }
+
+        .menu-item:not(&) { margin-top: 2.5em; }
+    }
+}
 
 /**
  * 7.0 - Accessibility
@@ -1642,16 +1657,6 @@ blockquote:after,
             padding-left: 1em;
         }
     }
-
-    @media screen and (min-width: 44.375em) {
-        &.site-content.site-inner {
-            .site-branding, .site-header-menu {
-                padding-left: 5em;
-            }
-
-            .site-branding { padding-right: 5em; }
-        }
-    }
 }
 
 .site-branding {
@@ -1668,6 +1673,14 @@ blockquote:after,
     font-weight: 700;
     line-height: 1.2173913043;
     margin: 0;
+    text-align: center;
+
+    .abc-logo {
+        max-width: 300px;
+
+        @media screen and (min-width: 56.875em) { display: none; }
+        @media print { fill: black !important; }
+    }
 }
 
 .site-branding .site-title a {
@@ -3517,17 +3530,18 @@ p > video {
     }
 
     .main-navigation {
-        margin: 0 -0.875em;
-        width: 100%;
+        &, & .primary-menu { width: 100%; }
+
+        .primary-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
     .main-navigation .primary-menu,
     .main-navigation .primary-menu > li {
         border: 0;
-    }
-
-    .main-navigation .primary-menu > li {
-        float: left;
     }
 
     .main-navigation a {
