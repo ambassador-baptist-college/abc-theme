@@ -2533,30 +2533,20 @@ body.search-no-results .page-header {
 
     .entry-content {
         color: white;
+        text-align: center;
 
         h2 {
             margin: 0;
-            font-family: $font-stack-sans-serif;
-            font-style: italic;
-            font-weight: 300;
+            font-weight: 400;
+            text-transform: uppercase;
             text-shadow: -0.1rem 0.1rem 0 rgba(0,0,0,0.5);
 
-            @media (min-width: 30em) { font-size: 1.75rem; }
-            @media (min-width: 37.5em) { font-size: 2.25rem; }
-
-            & + h2 {
-                font-size: 3em;
-                margin: 0 0 1rem 15%;
-
-                @media (max-width: 320px) {
-                    font-size: 2rem;
-                    margin-left: 0;
-                }
-                @media (min-width: 37.5em) { margin-left: 30%; }
+            @media (min-width: 30em) { font-size: 2rem; }
+            @media (min-width: 37.5em) {
+                font-size: 3rem;
+                letter-spacing: 0.03em;
             }
         }
-
-        p { text-align: center; }
 
         .button {
             display: inline-block;
