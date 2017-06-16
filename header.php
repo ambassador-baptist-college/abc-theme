@@ -29,6 +29,12 @@
     } else {
         $body_class_string = '';
     }
+
+    if ( is_front_page() ) {
+        $site_title_tag = 'h1';
+    } else {
+        $site_title_tag = 'p';
+    }
 ?>
 
 <body <?php body_class( $body_class_string ); ?>>
@@ -37,15 +43,9 @@
     <header id="masthead" class="site-header" role="banner">
         <div class="site-header-main site-inner site-content">
             <div class="site-branding">
-                <?php if ( is_front_page() && is_home() ) : ?>
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Ambassador Baptist College" rel="home">
-                        <?php include( get_stylesheet_directory() . '/img/ABC-logo.svg' ); ?>
-                    </a></h1>
-                <?php else : ?>
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Ambassador Baptist College" rel="home">
-                        <?php include( get_stylesheet_directory() . '/img/ABC-logo.svg' ); ?>
-                    </a></p>
-                <?php endif; ?>
+                <<?php echo $site_title_tag ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Ambassador Baptist College" rel="home">
+                    <?php include( get_stylesheet_directory() . '/img/ABC-logo.svg' ); ?>
+                </a></<?php echo $site_title_tag ?>>
             </div><!-- .site-branding -->
 
             <?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
