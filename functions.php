@@ -17,7 +17,7 @@ function abc_webfonts_add() {
     ?><script>
     WebFontConfig = {
         google: {
-            families: ['Raleway:400,400italic,600,600italic', 'Arvo:400,400italic']
+            families: ['Montserrat:400,400italic,600,600italic', 'Rokkitt:400,700']
         }
     };
 
