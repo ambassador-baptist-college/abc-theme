@@ -2509,6 +2509,14 @@ body.search-no-results .page-header {
 
     &.tall .content-area { background-color: transparent; }
 
+    &-video-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+    }
+
     .site-main {
         display: flex;
         flex-direction: column;
