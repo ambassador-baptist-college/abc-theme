@@ -1289,7 +1289,7 @@ a {
             height: 8em;
         }
 
-        .menu-item:not(&) { margin-top: 2.5em; }
+        #menu-main-menu > .menu-item:not(&) { margin-top: 2.5em; }
     }
 }
 
