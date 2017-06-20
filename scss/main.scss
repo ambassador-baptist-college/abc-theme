@@ -2513,8 +2513,13 @@ body.search-no-results .page-header {
         position: absolute;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        overflow: hidden;
         margin: 0;
+
+        video {
+            max-width: none;
+            min-height: 100%;
+        }
     }
 
     .site-main {

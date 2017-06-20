@@ -26,7 +26,7 @@
             posterUrl = themeUrl+'/video/poster.jpg',
             videoContainerClass = 'home-video-background',
             $videoContainer = container.children('.'+videoContainerClass),
-            videoSrc = '<video class="'+videoContainerClass+'" autoplay="true" loop="true" poster="'+posterUrl+'" src="'+videoRes[bestHeight].url+'" style="dispay: none;"></video>';
+            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoRes[bestHeight].height.toString()+'"><video autoplay="true" loop="true" src="'+videoRes[bestHeight].url+'" style="dispay: none;"></video></div>';
 
         console.log('computed height:');console.log(height);
         console.log('closest available source:');console.log(bestHeight);
@@ -35,8 +35,8 @@
         if ($videoContainer.length == 0) {
             container.prepend(videoSrc)
             $videoContainer.fadeIn('slow');
-        } else {
-            $videoContainer.html(videoSrc);
+        } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].height.toString()) {
+            $videoContainer.replaceWith(videoSrc);
         }
     }
 
@@ -51,7 +51,7 @@
         var closest = Object.keys(object).reduce(function(a, b){ return object[a] > object[b] ? a : b });
         for (var i in object) {
             if (object.hasOwnProperty(i)) {
-                if (i >= target && i < closest) {
+                if (Number(i) >= Number(target) && Number(i) < Number(closest)) {
                     closest = i;
                 }
             }
