@@ -87,7 +87,6 @@ html {
 
 body {
     margin: 0;
-    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -2515,10 +2514,13 @@ body.search-no-results .page-header {
         height: 100%;
         overflow: hidden;
         margin: 0;
+        background-color: $color-blue;
 
         video {
             max-width: none;
             min-height: 100%;
+            display: block;
+            margin: 0 auto;
         }
     }
 
@@ -2755,6 +2757,8 @@ body.search-no-results .page-header {
             @extend %one-liner;
         }
     }
+
+    .site-footer .site-inner { max-width: 1600px; }
 }
 
 .tall {

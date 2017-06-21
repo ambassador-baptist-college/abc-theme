@@ -22,36 +22,43 @@
     function getBestVideo(container) {
         var width = container.width(),
             height = container.height(),
-            bestHeight = closest(videoRes, height),
-            posterUrl = themeUrl+'/video/poster.jpg',
+            bestHeight = _bestFrameSize(videoRes, height, width).toString(),
             videoContainerClass = 'home-video-background',
             $videoContainer = container.children('.'+videoContainerClass),
             videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoRes[bestHeight].height.toString()+'"><video autoplay="true" loop="true" src="'+videoRes[bestHeight].url+'" style="dispay: none;"></video></div>';
 
-        console.log('computed height:');console.log(height);
-        console.log('closest available source:');console.log(bestHeight);
-        console.log('best URL:');console.log(videoRes[bestHeight]);
+        console.info('computed height: '+height.toString()+'; nearest source: '+bestHeight.toString()+'; URL: '+videoRes[bestHeight].url.toString());
 
-        if ($videoContainer.length == 0) {
+        if ($videoContainer.length === 0) {
             container.prepend(videoSrc)
             $videoContainer.fadeIn('slow');
-        } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].height.toString()) {
+        } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].height) {
             $videoContainer.replaceWith(videoSrc);
         }
     }
 
     /**
-     * Get object key closest to input
-     * @param   {object}  object input object
-     * @param   {integer} target number to check
-     * @returns {integer} key of nearest object item
+     * Get best framesize given height and width
+     * @private
+     * @param   {object}  object object of available framesizes
+     * @param   {integer} height container height
+     * @param   {integer} width  container width
+     * @returns {integer} key of best framesize
      */
-    function closest(object, target){
-        // Get the highest number in case it matches nothing
-        var closest = Object.keys(object).reduce(function(a, b){ return object[a] > object[b] ? a : b });
+    function _bestFrameSize(object, height, width){
+        // get the highest number in case it matches nothing
+        var closest = Object.keys(object).reduce(function(a, b){ return object[a] > object[b] ? a : b }),
+            maxWidth = 1600;
+
+        // return largest framesize if super-wide
+        if (width >= maxWidth) {
+            return closest;
+        }
+
+        // loop over all framesizes
         for (var i in object) {
             if (object.hasOwnProperty(i)) {
-                if (Number(i) >= Number(target) && Number(i) < Number(closest)) {
+                if (Number(i) >= Number(height) && Number(i) < Number(closest)) {
                     closest = i;
                 }
             }
