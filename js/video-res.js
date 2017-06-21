@@ -27,7 +27,7 @@
             $videoContainer = container.children('.'+videoContainerClass),
             videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoRes[bestHeight].height.toString()+'"><video autoplay="true" loop="true" src="'+videoRes[bestHeight].url+'" style="dispay: none;"></video></div>';
 
-        console.info('computed height: '+height.toString()+'; nearest source: '+bestHeight.toString()+'; URL: '+videoRes[bestHeight].url.toString());
+        console.info('computed size: '+height.toString()+'×'+width.toString()+'; source with nearest height: '+bestHeight.toString()+'; URL: '+videoRes[bestHeight].url.toString());
 
         if ($videoContainer.length === 0) {
             container.prepend(videoSrc)
