@@ -3397,6 +3397,8 @@ p > video {
 
     .site-main > article {
         margin-bottom: 5.25em;
+
+        .home & { margin-bottom: 0; }
     }
 
     .entry-title {
@@ -3673,11 +3675,11 @@ p > video {
 
     .site-content {
         .tall & {
-            padding-bottom: 16em;
+            padding-bottom: 25em;
             margin-bottom: -15em;
         }
 
-        .home & { margin-bottom: -20em; }
+        .home & { margin-bottom: -30em; }
     }
 
     .content-area {
@@ -3975,7 +3977,7 @@ p > video {
             margin-bottom: -30em;
         }
 
-        .home & { margin-bottom: -35em; }
+        .home & { margin-bottom: -30em; }
     }
 
     .site-branding,
