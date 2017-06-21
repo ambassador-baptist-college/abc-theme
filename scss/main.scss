@@ -4011,26 +4011,27 @@ p > video {
         margin-bottom: 7.0em;
     }
 
+    .home-stripe h2,
     .entry-title {
         font-size: 40px;
         font-size: 2.5rem;
         line-height: 1.225;
         margin-bottom: 1.05em;
-    }
 
-    .format-aside .entry-title,
-    .format-image .entry-title,
-    .format-video .entry-title,
-    .format-quote .entry-title,
-    .format-gallery .entry-title,
-    .format-status .entry-title,
-    .format-link .entry-title,
-    .format-audio .entry-title,
-    .format-chat .entry-title {
-        font-size: 23px;
-        font-size: 1.4375em;
-        line-height: 1.304347826;
-        margin-bottom: 1.826086957em;
+        .format-aside &,
+        .format-image &,
+        .format-video &,
+        .format-quote &,
+        .format-gallery &,
+        .format-status &,
+        .format-link &,
+        .format-audio &,
+        .format-chat & {
+            font-size: 23px;
+            font-size: 1.4375em;
+            line-height: 1.304347826;
+            margin-bottom: 1.826086957em;
+        }
     }
 
     .post-thumbnail {
@@ -4379,24 +4380,25 @@ p > video {
         display: block;
     }
 
+    .home-stripe h2,
     .entry-title {
         font-size: 24.75pt;
         line-height: 1.2727272727;
         margin-bottom: 1.696969697em;
-    }
 
-    .format-aside .entry-title,
-    .format-image .entry-title,
-    .format-video .entry-title,
-    .format-quote .entry-title,
-    .format-gallery .entry-title,
-    .format-status .entry-title,
-    .format-link .entry-title,
-    .format-audio .entry-title,
-    .format-chat .entry-title {
-        font-size: 17.25pt;
-        line-height: 1.304347826;
-        margin-bottom: 1.826086957em;
+        .format-aside &,
+        .format-image &,
+        .format-video &,
+        .format-quote &,
+        .format-gallery &,
+        .format-status &,
+        .format-link &,
+        .format-audio &,
+        .format-chat & {
+            font-size: 17.25pt;
+            line-height: 1.304347826;
+            margin-bottom: 1.826086957em;
+        }
     }
 
     .entry-content h1,
