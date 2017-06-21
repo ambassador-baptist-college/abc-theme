@@ -65,74 +65,32 @@ get_header(); ?>
         ?>
 
         <section class="home-features home-stripe">
-            <section class="events">
-                <header>
-                    <h2 class="entry-title">Events</h2>
-                </header>
-                <?php
-                    if ( get_field( 'events_content' ) ) {
-                        the_field( 'events_content' );
-                    }
-                    if ( get_field( 'events_link' ) ) {
-                        echo '<p class="read-more"><a href="' . get_field( 'events_link' ) . '">Read more</a></p>';
-                    }
-                    if ( get_field( 'events_background' ) ) {
-                        $home_features_styles .= '.home-features .events { background-image: url(\'' . get_field( 'events_background' ) . '\'); }';
-                    }
-                ?>
+            <?php if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) { ?>
+            <section class="button-1">
+                <a href="<?php the_field( 'button_1_link' ) ?>">
+                    <?php echo wp_get_attachment_image( get_field( 'button_1_image' ), 'full' ); ?>
+                    <h2 class="entry-title"><?php the_field( 'button_1_text' ) ?></h2>
+                </a>
             </section>
-            <section class="news">
-                <header>
-                    <h2 class="entry-title">News</h2>
-                </header>
-                <?php
-                    // WP_Query arguments
-                    $args = array (
-                        'post_type'              => array( 'post' ),
-                        'posts_per_page'         => '5',
-                        'post_status'            => 'publish',
-                    );
+            <?php } ?>
 
-                    // The Query
-                    $news_query = new WP_Query( $args );
-                    // The Loop
-                    if ( $news_query->have_posts() ) {
-                        echo '<ul>';
-                        while ( $news_query->have_posts() ) {
-                            $news_query->the_post();
-                            echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>' . "\n";
-                        }
-                        echo '</ul>
-                        <p class="read-more"><a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '">Read More</a></p>';
-                    }
-                    wp_reset_postdata();
-                    if ( get_field( 'news_background' ) ) {
-                        $home_features_styles .= '.home-features .news { background-image: url(\'' . get_field( 'news_background' ) . '\'); }' . "\n";
-                    }
-                ?>
+            <?php if ( get_field( 'button_2_text' ) && get_field( 'button_2_link' ) && get_field( 'button_2_image' ) ) { ?>
+            <section class="button-2">
+                <a href="<?php the_field( 'button_2_link' ) ?>">
+                    <?php echo wp_get_attachment_image( get_field( 'button_2_image' ), 'full' ); ?>
+                    <h2 class="entry-title"><?php the_field( 'button_2_text' ) ?></h2>
+                </a>
             </section>
-            <section class="info">
-                <header>
-                    <h2 class="entry-title">Info</h2>
-                </header>
-                <?php
-                    if ( get_field( 'contact_info_content' ) ) {
-                        the_field( 'contact_info_content' );
-                    }
-                    if ( get_field( 'contact_info_link' ) ) {
-                        echo '<p class="read-more"><a href="' . get_field( 'contact_info_link' ) . '">Read more</a></p>';
-                    }
-                    if ( get_field( 'contact_info_background' ) ) {
-                        $home_features_styles .= '.home-features .info { background-image: url(\'' . get_field( 'contact_info_background' ) . '\'); }' . "\n";
-                    }
+            <?php } ?>
 
-                    if ( $home_features_styles ) { ?>
-                    <style type="text/css">
-                        <?php echo $home_features_styles; ?>
-                    </style>
-                    <?php }
-                ?>
+            <?php if ( get_field( 'button_3_text' ) && get_field( 'button_3_link' ) && get_field( 'button_3_image' ) ) { ?>
+            <section class="button-3">
+                <a href="<?php the_field( 'button_3_link' ) ?>">
+                    <?php echo wp_get_attachment_image( get_field( 'button_3_image' ), 'full' ); ?>
+                    <h2 class="entry-title"><?php the_field( 'button_3_text' ) ?></h2>
+                </a>
             </section>
+            <?php } ?>
         </section><!-- .home-features -->
 
         <section class="apply home-stripe">
