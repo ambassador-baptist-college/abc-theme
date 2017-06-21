@@ -11,7 +11,10 @@
  * @since Twenty Sixteen 1.0
  */
 
-get_header(); ?>
+get_header();
+
+wp_enqueue_script( 'video-res' );
+?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">

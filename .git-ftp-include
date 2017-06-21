@@ -10,3 +10,5 @@ js/chosen.min.js:js/chosen.js
 js/grad-offering.min.js:js/grad-offering.js
 
 js/theme.min.js:js/theme.js
+
+js/video-res.min.js:js/video-res.js
