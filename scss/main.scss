@@ -3595,6 +3595,11 @@ p > video {
         top: -9px;
     }
 
+    .main-navigation li:nth-child(-n+3) ul:before {
+        left: 9px;
+        right: inherit;
+    }
+
     .main-navigation ul ul:after {
         border-color: #fff transparent;
         border-width: 0 8px 8px;
@@ -3602,11 +3607,23 @@ p > video {
         top: -7px;
     }
 
+    .main-navigation li:nth-child(-n+3) ul:after {
+        left: 11px;
+        right: inherit;
+    }
+
     .main-navigation li:hover > ul,
     .main-navigation li.focus > ul {
         left: auto;
         right: 0;
         opacity: 1;
+    }
+
+    .main-navigation li:nth-child(-n+3) {
+        &:hover > ul, &.focus > ul {
+            right: auto;
+            right: auto;
+        }
     }
 
     .main-navigation ul ul li:hover > ul,
