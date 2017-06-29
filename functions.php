@@ -93,6 +93,8 @@ function twentysixteen_entry_meta() {
         );
     }
 
+    do_action( 'custom_footer_meta' );
+
     if ( in_array( get_post_type(), array( 'post', 'attachment', 'newsletter' ) ) ) {
         twentysixteen_entry_date();
     }
