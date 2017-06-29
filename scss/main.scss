@@ -2819,6 +2819,8 @@ ul.columns {
 
 .faculty-member {
     clear: both;
+
+    ul, li { list-style-type: none; }
 }
 
 #map {
