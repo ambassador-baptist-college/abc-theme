@@ -1,0 +1,113 @@
+{
+    "key": "group_5955568a14e8f",
+    "title": "Chapel Hour Episodes",
+    "fields": [
+        {
+            "key": "field_5955571e69b5c",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Set the release date using the “Publish immediately” link to the right of this box.\r\n\r\nAdd any extra info (description, etc.) in the main post editor below.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_595556906df87",
+            "label": "Speaker Name",
+            "name": "speaker_name",
+            "type": "text",
+            "instructions": "The speaker’s name",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "John Doe",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5955569c6df88",
+            "label": "Media File",
+            "name": "media_file",
+            "type": "url",
+            "instructions": "Media file URL",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/media.ambassadors.edu\/chapel-hour\/…"
+        },
+        {
+            "key": "field_595564d3af598",
+            "label": "Media Duration",
+            "name": "media_duration",
+            "type": "time_picker",
+            "instructions": "Format as hours:minutes:seconds",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "H:i:s",
+            "return_format": "H:i:s"
+        },
+        {
+            "key": "field_5955686a39dfd",
+            "label": "File Size",
+            "name": "media_file_size",
+            "type": "number",
+            "instructions": "Media file size in bytes",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 11668901,
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "chapel_hour"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1498769587
+}
