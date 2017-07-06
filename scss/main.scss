@@ -1280,7 +1280,7 @@ a {
 @media screen and (min-width: 56.875em) {
     #menu-item-198 {
         margin: 0 2%;
-        min-width: 150px;
+        min-width: 110px;
         flex-grow: 2;
 
         a {
@@ -1675,6 +1675,7 @@ blockquote:after,
     text-align: center;
 
     .abc-logo {
+        width: 100%;
         max-width: 300px;
         filter: drop-shadow(-0.1rem 0.1rem 0 rgba(0,0,0,.5));
 
