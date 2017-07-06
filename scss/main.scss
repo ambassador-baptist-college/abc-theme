@@ -41,6 +41,7 @@
  * 0.0 - Settings
  *
  */
+$font-size-base:                 18px;
 $font-stack-sans-serif:          Montserrat, 'Helvetica Neue', Helvetica, sans-serif;
 $font-stack-serif:               Rokkitt, Georgia, serif;
 
@@ -288,7 +289,7 @@ optgroup {
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-family: "Genericons";
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
@@ -312,8 +313,7 @@ select,
 textarea {
     color: $color-body-text;
     font-family: $font-stack-sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: $font-size-base;
     line-height: 1.75;
 }
 
@@ -353,8 +353,7 @@ blockquote {
     border: 0 solid $color-body-text;
     border-left-width: 4px;
     color: $color-body-text-secondary;
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 1.1875em;
     font-style: italic;
     line-height: 1.4736842105;
     margin: 0 0 1.4736842105em;
@@ -381,8 +380,7 @@ blockquote cite,
 blockquote small {
     color: $color-body-text;
     display: block;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.75;
 }
 
@@ -422,8 +420,7 @@ pre {
 
 pre {
     border: 1px solid $color-gray;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.3125;
     margin: 0 0 1.75em;
     max-width: 100%;
@@ -685,8 +682,7 @@ textarea {
     color: $color-body-text-secondary;
     display: block;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     letter-spacing: 0.076923077em;
     line-height: 1.6153846154;
     margin-bottom: 1.75em;
@@ -712,7 +708,7 @@ input[type="search"].search-field {
 
 .search-submit:before {
     content: "\f400";
-    font-size: 24px;
+    font-size: 1.5em;
     left: 2px;
     line-height: 42px;
     position: relative;
@@ -880,7 +876,7 @@ a {
         border: 0 solid $color-gray;
         border-left-width: 1px;
         content: "\f431";
-        font-size: 24px;
+        font-size: 1.5em;
         left: 1px;
         position: relative;
         width: 48px;
@@ -1076,8 +1072,7 @@ a {
 
 .post-navigation .meta-nav {
     color: $color-body-text-secondary;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     letter-spacing: 0.076923077em;
     line-height: 1.6153846154;
     margin-bottom: 0.5384615385em;
@@ -1087,8 +1082,7 @@ a {
 .post-navigation .post-title {
     display: inline;
     font-family: $font-stack-sans-serif;
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 1.4375em;
     font-weight: 700;
     line-height: 1.2173913043;
     text-rendering: optimizeLegibility;
@@ -1106,8 +1100,7 @@ a {
 .pagination {
     border-top: 4px solid $color-body-text;
     font-family: $font-stack-sans-serif;
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 1.1875em;
     margin: 0 7.6923% 2.947368421em;
     min-height: 56px;
     position: relative;
@@ -1145,7 +1138,7 @@ a {
 .pagination .nav-links:before,
 .pagination .nav-links:after {
     color: #fff;
-    font-size: 32px;
+    font-size: 2em;
     line-height: 51px;
     opacity: 0.3;
     position: absolute;
@@ -1199,7 +1192,7 @@ a {
 
 .pagination .prev:before,
 .pagination .next:before {
-    font-size: 32px;
+    font-size: 2em;
     height: 53px;
     line-height: 52px;
     position: relative;
@@ -1245,8 +1238,7 @@ a {
     border-bottom: 1px solid $color-gray;
     color: $color-body-text-secondary;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
     margin: 0 7.6923% 2.1538461538em;
     padding: 1.0769230769em 0;
@@ -1315,7 +1307,7 @@ a {
     color: #21759b;
     display: block;
     font-family: $font-stack-sans-serif;
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 700;
     left: -9999em;
     outline: none;
@@ -1435,8 +1427,7 @@ blockquote:after,
 
 .widget .widget-title {
     font-family: $font-stack-sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
     letter-spacing: 0.046875em;
     line-height: 1.3125;
     margin: 0 0 1.75em;
@@ -1486,8 +1477,7 @@ blockquote:after,
     color: $color-body-text-secondary;
     display: block;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.615384615;
     margin-bottom: 0.538461538em;
 }
@@ -1506,8 +1496,7 @@ blockquote:after,
     color: $color-body-text-secondary;
     display: block;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-style: normal;
     line-height: 1.615384615;
     margin-bottom: 0.538461538em;
@@ -1549,7 +1538,7 @@ blockquote:after,
     li a {
         box-shadow: none;
 
-        i { font-size: 36px !important; }
+        i { font-size: 2.25em !important; }
     }
 }
 
@@ -1667,8 +1656,7 @@ blockquote:after,
 
 .site-title {
     font-family: $font-stack-serif;
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 1.4375em;
     font-weight: 700;
     line-height: 1.2173913043;
     margin: 0;
@@ -1693,8 +1681,7 @@ blockquote:after,
 .site-description {
     color: $color-body-text-secondary;
     display: none;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-weight: 400;
     line-height: 1.0769230769;
     margin: 0.538461538em 0 0;
@@ -1704,8 +1691,7 @@ blockquote:after,
     background-color: transparent;
     border: 1px solid white;
     color: white;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     margin: 1.076923077em auto;
     padding: .84375em .875em .78125em;
     display: block;
@@ -1772,8 +1758,7 @@ blockquote:after,
 
 .entry-title {
     font-family: $font-stack-serif;
-    font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     font-weight: 700;
     line-height: 1.25;
     margin-bottom: 1em;
@@ -1821,8 +1806,7 @@ a.post-thumbnail:focus {
 .entry-summary h1,
 .comment-content h1,
 .textwidget h1 {
-    font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     line-height: 1.25;
     margin-top: 2em;
     margin-bottom: 1em;
@@ -1832,8 +1816,7 @@ a.post-thumbnail:focus {
 .entry-summary h2,
 .comment-content h2,
 .textwidget h2 {
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 1.4375em;
     line-height: 1.2173913043;
     margin-top: 2.4347826087em;
     margin-bottom: 1.2173913043em;
@@ -1843,8 +1826,7 @@ a.post-thumbnail:focus {
 .entry-summary h3,
 .comment-content h3,
 .textwidget h3 {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 1.1875em;
     line-height: 1.1052631579;
     margin-top: 2.9473684211em;
     margin-bottom: 1.4736842105em;
@@ -1855,8 +1837,7 @@ a.post-thumbnail:focus {
 .comment-content,
 .textwidget {
     h4, h5, h6 {
-        font-size: 16px;
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 1.3125;
         margin-top: 3.5em;
         margin-bottom: 1.75em;
@@ -1908,8 +1889,7 @@ a.post-thumbnail:focus {
 
 body:not(.search-results) .entry-summary {
     color: $color-body-text-secondary;
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 1.1875em;
     line-height: 1.4736842105;
     margin-bottom: 1.4736842105em;
 }
@@ -2004,8 +1984,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .entry-content .author-title {
     clear: none;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 700;
     line-height: 1.75;
     margin: 0;
@@ -2013,8 +1992,7 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .author-bio {
     color: $color-body-text-secondary;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
     margin-bottom: 1.6153846154em;
     overflow: hidden;
@@ -2027,8 +2005,7 @@ body:not(.search-results) .entry-summary > :last-child,
 .entry-footer {
     color: $color-body-text-secondary;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
     margin-top: 2.1538461538em;
 }
@@ -2056,8 +2033,7 @@ body:not(.search-results) .entry-summary > :last-child,
     color: $color-body-text-secondary;
     display: block;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     letter-spacing: 0.076923077em;
     line-height: 1.6153846154;
     margin-bottom: 0.5384615385em;
@@ -2096,15 +2072,13 @@ body.search-no-results .page-header {
 
 .page-title {
     font-family: $font-stack-serif;
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 1.4375em;
     line-height: 1.2173913043;
 }
 
 .taxonomy-description {
     color: $color-body-text-secondary;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
 }
 
@@ -2127,8 +2101,7 @@ body.search-no-results .page-header {
     border: 1px solid $color-gray;
     border-radius: 2px;
     display: inline-block;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     height: 1.8461538462em;
     line-height: 1.6923076923em;
     margin-right: 0.3076923077em;
@@ -2164,8 +2137,7 @@ body.search-no-results .page-header {
 
 .entry-caption {
     color: $color-body-text-secondary;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-style: italic;
     line-height: 1.6153846154;
     padding-top: 1.0769230769em;
@@ -2193,8 +2165,7 @@ body.search-no-results .page-header {
 .format-link .entry-title,
 .format-audio .entry-title,
 .format-chat .entry-title {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 1.1875em;
     line-height: 1.473684211;
     margin-bottom: 1.473684211em;
 }
@@ -2222,8 +2193,7 @@ body.search-no-results .page-header {
 .comment-reply-title {
     border-top: 4px solid $color-body-text;
     font-family: $font-stack-serif;
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 1.4375em;
     font-weight: 700;
     line-height: 1.3125;
     padding-top: 1.217391304em;
@@ -2278,8 +2248,7 @@ body.search-no-results .page-header {
 .pingback .edit-link {
     color: $color-body-text-secondary;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
 }
 
@@ -2328,8 +2297,7 @@ body.search-no-results .page-header {
     color: $color-blue;
     display: inline-block;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1;
     margin-top: 2.1538461538em;
     padding: 0.5384615385em 0.5384615385em 0.4615384615em;
@@ -2350,8 +2318,7 @@ body.search-no-results .page-header {
     color: $color-body-text-secondary;
     display: block;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     letter-spacing: 0.076923077em;
     line-height: 1.6153846154;
     margin-bottom: 0.5384615385em;
@@ -2367,8 +2334,7 @@ body.search-no-results .page-header {
 .logged-in-as,
 .form-allowed-tags {
     color: $color-body-text-secondary;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
     margin-bottom: 2.1538461538em;
 }
@@ -2422,7 +2388,7 @@ body.search-no-results .page-header {
 
 .comment-reply-title small a:before {
     content: "\f405";
-    font-size: 32px;
+    font-size: 2em;
     position: relative;
     top: -5px;
 }
@@ -2455,7 +2421,7 @@ body.search-no-results .page-header {
     width: 100%;
     padding: 2em;
     color: #fff;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     line-height: 1.6153846154;
     text-align: center;
 
@@ -2476,7 +2442,7 @@ body.search-no-results .page-header {
     border-top: none;
     padding-top: 0;
 
-    @media (min-width: 30em) { font-size: 1rem; }
+    @media (min-width: 30em) { font-size: 1em; }
 
     &, a { color: darken($color-body-text-secondary, 10%); }
     a { &:hover, &:active, &:focus { color: $color-blue; } }
@@ -2557,9 +2523,9 @@ body.search-no-results .page-header {
             text-transform: uppercase;
             text-shadow: -0.1rem 0.1rem 0 rgba(0,0,0,0.5);
 
-            @media (min-width: 30em) { font-size: 2rem; }
+            @media (min-width: 30em) { font-size: 2em; }
             @media (min-width: 44.375em) {
-                font-size: 3rem;
+                font-size: 3em;
                 letter-spacing: 0.03em;
             }
         }
@@ -2575,11 +2541,11 @@ body.search-no-results .page-header {
         margin-bottom: 2rem;
 
         h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3em;
+            margin-bottom: 1em;
 
-            @media (max-width: 480px) { font-size: 2rem; }
-            @media (max-width: 320px) { font-size: 1.5rem; }
+            @media (max-width: 480px) { font-size: 2em; }
+            @media (max-width: 320px) { font-size: 1.5em; }
         }
 
         & > h2 { text-align: center; }
@@ -2695,7 +2661,7 @@ body.search-no-results .page-header {
                 margin: 0;
                 padding: 0.666rem;
                 color: white;
-                font-size: 2rem;
+                font-size: 2em;
                 font-weight: 300;
                 text-shadow: 0 0 0.5rem rgba(0,0,0,0.5);
             }
@@ -2709,7 +2675,7 @@ body.search-no-results .page-header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 3rem;
+                font-size: 3em;
             }
 
             &.button-1 {
@@ -2879,7 +2845,7 @@ form[name="courses"] {
 
 .credit-hours {
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     background-color: $color-blue;
     color: white;
@@ -3227,8 +3193,7 @@ p > video {
 
 .wp-caption .wp-caption-text {
     color: $color-body-text-secondary;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-style: italic;
     line-height: 1.6153846154;
     padding-top: 0.5384615385em;
@@ -3291,8 +3256,7 @@ p > video {
 .gallery-caption {
     color: $color-body-text-secondary;
     display: block;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-style: italic;
     line-height: 1.6153846154;
     padding-top: 0.5384615385em;
@@ -3333,8 +3297,7 @@ p > video {
 }
 
 .widecolumn h2 {
-    font-size: 23px;
-    font-size: 1.4375rem;
+    font-size: 1.4375em;
     font-weight: 700;
     line-height: 1.2173913043;
     margin-bottom: 1.2173913043em;
@@ -3352,8 +3315,7 @@ p > video {
 .widecolumn .mu_register label {
     color: $color-body-text-secondary;
     font-family: $font-stack-sans-serif;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 0.8125em;
     font-weight: 400;
     letter-spacing: 0.076923077em;
     line-height: 1.6153846154;
@@ -3373,8 +3335,7 @@ p > video {
 .widecolumn .mu_register #user_email,
 .widecolumn .mu_register #blogname,
 .widecolumn .mu_register #user_name {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
     width: 100%;
 }
 
@@ -3390,8 +3351,7 @@ p > video {
 
 .widecolumn #submit,
 .widecolumn .mu_register input[type="submit"] {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
     margin: 0;
     width: auto;
 }
@@ -3448,8 +3408,7 @@ p > video {
     }
 
     .site-title {
-        font-size: 28px;
-        font-size: 1.75rem;
+        font-size: 1.75em;
         line-height: 1.25;
     }
 
@@ -3458,8 +3417,7 @@ p > video {
     }
 
     .menu-toggle {
-        font-size: 16px;
-        font-size: 1.0rem;
+        font-size: 1.0em;
         margin: 1.3125em auto;
         padding: 0.8125em 0.875em 0.6875em;
     }
@@ -3485,8 +3443,7 @@ p > video {
     }
 
     .post-navigation .post-title {
-        font-size: 28px;
-        font-size: 1.75rem;
+        font-size: 1.75em;
         line-height: 1.25;
     }
 
@@ -3506,8 +3463,7 @@ p > video {
     }
 
     .entry-title {
-        font-size: 33px;
-        font-size: 2.0625rem;
+        font-size: 2.0625em;
         line-height: 1.2727272727;
         margin-bottom: 0.8484848485em;
     }
@@ -3795,7 +3751,7 @@ p > video {
             float: none;
             margin: 0 auto;
             width: 80%;
-            font-size: 1.2rem;
+            font-size: 1.2em;
         }
     }
 
@@ -3822,8 +3778,7 @@ p > video {
     }
 
     .widget {
-        font-size: 13px;
-        font-size: 0.8125rem;
+        font-size: 0.8125em;
         line-height: 1.6153846154;
         margin-bottom: 3.230769231em;
         padding-top: 1.615384615em;
@@ -3850,8 +3805,7 @@ p > video {
     }
 
     .widget blockquote {
-        font-size: 16px;
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 1.3125;
         margin-bottom: 1.3125em;
         padding-left: 1.0625em;
@@ -3859,8 +3813,7 @@ p > video {
 
     .widget blockquote cite,
     .widget blockquote small {
-        font-size: 13px;
-        font-size: 0.8125rem;
+        font-size: 0.8125em;
         line-height: 1.6153846154;
     }
 
@@ -3870,8 +3823,7 @@ p > video {
     }
 
     .widget pre {
-        font-size: 13px;
-        font-size: 0.8125rem;
+        font-size: 0.8125em;
         line-height: 1.6153846154;
         margin-bottom: 1.6153846154em;
         padding: 0.5384615385em;
@@ -3886,8 +3838,7 @@ p > video {
     .widget input,
     .widget select,
     .widget textarea {
-        font-size: 13px;
-        font-size: 0.8125rem;
+        font-size: 0.8125em;
         line-height: 1.6153846154;
     }
 
@@ -3911,22 +3862,19 @@ p > video {
     }
 
     .widget h1 {
-        font-size: 23px;
-        font-size: 1.4375rem;
+        font-size: 1.4375em;
         line-height: 1.2173913043;
         margin-bottom: 0.9130434783em;
     }
 
     .widget h2 {
-        font-size: 19px;
-        font-size: 1.1875rem;
+        font-size: 1.1875em;
         line-height: 1.1052631579;
         margin-bottom: 1.1052631579em;
     }
 
     .widget h3 {
-        font-size: 16px;
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 1.3125;
         margin-bottom: 1.3125em;
     }
@@ -3934,8 +3882,7 @@ p > video {
     .widget h4,
     .widget h5,
     .widget h6 {
-        font-size: 13px;
-        font-size: 0.8125rem;
+        font-size: 0.8125em;
         line-height: 1.6153846154;
         margin-bottom: 0.9130434783em;
     }
@@ -3967,7 +3914,7 @@ p > video {
     }
 
     .widget .search-submit:before {
-        font-size: 16px;
+        font-size: 1em;
         left: 1px;
         line-height: 35px;
         width: 34px;
@@ -4124,8 +4071,7 @@ p > video {
 
     .home-stripe h2,
     .entry-title {
-        font-size: 40px;
-        font-size: 2.5rem;
+        font-size: 2.5em;
         line-height: 1.225;
         margin-bottom: 1.05em;
 
@@ -4138,7 +4084,6 @@ p > video {
         .format-link &,
         .format-audio &,
         .format-chat & {
-            font-size: 23px;
             font-size: 1.4375em;
             line-height: 1.304347826;
             margin-bottom: 1.826086957em;
@@ -4152,8 +4097,7 @@ p > video {
     .entry-content h1,
     .entry-summary h1,
     .comment-content h1 {
-        font-size: 33px;
-        font-size: 2.0625rem;
+        font-size: 2.0625em;
         line-height: 1.2727272727;
         margin-top: 1.696969697em;
         margin-bottom: 0.8484848485em;
@@ -4171,8 +4115,7 @@ p > video {
     .entry-content h3,
     .entry-summary h3,
     .comment-content h3 {
-        font-size: 23px;
-        font-size: 1.4375rem;
+        font-size: 1.4375em;
         line-height: 1.2173913043;
         margin-top: 2.4347826087em;
         margin-bottom: 1.2173913043em;
@@ -4194,8 +4137,7 @@ p > video {
     .comment-content h4,
     .comment-content h5,
     .comment-content h6 {
-        font-size: 19px;
-        font-size: 1.1875rem;
+        font-size: 1.1875em;
         line-height: 1.1052631579;
         margin-top: 2.9473684211em;
         margin-bottom: 1.473684211em;
@@ -4312,8 +4254,7 @@ p > video {
     }
 
     body:not(.search-results) .entry-summary {
-        font-size: 23px;
-        font-size: 1.4375rem;
+        font-size: 1.4375em;
         line-height: 1.5217391304;
         margin-bottom: 1.826086957em;
     }
@@ -4344,8 +4285,7 @@ p > video {
     }
 
     body:not(.search-results) .entry-summary blockquote {
-        font-size: 23px;
-        font-size: 1.4375rem;
+        font-size: 1.4375em;
         line-height: 1.5217391304;
         margin: 0 0 1.5217391304em;
         padding-left: 1.347826087em;
@@ -4361,8 +4301,7 @@ p > video {
 
     body:not(.search-results) .entry-summary blockquote cite,
     body:not(.search-results) .entry-summary blockquote small {
-        font-size: 19px;
-        font-size: 1.1875rem;
+        font-size: 1.1875em;
         line-height: 1.8421052632;
     }
 
@@ -4372,8 +4311,7 @@ p > video {
     }
 
     body:not(.search-results) .entry-summary pre {
-        font-size: 16px;
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 1.75;
         margin-bottom: 1.75em;
         padding: 1.75em;
