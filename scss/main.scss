@@ -753,15 +753,23 @@ a {
     &:hover, &:active { outline: 0; }
 
     &[href*="tel"]:after,
-    &[href*="mailto"]:after {
+    &[href*="mailto"]:after,
+    &.button[href*="pdf"]:after {
         font-family: dashicons;
         font-size: 85%;
         padding-left: .3em;
         padding-right: .1em;
+        -webkit-font-smoothing: antialiased;
     }
 
     &[href*="tel"]:after { content: "\f525"; }
     &[href*="mailto"]:after { content: "\f465"; }
+    &.button[href*="pdf"]:after {
+        content: "\f497";
+        font-size: 20px;
+        position: relative;
+        top: 2px;
+    }
 }
 
 .entry-content a,
