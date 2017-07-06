@@ -23,11 +23,13 @@
         var width = container.width(),
             height = container.height(),
             bestHeight = _bestFrameSize(videoRes, height, width).toString(),
+            motionQuery = matchMedia('(prefers-reduced-motion)'),
+            videoUrl = (motionQuery.matches ? videoRes[bestHeight].url.replace('video', 'video/low-motion') : videoRes[bestHeight].url),
             videoContainerClass = 'home-video-background',
             $videoContainer = container.children('.'+videoContainerClass),
-            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoRes[bestHeight].height.toString()+'"><video autoplay="true" loop="true" src="'+videoRes[bestHeight].url+'" style="dispay: none;"></video></div>';
+            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video autoplay="true" loop="true" src="'+videoUrl+'" style="dispay: none;"></video></div>';
 
-        console.info('computed size: '+height.toString()+'×'+width.toString()+'; source with nearest height: '+bestHeight.toString()+'; URL: '+videoRes[bestHeight].url.toString());
+        console.info('computed size: '+height.toString()+'×'+width.toString()+'; source with nearest height: '+bestHeight.toString()+'; URL: '+videoUrl.toString());
 
         if ($videoContainer.length === 0) {
             container.prepend(videoSrc)
