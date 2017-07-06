@@ -24,4 +24,4 @@ Each framesize should be wide enough to cover the entire range of viewport width
 
 More export details:
 
-![Export settings](video/sources/MP4 export settings.png)
+![Export settings](video/sources/MP4%20export%20settings.png)
