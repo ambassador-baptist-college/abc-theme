@@ -827,6 +827,10 @@ a {
     padding: 0.84375em 0;
 
     .site-footer & { color: $color-body-text-secondary; }
+
+    @media screen and (min-width: $breakpoint-910) and (max-width: $breakpoint-985) {
+        font-size: 0.8888888889em;
+    }
 }
 
 .main-navigation .sub-menu a {
