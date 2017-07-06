@@ -41,6 +41,12 @@
  * 0.0 - Settings
  *
  */
+$breakpoint-710:          44.375em;
+$breakpoint-783:          48.9375em;
+$breakpoint-910:          56.875em;
+$breakpoint-985:          61.5625em;
+$breakpoint-1200:         75em;
+
 $font-size-base:                 18px;
 $font-stack-sans-serif:          Montserrat, 'Helvetica Neue', Helvetica, sans-serif;
 $font-stack-serif:               Rokkitt, Georgia, serif;
@@ -1269,7 +1275,7 @@ a {
     padding: 0 0.538461538em;
 }
 
-@media screen and (min-width: 56.875em) {
+@media screen and (min-width: $breakpoint-910) {
     #menu-item-198 {
         margin: 0 2%;
         min-width: 110px;
@@ -1533,7 +1539,7 @@ blockquote:after,
     margin: 0;
     display: flex;
 
-    @media (min-width: 56.875em) { justify-content: space-between; }
+    @media (min-width: $breakpoint-910) { justify-content: space-between; }
 
     li a {
         box-shadow: none;
@@ -1639,7 +1645,7 @@ blockquote:after,
     .home & { margin-bottom: -18em; }
 
     // fix menu on medium screens
-    @media screen and (min-width: 61.5625em) {
+    @media screen and (min-width: $breakpoint-985) {
         &.site-content.site-inner {
             padding-right: 1em;
             padding-left: 1em;
@@ -1667,7 +1673,7 @@ blockquote:after,
         max-width: 300px;
         filter: drop-shadow(-0.1rem 0.1rem 0 rgba(0,0,0,.5));
 
-        @media screen and (min-width: 56.875em) { display: none; }
+        @media screen and (min-width: $breakpoint-910) { display: none; }
         @media print { fill: black !important; }
     }
 }
@@ -2525,7 +2531,7 @@ body.search-no-results .page-header {
             text-shadow: -0.1rem 0.1rem 0 rgba(0,0,0,0.5);
 
             @media (min-width: 30em) { font-size: 2em; }
-            @media (min-width: 44.375em) {
+            @media (min-width: $breakpoint-710) {
                 font-size: 3em;
                 letter-spacing: 0.03em;
             }
@@ -2834,7 +2840,7 @@ ul.columns {
 form[name="courses"] {
     margin-bottom: 2.4347826087em;
 
-    @media screen and (min-width: 61.5625em) { margin-bottom: 2em; }
+    @media screen and (min-width: $breakpoint-985) { margin-bottom: 2em; }
 }
 
 .courses-container {
@@ -3391,7 +3397,7 @@ p > video {
  * 14.1 - >= 710px
  */
 
-@media screen and (min-width: 44.375em) {
+@media screen and (min-width: $breakpoint-710) {
     .site-header-main {
         padding: 1em 7.6923% 3.9375em;
 
@@ -3563,7 +3569,7 @@ p > video {
  * 14.2 - >= 783px
  */
 
-@media screen and (min-width: 48.9375em) {
+@media screen and (min-width: $breakpoint-783) {
 }
 
 
@@ -3571,7 +3577,7 @@ p > video {
  * 14.3 - >= 910px
  */
 
-@media screen and (min-width: 56.875em) {
+@media screen and (min-width: $breakpoint-910) {
     .site-header-main {
         padding-right: 4.5455%;
         padding-left: 4.5455%;
@@ -4019,7 +4025,7 @@ p > video {
  * 14.4 - >= 985px
  */
 
-@media screen and (min-width: 61.5625em) {
+@media screen and (min-width: $breakpoint-985) {
     .site-branding {
         text-align: left;
     }
@@ -4249,7 +4255,7 @@ p > video {
  * 14.5 - >= 1200px
  */
 
-@media screen and (min-width: 75em) {
+@media screen and (min-width: $breakpoint-1200) {
     .site-header .entry-header h1 {
         font-size: 5em;
     }
