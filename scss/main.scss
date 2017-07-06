@@ -3789,6 +3789,13 @@ p > video {
         float: left;
         margin-right: -100%;
         width: 70%;
+
+        .page-template-page-fullwidth & {
+            float: none;
+            margin: 0 auto;
+            width: 80%;
+            font-size: 1.2rem;
+        }
     }
 
     .entry-header,
@@ -4154,8 +4161,7 @@ p > video {
     .entry-content h2,
     .entry-summary h2,
     .comment-content h2 {
-        font-size: 28px;
-        font-size: 1.75rem;
+        font-size: 1.75em;
         line-height: 1.25;
         margin-top: 2em;
         margin-bottom: 1em;
