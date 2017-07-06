@@ -1874,11 +1874,12 @@ a.post-thumbnail:focus {
 
 .entry-content > p:first-of-type:first-letter {
     float: left;
-    font-size: 3.5em;
-    line-height: 1em;
-    padding-right: .1em;
+    font-size: 4.1em;
+    line-height: 0.9;
+    padding-right: 0.1em;
     font-family: $font-stack-serif;
     font-weight: 700;
+    margin-bottom: -0.1em;
 }
 
 .post-navigation .post-title,
