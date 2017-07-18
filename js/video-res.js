@@ -30,15 +30,17 @@
             videoUrl = (motionQuery.matches ? videoRes[bestHeight].url.replace('video', 'video/low-motion') : videoRes[bestHeight].url),
             videoContainerClass = 'home-video-background',
             $videoContainer = container.children('.'+videoContainerClass),
-            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video autoplay="true" loop="true" src="'+videoUrl+'" style="dispay: none;"></video></div>';
+            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video id="home-video-background" autoplay="true" loop="true" src="'+videoUrl+'" style="dispay: none;"></video></div>';
 
         console.info('computed size: '+height.toString()+'×'+width.toString()+'; source with nearest height: '+bestHeight.toString()+'; URL: '+videoUrl.toString());
 
         if ($videoContainer.length === 0) {
             container.prepend(videoSrc)
             $videoContainer.fadeIn('slow');
+            setMaxLoops($('#home-video-background'));
         } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].url) {
             $videoContainer.replaceWith(videoSrc);
+            setMaxLoops($('#home-video-background'));
         }
     }
 
@@ -72,5 +74,27 @@
             }
         }
         return closest;
+    }
+
+    /**
+     * Set max number of times to loop video
+     * @param {object} videoElement jQuery <video> object
+     */
+    function setMaxLoops(videoElement) {
+        var loopIterations = 0,
+            totalLoopIterations = 5;
+
+        videoElement.on('timeupdate', function() {
+            // count how many times video has looped
+            if (videoElement.get(0).currentTime == 0) {
+                loopIterations++;
+            }
+
+            // pause video when it reaches the total count
+            if (loopIterations == totalLoopIterations) {
+                console.log('pausing…');
+                videoElement.get(0).pause();
+            }
+        });
     }
 })(jQuery);
