@@ -14,6 +14,10 @@ There are currently four static heights for `.site-header`, though I also create
 
 Each framesize should be wide enough to cover the entire range of viewport widths for that given height.
 
+Take a look at the [video source files](https://github.com/ambassador-baptist-college/abc-theme/tree/master/video) to help understand how the system works.
+
+The low-mo bitrate refers to a low-motion version of the video (basically still images fading into each other) for site visitors who have `prefers-reduced-motion` enabled. (See [this article](https://css-tricks.com/introduction-reduced-motion-media-query/) for an introduction to the reduced motion media query.)
+
 | Viewport Width | Container Height | Framesize |  Bitrate | Low-mo bitrate |
 |----------------|------------------|-----------|----------|----------------|
 | >= 1600px      | 764px            |  1920x766 | 1800kb/s |       1100kb/s |
