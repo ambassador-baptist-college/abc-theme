@@ -37,7 +37,7 @@
         if ($videoContainer.length === 0) {
             container.prepend(videoSrc)
             $videoContainer.fadeIn('slow');
-        } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].height) {
+        } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].url) {
             $videoContainer.replaceWith(videoSrc);
         }
     }
