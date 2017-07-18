@@ -17,6 +17,9 @@
 
     /**
      * Get best video source based on computed height and width
+     *
+     * @see {@link https://github.com/ambassador-baptist-college/abc-theme#homepage-video more information about framesize and quality}}
+     *
      * @param {object} container jQuery object to udpate with best source URL
      */
     function getBestVideo(container) {
@@ -42,6 +45,9 @@
     /**
      * Get best framesize given height and width
      * @private
+     *
+     * @see {@link https://github.com/ambassador-baptist-college/abc-theme#homepage-video more information about framesize and quality}}
+     *
      * @param   {object}  object object of available framesizes
      * @param   {integer} height container height
      * @param   {integer} width  container width
