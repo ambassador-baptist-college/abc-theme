@@ -25,7 +25,7 @@
         $('select.sermon-search, select[name="archive-dropdown"]').chosen();
 
         // hide collapse-form and add toggle button
-        $('.collapse-form').slideUp().before('<p><button type="button" class="toggle-form">Expand Form <span class="dashicons dashicons-arrow-down-alt2"></span></button></p>');
+        $('.collapse-form').slideUp().before('<p><button type="button" class="toggle-form">Give Now <span class="dashicons dashicons-arrow-down-alt2"></span></button></p>');
 
         // handle collapse-form toggle buttons
         $(document).on('click', 'button.toggle-form', function(e){
