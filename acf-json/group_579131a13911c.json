@@ -3,9 +3,6 @@
     "title": "Meetings",
     "fields": [
         {
-            "display_format": "m\/d\/Y",
-            "return_format": "Y-m-d",
-            "first_day": 0,
             "key": "field_56edd9dc9c331",
             "label": "Begin Date",
             "name": "begin_date",
@@ -14,15 +11,15 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "20",
                 "class": "",
                 "id": ""
-            }
-        },
-        {
+            },
             "display_format": "m\/d\/Y",
             "return_format": "Y-m-d",
-            "first_day": 0,
+            "first_day": 0
+        },
+        {
             "key": "field_56edda0a9c332",
             "label": "End Date",
             "name": "end_date",
@@ -31,24 +28,15 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "20",
                 "class": "",
                 "id": ""
-            }
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "Y-m-d",
+            "first_day": 0
         },
         {
-            "layout": "vertical",
-            "choices": {
-                "AM": "AM",
-                "PM": "PM",
-                "School Chapel": "School Chapel",
-                "Youth Rally": "Youth Rally"
-            },
-            "default_value": [],
-            "allow_custom": 0,
-            "save_custom": 0,
-            "toggle": 0,
-            "return_format": "value",
             "key": "field_56edda379c334",
             "label": "AM\/PM",
             "name": "am_pm",
@@ -57,17 +45,24 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "20",
                 "class": "",
                 "id": ""
-            }
+            },
+            "choices": {
+                "AM": "AM",
+                "PM": "PM",
+                "School Chapel": "School Chapel",
+                "Youth Rally": "Youth Rally"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "Pastor John Smith",
-            "prepend": "",
-            "append": "",
             "key": "field_56edda8a9c335",
             "label": "Pastor Name",
             "name": "pastor_name",
@@ -76,20 +71,17 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
-            "formatting": "html",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "123 Anystreet",
+            "placeholder": "Pastor John Smith",
             "prepend": "",
             "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_56eddac49c336",
             "label": "Street Address 1",
             "name": "address_1",
@@ -98,20 +90,17 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "formatting": "html",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "Suite #104",
+            "placeholder": "123 Anystreet",
             "prepend": "",
             "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_56eddb2d9c339",
             "label": "Street Address 2",
             "name": "address_2",
@@ -120,20 +109,17 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "formatting": "html",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "Sometown",
+            "placeholder": "Suite #104",
             "prepend": "",
             "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_56eddb009c338",
             "label": "City",
             "name": "city",
@@ -142,17 +128,29 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "35",
                 "class": "",
                 "id": ""
             },
-            "formatting": "html",
-            "readonly": 0,
-            "disabled": 0
+            "default_value": "",
+            "placeholder": "Sometown",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "multiple": 0,
-            "allow_null": 0,
+            "key": "field_56eddb469c33a",
+            "label": "State",
+            "name": "state",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
             "choices": {
                 "AL": "Alabama",
                 "AK": "Alaska",
@@ -206,33 +204,14 @@
                 "WY": "Wyoming"
             },
             "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": "",
             "return_format": "value",
-            "key": "field_56eddb469c33a",
-            "label": "State",
-            "name": "state",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "disabled": 0,
-            "readonly": 0
+            "placeholder": ""
         },
         {
-            "default_value": "",
-            "min": "",
-            "max": 99999,
-            "step": 1,
-            "placeholder": 12345,
-            "prepend": "",
-            "append": "",
             "key": "field_56eddb609c33b",
             "label": "Zip",
             "name": "zip",
@@ -241,19 +220,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "15",
                 "class": "",
                 "id": ""
             },
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "default_value": "",
-            "maxlength": "",
-            "placeholder": "234-567-8901",
+            "placeholder": 12345,
             "prepend": "",
             "append": "",
+            "min": "",
+            "max": 99999,
+            "step": 1
+        },
+        {
             "key": "field_56eddbc09c33c",
             "label": "Phone",
             "name": "phone",
@@ -262,19 +241,17 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "formatting": "html",
-            "readonly": 0,
-            "disabled": 0
+            "default_value": "",
+            "placeholder": "234-567-8901",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "height": "",
-            "center_lat": "35.3192571",
-            "center_lng": "-81.6586981",
-            "zoom": 7,
             "key": "field_56f18678554be",
             "label": "Location",
             "name": "location",
@@ -286,7 +263,11 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "center_lat": "35.3192571",
+            "center_lng": "-81.6586981",
+            "zoom": 7,
+            "height": ""
         }
     ],
     "location": [
@@ -311,5 +292,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1482336352
+    "modified": 1501878733
 }
