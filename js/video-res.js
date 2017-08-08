@@ -30,16 +30,18 @@
             videoUrl = (motionQuery.matches ? videoRes[bestHeight].url.replace('video', 'video/low-motion') : videoRes[bestHeight].url),
             videoContainerClass = 'home-video-background',
             $videoContainer = container.children('.'+videoContainerClass),
-            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video id="home-video-background" autoplay="true" loop="true" src="'+videoUrl+'" style="dispay: none;"></video></div>';
+            videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video id="home-video-background" autoplay="true" loop="true" src="'+videoUrl+'" style="display: none;"></video></div>';
 
         console.info('computed size: '+height.toString()+'×'+width.toString()+'; source with nearest height: '+bestHeight.toString()+'; URL: '+videoUrl.toString());
 
         if ($videoContainer.length === 0) {
             container.prepend(videoSrc)
-            $videoContainer.fadeIn('slow');
+            $('#'+videoContainerClass).fadeIn();
             setMaxLoops($('#home-video-background'));
         } else if ($videoContainer.length > 0 && $videoContainer.data('current-size').toString() !== videoRes[bestHeight].url) {
+            $('#'+videoContainerClass).fadeOut();
             $videoContainer.replaceWith(videoSrc);
+            $('#'+videoContainerClass).fadeIn();
             setMaxLoops($('#home-video-background'));
         }
     }
