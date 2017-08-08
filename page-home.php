@@ -22,14 +22,6 @@ wp_enqueue_script( 'video-res' );
         // Start the loop.
         while ( have_posts() ) : the_post(); ?>
 
-        <section class="video streaming home-stripe off-air">
-        <?php
-            if ( get_field( 'live_streaming' ) ) {
-                the_field( 'live_streaming' );
-            }
-        ?>
-        </section><!-- .apply -->
-
             <?php
             // Include the page content template. ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -66,6 +58,16 @@ wp_enqueue_script( 'video-res' );
             <?php // End of the loop.
         endwhile;
         ?>
+
+        <section class="streaming home-stripe off-air">
+        <?php
+            if ( get_field( 'live_streaming' ) ) {
+                echo '<div class="teaser">' . get_field( 'live_streaming' ) . '</div>
+                <div class="streaming-frame-shade"></div>
+                <div class="streaming-frame"><span class="close">&times;</span>' . do_shortcode( '[youtube_live]' ) . '</div>';
+            }
+        ?>
+        </section><!-- .video.streaming -->
 
         <section class="home-features home-stripe">
             <?php if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) { ?>
