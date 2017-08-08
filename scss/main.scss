@@ -629,6 +629,11 @@ input[type="submit"],
         &, &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-green, 20%), 0.5); }
     }
 
+    &.orange, .entry-content &.orange {
+        border-color: darken($color-orange, 20%);
+
+        &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-orange, 20%), 0.5); }
+    }
 
     &, &:hover, &:focus {
         background: linear-gradient(to bottom, darken($color-blue, 5%), darken($color-blue, 12%));
@@ -642,12 +647,16 @@ input[type="submit"],
         transition: all $transition-duration ease;
 
         &.green { background: linear-gradient(to bottom, darken($color-green, 5%), darken($color-green, 12%)); }
+
+        &.orange { background: linear-gradient(to bottom, darken($color-orange, 5%), darken($color-orange, 12%)); }
     }
 
     &:hover, &:focus {
         background: linear-gradient(to bottom, darken($color-blue, 15%), darken($color-blue, 22%));
 
         &.green { background: linear-gradient(to bottom, darken($color-green, 15%), darken($color-green, 22%)); }
+
+        &.orange { background: linear-gradient(to bottom, darken($color-orange, 15%), darken($color-orange, 22%)); }
     }
 
     &:focus {
