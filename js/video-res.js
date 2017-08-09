@@ -95,6 +95,7 @@
             // pause video when it reaches the total count
             if (loopIterations == totalLoopIterations) {
                 videoElement.get(0).pause();
+                videoElement.fadeOut();
             }
         });
     }
