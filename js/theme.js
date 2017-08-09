@@ -1,5 +1,10 @@
 (function($){
     $(document).ready(function(){
+
+        window.addEventListener('wpYouTubeLiveStarted', function() {
+            $('.streaming.off-air').removeClass('off-air').addClass('on-air');
+        });
+
         // live streaming
         $('.streaming-frame, .streaming-frame-shade').hide();
         $('#streaming-popup').on('click', function(e) {
