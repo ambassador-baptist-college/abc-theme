@@ -94,7 +94,6 @@
 
             // pause video when it reaches the total count
             if (loopIterations == totalLoopIterations) {
-                console.log('pausing…');
                 videoElement.get(0).pause();
             }
         });
