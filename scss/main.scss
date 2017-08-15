@@ -3524,8 +3524,6 @@ p > video {
 
     .site-main > article {
         margin-bottom: 5.25em;
-
-        .home & { margin-bottom: 0; }
     }
 
     .entry-content blockquote.alignleft,
@@ -4091,7 +4089,7 @@ p > video {
             margin-bottom: -30em;
         }
 
-        .home & { margin-bottom: -30em; }
+        .home & { margin-bottom: -40em; }
     }
 
     .site-branding,
