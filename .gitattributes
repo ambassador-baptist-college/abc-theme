@@ -24,3 +24,4 @@ video/low-motion/1600x765.mp4 filter=lfs diff=lfs merge=lfs -text
 video/low-motion/1920x766.mp4 filter=lfs diff=lfs merge=lfs -text
 video/low-motion/710x535.mp4 filter=lfs diff=lfs merge=lfs -text
 video/low-motion/920x620.mp4 filter=lfs diff=lfs merge=lfs -text
+video/1920x766.mp4 filter=lfs diff=lfs merge=lfs -text
