@@ -3,28 +3,23 @@
     "title": "Faculty\/Staff",
     "fields": [
         {
-            "message": "<h2>Instructions<\/h2>\n\nChoose \u201cAdministration,\u201d \u201cFaculty,\u201d or \u201cStaff\u201d from the \u201cTypes\u201d\u00a0category box to the right.\n\nUse the \u201cFeatured Photo\u201d and upload an image <em>at least<\/em> 900&times;1200px.\n\n<h2>General guide for cropping photos<\/h2>\n<ul>\n    <li>Using the rule of thirds, put the vertical third lines at the outside edges of the person&rsquo;s eyes<\/li>\n    <li>Using the rule of thirds, put the person&rsquo;s eyes just below the top third line so there&rsquo;s some space above their head and the top of the photo<\/li>\n    <li>Example:<br\/><a href=\"http:\/\/dev.ambassadors.edu\/wp-content\/uploads\/2016\/03\/people-cropping-sample.png\" target=\"_blank\"><img src=\"http:\/\/dev.ambassadors.edu\/wp-content\/uploads\/2016\/03\/people-cropping-sample-150x150.png\"\/><br\/>(Click for larger version)<\/a><\/li>\n<\/ul>",
-            "esc_html": 0,
-            "new_lines": "wpautop",
             "key": "field_56fc43a6d319a",
             "label": "Notes",
             "name": "",
             "type": "message",
-            "instructions": "Choose \u201cAdministration,\u201d \u201cFaculty,\u201d or \u201cStaff\u201d from the category to the right.\n\nUse the \u201cFeatured Photo\u201d and upload an image <em>at least<\/em> 900&times;1200px.",
+            "instructions": "Choose “Administration,” “Faculty,” or “Staff” from the category to the right.\r\n\r\nUse the “Featured Photo” and upload an image <em>at least<\/em> 900&times;1200px.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "message": "<h2>Instructions<\/h2>\r\n<ul>\r\n<li>Choose “Administration,” “Faculty,” or “Staff” from the “Types” category box to the right.<\/li>\r\n<li>Use the “Featured Photo” and upload an image <em>at least<\/em> 900&times;1200px.<\/li>\r\n<\/ul>\r\n<h2>General guide for cropping photos<\/h2>\r\n<ul>\r\n    <li>Using the rule of thirds, put the vertical third lines at the outside edges of the person&rsquo;s eyes<\/li>\r\n    <li>Using the rule of thirds, put the person&rsquo;s eyes just below the top third line so there&rsquo;s some space above their head and the top of the photo<\/li>\r\n    <li>Example:<br\/><a href=\"\/wp-content\/uploads\/2016\/03\/people-cropping-sample.png\" target=\"_blank\"><img src=\"\/wp-content\/uploads\/2016\/03\/people-cropping-sample-150x150.png\"\/><br\/>(Click for larger version)<\/a><\/li>\r\n<\/ul>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_56fc39d528912",
             "label": "Position",
             "name": "position",
@@ -37,18 +32,16 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "formatting": "html",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
-            "default_value": "",
-            "min": 1989,
-            "max": "",
-            "step": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_56fc39ff28913",
             "label": "Begin Year",
             "name": "begin_year",
@@ -61,14 +54,17 @@
                 "class": "",
                 "id": ""
             },
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
             "default_value": "",
             "placeholder": "",
             "prepend": "",
             "append": "",
+            "min": 1989,
+            "max": "",
+            "step": 1,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_56fc3a1e28914",
             "label": "Email Address",
             "name": "email_address",
@@ -80,20 +76,13 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "multiple": 0,
-            "allow_null": 1,
-            "choices": {
-                "Professor": "Professor",
-                "Instructor": "Instructor"
-            },
-            "default_value": [],
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "return_format": "value",
             "key": "field_56fc3a4328915",
             "label": "Teacher Type",
             "name": "teacher_type",
@@ -106,15 +95,21 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "Professor": "Professor",
+                "Instructor": "Instructor"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
             "disabled": 0,
-            "readonly": 0
+            "readonly": 0,
+            "return_format": "value"
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_56fc3aa228916",
             "label": "Department",
             "name": "department",
@@ -127,16 +122,16 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "formatting": "html",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         },
         {
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "default_value": "",
-            "delay": 0,
             "key": "field_56fc42eac0616",
             "label": "Qualifications",
             "name": "qualifications",
@@ -148,14 +143,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            }
+            },
+            "default_value": "",
+            "toolbar": "full",
+            "media_upload": 0,
+            "tabs": "all",
+            "delay": 0
         },
         {
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
             "key": "field_56fc3c680213a",
             "label": "Last Name",
             "name": "last_name",
@@ -168,7 +163,12 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "formatting": "html",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
         }
@@ -194,5 +194,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1482336357
+    "modified": 1502894252
 }
