@@ -5,6 +5,8 @@ css/chosen.min.css:scss/chosen.scss
 css/main.min.css:scss/main.scss
 css/main.min.css.map:scss/main.scss
 
+js/csr.min.js:js/csr.js
+
 js/chosen.min.js:js/chosen.js
 
 js/grad-offering.min.js:js/grad-offering.js
