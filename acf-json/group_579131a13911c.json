@@ -268,6 +268,23 @@
             "center_lng": "-81.6586981",
             "zoom": 7,
             "height": ""
+        },
+        {
+            "key": "field_59affc90c0808",
+            "label": "Optional Notes",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Enter any public special notes in the content editor below.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -285,12 +302,22 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
+        "permalink",
+        "excerpt",
         "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
         "author",
         "format",
-        "featured_image"
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1501878733
+    "modified": 1504705733
 }
