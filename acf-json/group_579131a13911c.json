@@ -256,7 +256,7 @@
             "label": "Location",
             "name": "location",
             "type": "google_map",
-            "instructions": "",
+            "instructions": "The search field should be auto-filled with address information from above; click in the search field and choose a result from the popup. If no suggestion shows up after clicking in the search field, try searching for the church and city, or search for just the city and state.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -319,5 +319,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1504705733
+    "modified": 1504789094
 }
