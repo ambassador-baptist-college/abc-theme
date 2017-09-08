@@ -142,6 +142,33 @@ wp_enqueue_script( 'video-res' );
         ?>
         </section><!-- .apply -->
 
+        <?php
+        if ( get_field( 'highlighted_event' ) ) {
+            $event_id = get_field( 'highlighted_event' );
+            $event_link = get_permalink( $event_id );
+        ?>
+        <section class="highlighted-event home-stripe full-width">
+            <div class="container">
+                <div class="image">
+                <?php
+                    echo '<a href="' . $event_link . '">';
+                    if ( get_field( 'highlighted_event_image' ) ) {
+                        echo wp_get_attachment_image( get_field( 'highlighted_event_image' ), 'highlighted-event-small', false, array( 'class' => 'highlighted-event' ) );
+                    } else {
+                        echo get_the_post_thumbnail( $event_id, 'highlighted-event-small', array( 'class' => 'highlighted-event' ) );
+                    }
+                    echo '</a>';
+                ?>
+                </div>
+                <div class="content">
+                    <h2 class="entry-title"><a href="<?php echo $event_link; ?>"><?php echo get_the_title( $event_id ); ?></a></h2>
+                    <p class="excerpt"><?php echo get_the_excerpt( $event_id ); ?></p>
+                    <p><a class="button" href="<?php echo $event_link; ?>">More Information</a></p>
+                </div>
+            </div>
+        </section><!-- .highlighted-event -->
+        <?php } ?>
+
         <section class="video home-stripe full-width">
             <div class="container">
             <?php

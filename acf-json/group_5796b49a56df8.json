@@ -227,6 +227,68 @@
             "mime_types": ""
         },
         {
+            "key": "field_59b2fe86ad12b",
+            "label": "Highlighted Event Stripe",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59b2feb5ca9f8",
+            "label": "Highlighted Event Image",
+            "name": "highlighted_event_image",
+            "type": "image",
+            "instructions": "If specified, used in place of the post’s thumbnail image. Recommended size: 750×460px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "sermon_medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59b2fe38ad12a",
+            "label": "Highlighted Event",
+            "name": "highlighted_event",
+            "type": "post_object",
+            "instructions": "Upcoming event to highlight",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "special_event"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_5796b500e04d0",
             "label": "Application Stripe",
             "name": "",
@@ -440,5 +502,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1504898628
+    "modified": 1504903973
 }

@@ -2626,6 +2626,36 @@ body.search-no-results .page-header {
             h2 { text-align: center; }
         }
 
+        &.highlighted-event {
+            background: url('/wp-content/themes/ABC/img/highlighted-event.jpg') no-repeat center center / cover;
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+
+                @media screen and (max-width: 48em) { flex-wrap: wrap; }
+            }
+
+            .image {
+                width: 100%;
+                margin-bottom: 2rem;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    border: .3rem solid $color-magenta;
+                }
+            }
+
+            @media screen and (min-width: 48em) {
+                .image, .content { width: calc(50% - 2rem); }
+
+                .content { text-align: right; }
+
+                .image img { margin-right: 2rem; }
+            }
+        }
+
         &.video {
             background-color: $color-orange;
             padding: 2rem;
