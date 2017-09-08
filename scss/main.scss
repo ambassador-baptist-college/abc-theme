@@ -2552,13 +2552,13 @@ body.search-no-results .page-header {
         padding-left: 0;
     }
 
-    .site-header-main, article, .home-stripe:not(.video), .home-stripe.video .container {
+    .site-header-main, article, .home-stripe:not(.full-width), .home-stripe.full-width .container {
         box-sizing: border-box;
         width: 100%;
         max-width: 1320px;
     }
 
-    article, .home-stripe:not(.video), .home-stripe.video .container {
+    article, .home-stripe:not(.full-width), .home-stripe.full-width .container {
         margin: 0 auto;
         padding: 2rem;
     }
@@ -2588,7 +2588,7 @@ body.search-no-results .page-header {
     }
 
     .home-stripe {
-        margin-bottom: 2rem;
+        &:not(.full-width) { margin-bottom: 2rem; }
 
         h2 {
             font-size: 3em;

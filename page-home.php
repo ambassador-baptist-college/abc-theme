@@ -142,7 +142,7 @@ wp_enqueue_script( 'video-res' );
         ?>
         </section><!-- .apply -->
 
-        <section class="video home-stripe">
+        <section class="video home-stripe full-width">
             <div class="container">
             <?php
                 if ( get_field( 'video_content' ) ) {
