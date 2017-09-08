@@ -162,7 +162,7 @@ wp_enqueue_script( 'video-res' );
                 </div>
                 <div class="content">
                     <h2 class="entry-title"><a href="<?php echo $event_link; ?>"><?php echo get_the_title( $event_id ); ?></a></h2>
-                    <p class="excerpt"><?php echo get_the_excerpt( $event_id ); ?></p>
+                    <p class="excerpt"><?php echo apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $event_id ) ); ?></p>
                     <p><a class="button" href="<?php echo $event_link; ?>">More Information</a></p>
                 </div>
             </div>
