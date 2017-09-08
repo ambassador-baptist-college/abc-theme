@@ -20,7 +20,7 @@
         },
         {
             "key": "field_5798d67e3f90f",
-            "label": "Button 1 Text",
+            "label": "Students Text",
             "name": "button_1_text",
             "type": "text",
             "instructions": "",
@@ -39,7 +39,7 @@
         },
         {
             "key": "field_5796b5cad93f4",
-            "label": "Button 1 Link",
+            "label": "Students Link",
             "name": "button_1_link",
             "type": "page_link",
             "instructions": "",
@@ -58,7 +58,7 @@
         },
         {
             "key": "field_5949ce1f53a0e",
-            "label": "Button 1 Image",
+            "label": "Students Image",
             "name": "button_1_image",
             "type": "image",
             "instructions": "Recommended 756&times;488px",
@@ -69,7 +69,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "url",
             "preview_size": "sermon_medium",
             "library": "all",
             "min_width": "",
@@ -82,7 +82,7 @@
         },
         {
             "key": "field_5949ce4c53a11",
-            "label": "Button 2 Text",
+            "label": "Events Text",
             "name": "button_2_text",
             "type": "text",
             "instructions": "",
@@ -101,7 +101,7 @@
         },
         {
             "key": "field_5949ce4a53a10",
-            "label": "Button 2 Link",
+            "label": "Events Link",
             "name": "button_2_link",
             "type": "page_link",
             "instructions": "",
@@ -120,7 +120,7 @@
         },
         {
             "key": "field_5949ce4953a0f",
-            "label": "Button 2 Image",
+            "label": "Events Image",
             "name": "button_2_image",
             "type": "image",
             "instructions": "Recommended 756&times;488px",
@@ -131,7 +131,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "url",
             "preview_size": "sermon_medium",
             "library": "all",
             "min_width": "",
@@ -143,8 +143,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_59b2edf3855cc",
+            "label": "Events Calendar",
+            "name": "button_2_calendar",
+            "type": "post_object",
+            "instructions": "Choose the calendar to show",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "calendar"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_5949ce7d53a14",
-            "label": "Button 3 Text",
+            "label": "News Text",
             "name": "button_3_text",
             "type": "text",
             "instructions": "",
@@ -163,7 +185,7 @@
         },
         {
             "key": "field_5949ce6f53a13",
-            "label": "Button 3 Link",
+            "label": "News Link",
             "name": "button_3_link",
             "type": "page_link",
             "instructions": "",
@@ -182,7 +204,7 @@
         },
         {
             "key": "field_5949ce6653a12",
-            "label": "Button 3 Image",
+            "label": "News Image",
             "name": "button_3_image",
             "type": "image",
             "instructions": "Recommended 756&times;488px",
@@ -193,7 +215,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "url",
             "preview_size": "sermon_medium",
             "library": "all",
             "min_width": "",
@@ -418,5 +440,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498010073
+    "modified": 1504898628
 }

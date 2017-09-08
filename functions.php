@@ -72,6 +72,7 @@ function abc_custom_image_sizes() {
     set_post_thumbnail_size( 2400, 600, true );
     add_image_size( 'thumbnail-tall', 2400, 1280, true );
     add_image_size( 'signature', 300, 60 );
+    add_image_size( 'home-square', 75, 75, true );
 }
 
 // Add signature custom image size

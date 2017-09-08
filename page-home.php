@@ -70,31 +70,64 @@ wp_enqueue_script( 'video-res' );
         </section><!-- .video.streaming -->
 
         <section class="home-features home-stripe">
-            <?php if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) { ?>
-            <section class="button-1">
-                <a href="<?php the_field( 'button_1_link' ) ?>">
-                    <?php echo wp_get_attachment_image( get_field( 'button_1_image' ), 'full' ); ?>
-                    <h2 class="entry-title"><?php the_field( 'button_1_text' ) ?></h2>
-                </a>
+            <?php
+            $home_feature_styles = '';
+
+            if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) {
+                $home_feature_styles .= '.button-1 {background-image: url("' .  get_field( 'button_1_image' ) . '");}';
+                ?>
+            <section class="button-1 students">
+                <h2 class="read-more"><a href="<?php the_field( 'button_1_link' ) ?>"><?php the_field( 'button_1_text' ) ?></a></h2>
             </section>
             <?php } ?>
 
-            <?php if ( get_field( 'button_2_text' ) && get_field( 'button_2_link' ) && get_field( 'button_2_image' ) ) { ?>
-            <section class="button-2">
-                <a href="<?php the_field( 'button_2_link' ) ?>">
-                    <?php echo wp_get_attachment_image( get_field( 'button_2_image' ), 'full' ); ?>
-                    <h2 class="entry-title"><?php the_field( 'button_2_text' ) ?></h2>
-                </a>
+            <?php if ( get_field( 'button_2_text' ) && get_field( 'button_2_link' ) && get_field( 'button_2_image' ) ) {
+                $home_feature_styles .= '.button-2 {background-image: url("' .  get_field( 'button_2_image' ) . '");}';
+                ?>
+            <section class="button-2 events">
+                <?php echo do_shortcode( '[calendar id="' . get_field( 'button_2_calendar' ) . '"]' ); ?>
+                <h2 class="read-more"><a href="<?php the_field( 'button_2_link' ) ?>"><?php the_field( 'button_2_text' ) ?></a></h2>
             </section>
             <?php } ?>
 
-            <?php if ( get_field( 'button_3_text' ) && get_field( 'button_3_link' ) && get_field( 'button_3_image' ) ) { ?>
-            <section class="button-3">
-                <a href="<?php the_field( 'button_3_link' ) ?>">
-                    <?php echo wp_get_attachment_image( get_field( 'button_3_image' ), 'full' ); ?>
-                    <h2 class="entry-title"><?php the_field( 'button_3_text' ) ?></h2>
-                </a>
+            <?php if ( get_field( 'button_3_text' ) && get_field( 'button_3_link' ) && get_field( 'button_3_image' ) ) {
+                $home_feature_styles .= '.button-3 {background-image: url("' .  get_field( 'button_3_image' ) . '");}';
+                ?>
+            <section class="button-3 news">
+                <?php
+                // WP_Query arguments
+                $args = array (
+                    'post_type'              => array( 'post' ),
+                    'posts_per_page'         => '2',
+                    'post_status'            => 'publish',
+                );
+
+                // The Query
+                $news_query = new WP_Query( $args );
+                // The Loop
+                if ( $news_query->have_posts() ) {
+                    while ( $news_query->have_posts() ) {
+                        $news_query->the_post();
+
+                        add_filter( 'excerpt_length', function() {return 10;} );
+
+                        echo '<article class="home-news-excerpt">';
+                            echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( get_the_ID(), 'home-square', array( 'class' => 'alignleft' ) ) . '</a>';
+                            echo '<h3 class="entry-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
+                            the_excerpt();
+                        echo '</article>' . "\n";
+                    }
+                }
+                wp_reset_postdata();
+                ?>
+                <h2 class="read-more"><a href="<?php the_field( 'button_3_link' ) ?>"><?php the_field( 'button_3_text' ) ?></a></h2>
             </section>
+            <?php
+            }
+            if ( $home_feature_styles ) { ?>
+                <style type="text/css">
+                    <?php echo $home_feature_styles; ?>
+                </style>
             <?php } ?>
         </section><!-- .home-features -->
 
