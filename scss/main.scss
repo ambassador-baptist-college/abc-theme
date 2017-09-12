@@ -2780,6 +2780,8 @@ body.search-no-results .page-header {
             border-bottom: .3rem solid;
             text-shadow: 0 0 0.5rem rgba(0,0,0,0.5);
 
+            &.button-1, &.button-2, &.button-3 { padding: 1rem; }
+
             &.students {
                 @media screen and (max-width: 48em) {
                     padding: 1rem 0;
@@ -2794,21 +2796,24 @@ body.search-no-results .page-header {
 
             &.events {
                 .simcal {
+                    &-calendar p.simcal-align-right:first-child { display: none; }
+
                     &-calendar .entry-title {
                         font-size: 1.5rem;
                         margin-bottom: 0;
                     }
 
-                    &-event-start {
-                        font-size: 0.9rem;
-                    }
+                    &-events { margin: 0; }
+
+                    &-event-start { font-size: 0.9rem; }
                 }
             }
 
             .home-news-excerpt {
-                margin: 1rem 0 0;
-                padding: 0 1rem;
+                padding: 0;
                 clear: both;
+
+                &:not(:last-of-type) { margin-bottom: 1rem; }
 
                 .alignleft {
                     background: white;
@@ -2839,7 +2844,6 @@ body.search-no-results .page-header {
                 width: 100%;
                 text-align: right;
                 margin: 0;
-                padding: 0.666rem;
                 font-size: 2em;
                 font-weight: 300;
             }
