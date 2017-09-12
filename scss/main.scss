@@ -2555,7 +2555,9 @@ body.search-no-results .page-header {
 
     article, .home-stripe:not(.full-width), .home-stripe.full-width .container {
         margin: 0 auto;
-        padding: 2rem;
+        padding: 1rem;
+
+        @media screen and (min-width: 48em) { padding: 2rem; }
     }
 
     .entry-content {
@@ -2582,8 +2584,16 @@ body.search-no-results .page-header {
     }
 
     .home-stripe {
-        &.full-width { padding: 2rem; }
-        &:not(.full-width) { margin-bottom: 2rem; }
+        &.full-width {
+            padding: 1rem;
+
+            @media screen and (min-width: 48em) { padding: 2rem; }
+        }
+        &:not(.full-width) {
+            margin-bottom: 1rem;
+
+            @media screen and (min-width: 48em) { margin-bottom: 2rem; }
+        }
 
         h2 {
             font-size: 3em;
@@ -2604,7 +2614,9 @@ body.search-no-results .page-header {
             .teaser {
                 border: 1px solid $color-blue;
                 background-color: rgba($color-blue, 0.85);
-                padding: 2rem;
+                padding: 1rem;
+
+                @media screen and (min-width: 48em) { padding: 2rem; }
             }
 
             p:last-child { margin-bottom: 0; }
@@ -2634,7 +2646,9 @@ body.search-no-results .page-header {
 
             .image {
                 width: 100%;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
+
+                @media screen and (min-width: 48em) { margin-bottom: 2rem; }
 
                 img {
                     display: block;
@@ -2644,11 +2658,19 @@ body.search-no-results .page-header {
             }
 
             @media screen and (min-width: 48em) {
-                .image, .content { width: calc(50% - 2rem); }
+                .image, .content {
+                    width: calc(50% - 1rem);
+
+                    @media screen and (min-width: 48em) { width: calc(50% - 2rem); }
+                }
 
                 .content { text-align: right; }
 
-                .image img { margin-right: 2rem; }
+                .image img {
+                    margin-right: 1rem;
+
+                    @media screen and (min-width: 48em) { margin-right: 2rem; }
+                }
             }
         }
 
@@ -2664,7 +2686,11 @@ body.search-no-results .page-header {
 
             &, & * { color: white; }
 
-            .video-content { margin: 0 2rem 2rem 0; }
+            .video-content {
+                margin: 0 1rem 1rem 0;
+
+                @media screen and (min-width: 48em) { margin: 0 2rem 2rem 0; }
+            }
 
             .video-link {
                 border: 3px solid darken($color-orange, 5%);
@@ -2751,7 +2777,11 @@ body.search-no-results .page-header {
             text-shadow: 0 0 0.5rem rgba(0,0,0,0.5);
 
             &.students {
-                @media screen and (max-width: 48em) { padding: 2rem 0; }
+                @media screen and (max-width: 48em) {
+                    padding: 1rem 0;
+
+                    @media screen and (min-width: 48em) { padding: 2rem 0; }
+                }
             }
 
             &.events, &.news {
@@ -2837,7 +2867,9 @@ body.search-no-results .page-header {
     .content-area,
     .sidebar .widget {
         background-color: white;
-        padding: 2rem;
+        padding: 1rem;
+
+        @media screen and (min-width: 48em) { padding: 2rem; };
     }
 
     &.sermons .content-area {
@@ -2847,7 +2879,9 @@ body.search-no-results .page-header {
 }
 
 ul.columns {
-    column-gap: 2rem;
+    column-gap: 1rem;
+
+    @media screen and (min-width: 48em) { column-gap: 2rem; }
 
     &, li {
         list-style-type: none;
@@ -3047,10 +3081,15 @@ ul.subscribe {
     .sermon-block {
         display: block;
         background: white;
-        padding: 2rem;
-        margin-bottom: 2rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
         border-bottom-width: .3rem;
         border-bottom-style: solid;
+
+        @media screen and (min-width: 48em) {
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
 
         .entry-title {
             border-bottom: .1rem solid $color-gray;
