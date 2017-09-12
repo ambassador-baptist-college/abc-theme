@@ -70,16 +70,7 @@ wp_enqueue_script( 'video-res' );
         </section><!-- .video.streaming -->
 
         <section class="home-features home-stripe">
-            <?php
-            $home_feature_styles = '';
-
-            if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) {
-                $home_feature_styles .= '.button-1 {background-image: url("' .  get_field( 'button_1_image' ) . '");}';
-                ?>
-            <section class="button-1 students">
-                <h2 class="read-more"><a href="<?php the_field( 'button_1_link' ) ?>"><?php the_field( 'button_1_text' ) ?></a></h2>
-            </section>
-            <?php } ?>
+            <?php $home_feature_styles = ''; ?>
 
             <?php if ( get_field( 'button_2_text' ) && get_field( 'button_2_link' ) && get_field( 'button_2_image' ) ) {
                 $home_feature_styles .= '.button-2 {background-image: url("' .  get_field( 'button_2_image' ) . '");}';
@@ -87,6 +78,15 @@ wp_enqueue_script( 'video-res' );
             <section class="button-2 events">
                 <?php echo do_shortcode( '[calendar id="' . get_field( 'button_2_calendar' ) . '"]' ); ?>
                 <h2 class="read-more"><a href="<?php the_field( 'button_2_link' ) ?>"><?php the_field( 'button_2_text' ) ?></a></h2>
+            </section>
+            <?php } ?>
+
+            <?php
+            if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) {
+                $home_feature_styles .= '.button-1 {background-image: url("' .  get_field( 'button_1_image' ) . '");}';
+                ?>
+            <section class="button-1 students">
+                <h2 class="read-more"><a href="<?php the_field( 'button_1_link' ) ?>"><?php the_field( 'button_1_text' ) ?></a></h2>
             </section>
             <?php } ?>
 
