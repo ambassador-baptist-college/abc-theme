@@ -1663,7 +1663,11 @@ blockquote:after,
         margin-bottom: -11em;
     }
 
-    .home & { margin-bottom: -18em; }
+    .home & {
+        margin-bottom: -18em;
+
+        @media screen and (max-width: $breakpoint-710) { margin-bottom: -15em; }
+    }
 
     // fix menu on medium screens
     @media screen and (min-width: $breakpoint-985) {
