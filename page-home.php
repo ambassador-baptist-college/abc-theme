@@ -146,6 +146,14 @@ wp_enqueue_script( 'video-res' );
         if ( get_field( 'highlighted_event' ) ) {
             $event_id = get_field( 'highlighted_event' );
             $event_link = get_permalink( $event_id );
+            $event_excerpt = get_post_field( 'post_excerpt', $event_id );
+            if ( $event_excerpt ) {
+                $excerpt = apply_filters( 'the_excerpt', $event_excerpt );
+            } else {
+                $excerpt = strip_shortcodes( get_post_field( 'post_content', $event_id ) );
+                $excerpt = wp_trim_words( $excerpt, 25, '&hellip;' );
+            }
+
         ?>
         <section class="highlighted-event home-stripe full-width">
             <div class="container">
@@ -162,7 +170,7 @@ wp_enqueue_script( 'video-res' );
                 </div>
                 <div class="content">
                     <h2 class="entry-title"><a href="<?php echo $event_link; ?>"><?php echo get_the_title( $event_id ); ?></a></h2>
-                    <p class="excerpt"><?php echo apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $event_id ) ); ?></p>
+                    <p class="excerpt"><?php echo $excerpt; ?></p>
                     <p><a class="button" href="<?php echo $event_link; ?>">More Information</a></p>
                 </div>
             </div>
