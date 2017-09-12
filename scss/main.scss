@@ -331,7 +331,7 @@ h5,
 h6 {
     font-family: $font-stack-serif;
     clear: both;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0;
     text-rendering: optimizeLegibility;
 
@@ -640,7 +640,7 @@ input[type="submit"],
         border-radius: 0.2rem;
         color: #fff;
         font-family: $font-stack-sans-serif;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 0.046875em;
         line-height: 1;
         padding: 0.84375em 0.875em 0.78125em;
@@ -1786,7 +1786,6 @@ blockquote:after,
 .entry-title {
     font-family: $font-stack-serif;
     font-size: 1.75em;
-    font-weight: 700;
     line-height: 1.25;
     margin-bottom: 1em;
 }
@@ -1843,7 +1842,7 @@ a.post-thumbnail:focus {
 .comment-content,
 .textwidget {
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 700;
+        font-weight: 400;
 
         &:first-child { margin-top: 0; }
 
@@ -2032,7 +2031,7 @@ body:not(.search-results) .entry-summary > :last-child,
 .entry-content .author-title {
     clear: none;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.75;
     margin: 0;
 }
@@ -2241,7 +2240,7 @@ body.search-no-results .page-header {
     border-top: 4px solid $color-body-text;
     font-family: $font-stack-serif;
     font-size: 1.4375em;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.3125;
     padding-top: 1.217391304em;
 }
@@ -2565,7 +2564,6 @@ body.search-no-results .page-header {
 
         h2 {
             margin: 0;
-            font-weight: 400;
             text-transform: uppercase;
             text-shadow: -0.1rem 0.1rem 0 rgba(0,0,0,0.5);
 
@@ -3423,7 +3421,7 @@ p > video {
 
 .widecolumn h2 {
     font-size: 1.4375em;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2173913043;
     margin-bottom: 1.2173913043em;
 }
