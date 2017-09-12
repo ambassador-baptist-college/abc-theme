@@ -2584,6 +2584,7 @@ body.search-no-results .page-header {
     }
 
     .home-stripe {
+        &.full-width { padding: 2rem; }
         &:not(.full-width) { margin-bottom: 2rem; }
 
         h2 {
@@ -2616,6 +2617,7 @@ body.search-no-results .page-header {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            margin-bottom: 4rem;
 
             * { margin: 0 1rem; }
 
@@ -2654,7 +2656,6 @@ body.search-no-results .page-header {
 
         &.video {
             background-color: $color-orange;
-            padding: 2rem;
             position: relative;
 
             .container {
