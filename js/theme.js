@@ -44,5 +44,20 @@
                 otherField.slideUp();
             }
         });
+
+        // handle transcript delivery method
+        $('select[name="delivery-type"]').on('change', updateDeliveryMethod);
+        updateDeliveryMethod();
+
+        /**
+         * Show/hide transcript delivery method fields
+         * @param {string} selector jQuery selector string
+         */
+        function updateDeliveryMethod(selector) {
+            var deliveryMethod = $('select[name="delivery-type"]').val().toLowerCase().replace(' ', '-');
+
+            $('.delivery').hide();
+            $('.'+deliveryMethod).show();
+        }
     });
 })(jQuery);
