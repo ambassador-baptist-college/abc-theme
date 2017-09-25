@@ -53,7 +53,7 @@
                  */
                 do_action( 'twentysixteen_credits' );
             ?>
-            <span class="site-copyright">&copy;<?php echo date( 'Y' ); ?></span> <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span> | All Rights Reserved.
+            <span class="site-copyright">&copy;<?php echo date( 'Y' ); ?></span> <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span> | Developed by <a href="https://andrewrminion.com/?ref=ambassadors.edu">AndrewRMinion Design</a> | All Rights Reserved.
         </div><!-- .site-inner -->
     </footer><!-- .site-info -->
 </div><!-- .site -->
