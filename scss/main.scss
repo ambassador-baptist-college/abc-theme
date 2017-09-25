@@ -1603,6 +1603,8 @@ section#text-2 p {
 
 .site-main {
     margin-bottom: 3.5em;
+
+    .home & { margin-bottom: 0; }
 }
 
 .site-main > :last-child {
@@ -2690,6 +2692,8 @@ body.search-no-results .page-header {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
+
+                @media screen and (min-width: 58.375em) { flex-wrap: nowrap; }
             }
 
             &, & * { color: white; }
@@ -2698,21 +2702,19 @@ body.search-no-results .page-header {
                 margin: 0 1rem 1rem 0;
 
                 @media screen and (min-width: 48em) { margin: 0 2rem 2rem 0; }
+                @media screen and (min-width: 58.375em) { max-width: 50%; }
             }
 
             .video-link {
-                border: 3px solid darken($color-orange, 5%);
+                iframe { border: 3px solid darken($color-orange, 5%); }
+
                 &, iframe {
                     margin: 0;
 
                     @media screen and (max-width: 58.375em) { height: auto; }
                 }
-            }
 
-            @media (min-width: 48em) {
-                flex-wrap: nowrap;
-
-                .video-link { max-width: 66%; }
+                @media screen and (min-width: 58.375em) { max-width: 50%; }
             }
         }
 
