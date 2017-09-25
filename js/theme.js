@@ -51,13 +51,14 @@
 
         /**
          * Show/hide transcript delivery method fields
-         * @param {string} selector jQuery selector string
          */
-        function updateDeliveryMethod(selector) {
-            var deliveryMethod = $('select[name="delivery-type"]').val().toLowerCase().replace(' ', '-');
+        function updateDeliveryMethod() {
+            if ($('select[name="delivery-type"]').length > 0) {
+                var deliveryMethod = $('select[name="delivery-type"]').val().toLowerCase().replace(' ', '-');
 
-            $('.delivery').hide();
-            $('.'+deliveryMethod).show();
+                $('.delivery').hide();
+                $('.'+deliveryMethod).show();
+            }
         }
     });
 })(jQuery);
