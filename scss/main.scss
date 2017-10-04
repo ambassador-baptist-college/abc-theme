@@ -2958,18 +2958,25 @@ ul.columns {
 .faculty-member {
     clear: both;
     display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-column-gap: 1.75em;
 
-    img {
-        grid-column: 1;
-        grid-row-start: 1;
-        grid-row-end: span 20;
+    @media screen and (min-width: $breakpoint-710) {
+        grid-template-columns: 150px 1fr;
+        grid-column-gap: 1.75em;
+
+        img {
+            grid-column: 1;
+            grid-row-start: 1;
+            grid-row-end: span 20;
+            height: auto;
+        }
+
+        *:not(img) { grid-column: 2; }
     }
 
-    *:not(img) { grid-column: 2; }
-
-    ul, li { list-style-type: none; }
+    ul, li {
+        list-style-type: none;
+        margin: 0;
+    }
 }
 
 #map {
