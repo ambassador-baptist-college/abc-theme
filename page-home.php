@@ -222,7 +222,7 @@ wp_enqueue_script( 'video-res' );
                         echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, preached by ';
                             // preacher
                             the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span>' );
-                        echo '</p>' . wpfc_sermon_media();
+                        echo '</p>' . ( function_exists( 'wpfc_sermon_media' ) ? wpfc_sermon_media() : '<a class="button" href="' . get_the_permalink() . '">Listen here</a>' );
                     }
                 }
                 // reset the query
