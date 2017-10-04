@@ -1797,6 +1797,10 @@ section#text-2 p {
     width: auto;
 }
 
+.entry-content .entry-content {
+    margin: 0;
+}
+
 .entry-title {
     font-family: $font-stack-serif;
     font-size: 1.75em;
@@ -3137,6 +3141,7 @@ ul.subscribe {
     .event { border-bottom-color: $color-green; }
     .search { border-bottom-color: $color-orange; }
     .search h3 { margin: 1.2173913043em 0 0.608695652em; }
+    .mejs-time-rail { max-width: calc(100% - 55px); }
 }
 
 .wpfc_sermon {
