@@ -134,9 +134,9 @@ get_header(); ?>
                         ));
 
                         if ( $books ) {
-                            echo '<form class="wpfc_book" action="' . home_url() . '" data-path="' . home_url( '/' . $sermons_slug . '/book/' ) . '">
+                            echo '<form class="wpfc_bible_book" action="' . home_url() . '" data-path="' . home_url( '/' . $sermons_slug . '/book/' ) . '">
                             <h3>Books</h3>
-                            <select class="sermon-search" name="wpfc_book">';
+                            <select class="sermon-search" name="wpfc_bible_book">';
                             foreach ( $books as $book ) {
                                 echo '<option value="' . $book->slug . '">' . $book->name. '</option>';
                             }
