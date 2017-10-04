@@ -202,7 +202,7 @@ function abc_add_page_thumb() {
         $cpts[$cpt['post_type']] = $cpt['archive_image'];
     }
 
-    if ( is_archive() ) {
+    if ( is_archive() || is_home() ) {
         foreach( $cpt_headers as $cpt ) {
             if ( array_key_exists( get_post_type(), $cpts ) ) {
                 echo abc_header_image( $cpts[get_post_type()] );
