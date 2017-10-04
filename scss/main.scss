@@ -321,6 +321,10 @@ textarea {
     font-family: $font-stack-sans-serif;
     font-size: $font-size-base;
     line-height: 1.75;
+
+    @media screen and (max-width: $breakpoint-710) {
+        font-size: $font-size-base * 0.8888888888888888;
+    }
 }
 
 h1,
