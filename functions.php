@@ -1,19 +1,18 @@
 <?php
 
 // add minified CSS
-add_action( 'wp_enqueue_scripts', 'abc_minified_css', 5 );
 function abc_minified_css() {
     // add minified stylesheet
     wp_enqueue_style( 'twentysixteen-style', get_stylesheet_directory_uri() . '/css/main.min.css' );
     wp_register_script( 'video-res', get_stylesheet_directory_uri() . '/js/video-res.min.js', array( 'jquery' ) );
 }
+add_action( 'wp_enqueue_scripts', 'abc_minified_css', 5 );
 
 // replace default fonts and stylesheet
-add_action( 'wp_enqueue_scripts', 'abc_webfonts_remove', 20 );
 function abc_webfonts_remove() {
     wp_dequeue_style( 'twentysixteen-fonts' );
 }
-add_action( 'wp_footer', 'abc_webfonts_add' );
+add_action( 'wp_enqueue_scripts', 'abc_webfonts_remove', 20 );
 function abc_webfonts_add() {
     ?><script>
     WebFontConfig = {
@@ -30,9 +29,9 @@ function abc_webfonts_add() {
     </script><?php
     wp_enqueue_style( 'dashicons' );
 }
+add_action( 'wp_footer', 'abc_webfonts_add' );
 
-// add chosen.js and theme JS
-add_action( 'wp_enqueue_scripts', 'abc_add_assets' );
+// add theme assets
 function abc_add_assets() {
     wp_enqueue_style( 'chosen', get_stylesheet_directory_uri() . '/css/chosen.min.css' );
     wp_enqueue_script( 'chosen', get_stylesheet_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ) );
@@ -54,9 +53,9 @@ function abc_add_assets() {
     ));
 
 }
+add_action( 'wp_enqueue_scripts', 'abc_add_assets' );
 
 // add backend styles
-add_action( 'admin_enqueue_scripts', 'abc_add_backend_styles' );
 function abc_add_backend_styles() {
     wp_register_style( 'abc-backend', get_stylesheet_directory_uri() . '/css/backend.min.css' );
 
@@ -64,10 +63,10 @@ function abc_add_backend_styles() {
         wp_enqueue_style( 'abc-backend' );
     }
 }
+add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
 
 // add custom image sizes
 // default thumbnail
-add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
 function abc_custom_image_sizes() {
     set_post_thumbnail_size( 2400, 600, true );
     add_image_size( 'thumbnail-tall', 2400, 1280, true );
@@ -76,6 +75,7 @@ function abc_custom_image_sizes() {
     add_image_size( 'highlighted-event-small', 600, 300, true );
     add_image_size( 'highlighted-event-medium', 900, 450, true );
 }
+add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
 
 // Add signature custom image size
 function signature_image_size( $sizes ) {
