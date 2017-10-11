@@ -52,6 +52,23 @@ function abc_add_assets() {
         'newWindow'     => true,
     ));
 
+    // homepage JS
+    if ( is_front_page() ) {
+        $json_videos = '';
+        $videos = glob( get_stylesheet_directory() . '/video/*.mp4' );
+        foreach ( $videos as $video ) {
+            $basename = basename( $video, '.mp4' );
+            $size_array = explode( 'x', $basename );
+            $json_videos[$size_array[1]] = array(
+                'width'     => $size_array[0],
+                'height'    => $size_array[1],
+                'url'       => get_stylesheet_directory_uri() . '/video/' . $basename . '.mp4',
+            );
+        }
+        ksort($json_videos);
+        wp_add_inline_script( 'video-res', 'var themeUrl = "' . get_stylesheet_directory_uri() . '", videoRes = ' . json_encode( $json_videos ) );
+        wp_enqueue_script( 'video-res' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'abc_add_assets' );
 
@@ -248,27 +265,6 @@ function abc_sermon_player() {
     ));
 }
 add_action( 'wp_footer', 'abc_sermon_player' );
-
-// Add homepage background video
-function abc_homepage_videos() {
-    if ( is_front_page() ) {
-        $json_videos = '';
-        $videos = glob( get_stylesheet_directory() . '/video/*.mp4' );
-        foreach ( $videos as $video ) {
-            $basename = basename( $video, '.mp4' );
-            $size_array = explode( 'x', $basename );
-            $json_videos[$size_array[1]] = array(
-                'width'     => $size_array[0],
-                'height'    => $size_array[1],
-                'url'       => get_stylesheet_directory_uri() . '/video/' . $basename . '.mp4',
-            );
-        }
-        ksort($json_videos);
-        wp_add_inline_script( 'video-res', 'var themeUrl = "' . get_stylesheet_directory_uri() . '", videoRes = ' . json_encode( $json_videos ) );
-        wp_enqueue_script( 'video-res' );
-    }
-}
-add_action( 'wp_enqueue_scripts', 'abc_homepage_videos' );
 
 /**
  * Add favicons to <head>
