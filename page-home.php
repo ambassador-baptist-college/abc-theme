@@ -98,7 +98,7 @@ wp_enqueue_script( 'video-res' );
                 // WP_Query arguments
                 $args = array (
                     'post_type'              => array( 'post' ),
-                    'posts_per_page'         => '2',
+                    'posts_per_page'         => '3',
                     'post_status'            => 'publish',
                 );
 
@@ -109,11 +109,10 @@ wp_enqueue_script( 'video-res' );
                     while ( $news_query->have_posts() ) {
                         $news_query->the_post();
 
-                        add_filter( 'excerpt_length', function() {return 10;} );
+                        add_filter( 'excerpt_length', function() { return 13; } );
 
                         echo '<article class="home-news-excerpt">';
-                            echo '<a href="' . get_permalink() . '">' . get_the_post_thumbnail( get_the_ID(), 'home-square', array( 'class' => 'alignleft' ) ) . '</a>';
-                            echo '<h3 class="entry-title"><a href="' . get_permalink() . '">' . wp_trim_words( get_the_title(), 3, '&hellip;') . '</a></h3>';
+                            echo '<h3 class="entry-title"><a href="' . get_permalink() . '">' . wp_trim_words( get_the_title(), 4, '&hellip;') . '</a></h3>';
                             the_excerpt();
                         echo '</article>' . "\n";
                     }

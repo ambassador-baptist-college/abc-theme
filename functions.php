@@ -281,4 +281,15 @@ function abc_favicons() {
 }
 add_action( 'wp_head', 'abc_favicons' );
 
+/**
+ * Trim trailing space from excerpt
+ * @param  string $excerpt     default excerpt
+ * @param  string $raw_excerpt raw excerpt text
+ * @return string excerpt with extra spaces removed
+ */
+function abc_trim_excerpt( $excerpt, $raw_excerpt ) {
+    return str_replace( ' &hellip; ', '&hellip;', $excerpt );
+}
+add_filter( 'wp_trim_excerpt', 'abc_trim_excerpt', 10, 2 );
+
 include( 'inc/shortcodes.php' );
