@@ -23,6 +23,7 @@
  *    11.6 - Footer
  *    11.7 - Specific content
  *    11.8 - Forms
+ *    11.9 - WooCommerce
  * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
@@ -3292,6 +3293,26 @@ ul.subscribe {
     }
 
     .anonymous .wpcf7-list-item-label { display: none; }
+}
+
+
+/**
+ * 11.9 - WooCommerce
+ */
+
+.woocommerce .site-content,
+.woocommerce-page .woocommerce {
+    button, .button, a.button, .checkout-button, input[type="reset"], input[type="submit"] {
+        &.alt {
+            background-color: $color-blue;
+
+            &:hover { background-color: $color-orange; }
+        }
+    }
+
+    .product .price {
+        color: $color-green;
+    }
 }
 
 
