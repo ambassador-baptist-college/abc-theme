@@ -215,7 +215,7 @@ wp_enqueue_script( 'video-res' );
                 // The Loop
                 if ( $sermons_query->have_posts() ) {
                     // remove some mediaJS features
-                    while ( $sermons_query->have_posts() && $counter == 0) {
+                    while ( $sermons_query->have_posts() ) {
                         $sermons_query->the_post();
 
                         echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . get_permalink() . '">' . get_the_title() . '</a>, preached by ';
