@@ -280,4 +280,16 @@ function abc_trim_excerpt( $excerpt, $raw_excerpt ) {
 }
 add_filter( 'wp_trim_excerpt', 'abc_trim_excerpt', 10, 2 );
 
+/**
+ * Include 100 items in the podcast feed
+ * @param  object $query WP_Query
+ * @return object WP_Query
+ */
+function abc_sermons_podcast_length( $query ) {
+    if ( $query->is_feed() && $query->query['post_type'] === 'wpfc_sermon' ) {
+        add_filter( 'option_posts_per_rss', function() { return 100; } );
+    }
+}
+add_action( 'pre_get_posts', 'abc_sermons_podcast_length' );
+
 include( 'inc/shortcodes.php' );
