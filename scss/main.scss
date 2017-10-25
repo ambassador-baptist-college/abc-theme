@@ -2096,6 +2096,8 @@ body:not(.search-results) .entry-summary > :last-child,
     width: 21px;
 }
 
+.posted-on { margin-right: .3em; }
+
 .sticky-post {
     color: $color-body-text-secondary;
     display: block;
