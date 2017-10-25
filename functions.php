@@ -200,6 +200,8 @@ add_action( 'init', 'abc_cpt_archive_headers' );
 
 // Add page header if exists
 function abc_add_page_thumb() {
+    global $post;
+
     // get CPT archive options
     $cpt_headers = get_field( 'cpt_archive_headers', 'option' );
     $cpts = array();
