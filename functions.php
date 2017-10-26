@@ -203,26 +203,28 @@ function abc_add_page_thumb() {
     global $post;
 
     // get CPT archive options
-    $cpt_headers = get_field( 'cpt_archive_headers', 'option' );
-    $cpts = array();
-    foreach ( $cpt_headers as $cpt ) {
-        $cpts[$cpt['post_type']] = $cpt['archive_image'];
-    }
+    if ( function_exists( 'get_field' ) ) {
+        $cpt_headers = get_field( 'cpt_archive_headers', 'option' );
+        $cpts = array();
+        foreach ( $cpt_headers as $cpt ) {
+            $cpts[$cpt['post_type']] = $cpt['archive_image'];
+        }
 
-    if ( is_archive() || is_home() ) {
-        foreach( $cpt_headers as $cpt ) {
-            if ( array_key_exists( get_post_type(), $cpts ) ) {
-                echo abc_header_image( $cpts[get_post_type()] );
+        if ( is_archive() || is_home() ) {
+            foreach( $cpt_headers as $cpt ) {
+                if ( array_key_exists( get_post_type(), $cpts ) ) {
+                    echo abc_header_image( $cpts[get_post_type()] );
+                }
             }
-        }
-    } elseif ( is_singular() ) {
-        // single posts
-        if ( has_post_thumbnail( $post->ID ) ) {
-            echo abc_header_image( get_the_post_thumbnail_url() );
-        }
-    } elseif ( is_404() ) {
-        if ( array_key_exists( '404', $cpts ) ) {
-            echo abc_header_image( $cpts['404'] );
+        } elseif ( is_singular() ) {
+            // single posts
+            if ( has_post_thumbnail( $post->ID ) ) {
+                echo abc_header_image( get_the_post_thumbnail_url() );
+            }
+        } elseif ( is_404() ) {
+            if ( array_key_exists( '404', $cpts ) ) {
+                echo abc_header_image( $cpts['404'] );
+            }
         }
     }
 }
