@@ -3304,6 +3304,18 @@ ul.subscribe {
 
 .woocommerce .site-content,
 .woocommerce-page .woocommerce {
+    ul.products li.product {
+        @media screen and (min-width: $breakpoint-710) {
+            width: 22.05%;
+
+            &:not(.first) { clear: none; }
+            &:not(.last) {
+                margin-right: 3.8%;
+                float: left;
+            }
+        }
+    }
+
     button, .button, a.button, .checkout-button, input[type="reset"], input[type="submit"] {
         &.alt {
             background-color: $color-blue;
