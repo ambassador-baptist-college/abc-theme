@@ -19,7 +19,7 @@ function abc_webfonts_add() {
     ?><script>
     WebFontConfig = {
         google: {
-            families: ['Montserrat:400,400italic,600,600italic', 'Rokkitt:400,700']
+            families: ['Montserrat:400,400italic,800,800italic', 'Rokkitt:400,700']
         }
     };
 

@@ -141,7 +141,7 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 small {
@@ -274,7 +274,7 @@ textarea {
 }
 
 optgroup {
-    font-weight: bold;
+    font-weight: 800;
 }
 
 
@@ -524,7 +524,7 @@ dl {
 }
 
 dt {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 dd {
@@ -573,7 +573,7 @@ td {
 
 th {
     border-width: 0 1px 1px 0;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 td {
@@ -863,7 +863,7 @@ a {
 
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .main-navigation ul ul {
@@ -1115,7 +1115,7 @@ a {
     display: inline;
     font-family: $font-stack-sans-serif;
     font-size: 1.4375em;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2173913043;
     text-rendering: optimizeLegibility;
 }
@@ -1204,7 +1204,7 @@ a {
 
 .pagination .current {
     display: inline-block;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .pagination .prev,
@@ -1340,7 +1340,7 @@ a {
     display: block;
     font-family: $font-stack-sans-serif;
     font-size: 0.875em;
-    font-weight: 700;
+    font-weight: 800;
     left: -9999em;
     outline: none;
     padding: 15px 23px 14px;
@@ -1495,7 +1495,7 @@ blockquote:after,
     background-color: $color-blue;
     color: #fff;
     display: block;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .widget_calendar tbody a:hover,
@@ -1699,7 +1699,7 @@ section#text-2 p {
 .site-title {
     font-family: $font-stack-serif;
     font-size: 1.4375em;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2173913043;
     margin: 0;
     text-align: center;
@@ -2411,7 +2411,7 @@ body.search-no-results .page-header {
 .no-comments {
     border-top: 1px solid $color-gray;
     font-family: $font-stack-sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     margin: 0;
     padding-top: 1.75em;
 }
@@ -3001,7 +3001,7 @@ ul.columns {
 
 .courses-container[class*="active"] {
     .cat-filter {
-        &.active { font-weight: 700; }
+        &.active { font-weight: 800; }
 
         &:not(.active) {
             color: $color-body-text-secondary;
