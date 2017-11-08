@@ -3316,6 +3316,13 @@ ul.subscribe {
         }
     }
 
+    @media screen and (min-width: $breakpoint-710) {
+        .twentysixteen div.product div.images,
+        .twentysixteen div.product div.summary { width: 48% !important; }
+        .twentysixteen div.product div.images { float: left !important; }
+        .twentysixteen div.product div.summary { float: right !important; }
+    }
+
     button, .button, a.button, .checkout-button, input[type="reset"], input[type="submit"] {
         &.alt {
             background-color: $color-blue;
