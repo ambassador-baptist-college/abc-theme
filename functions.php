@@ -304,6 +304,6 @@ function abc_product_author() {
         echo '<p class="entry-meta">by ' . get_field( 'author_name' ) . '</p>';
     }
 }
-add_action( 'woocommerce_after_shop_loop_item_title', 'abc_product_author' );
+add_action( 'woocommerce_after_shop_loop_item_title', 'abc_product_author', 4 );
 
 include( 'inc/shortcodes.php' );

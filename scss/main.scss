@@ -3316,6 +3316,8 @@ ul.subscribe {
         }
     }
 
+    ul.products p.entry-meta { font-size: .666em; }
+
     @media screen and (min-width: $breakpoint-710) {
         .twentysixteen div.product div.images,
         .twentysixteen div.product div.summary { width: 48% !important; }
@@ -3331,9 +3333,7 @@ ul.subscribe {
         }
     }
 
-    .product .price {
-        color: $color-green;
-    }
+    .product .price { color: $color-green; }
 }
 
 
