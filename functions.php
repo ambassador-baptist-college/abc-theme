@@ -296,4 +296,14 @@ function abc_sermons_podcast_length( $query ) {
 }
 add_action( 'pre_get_posts', 'abc_sermons_podcast_length' );
 
+/**
+ * Show product author name
+ */
+function abc_product_author() {
+    if ( get_field( 'author_name' ) ) {
+        echo '<p class="entry-meta">by ' . get_field( 'author_name' ) . '</p>';
+    }
+}
+add_action( 'woocommerce_archive_description', 'abc_product_author' );
+
 include( 'inc/shortcodes.php' );

@@ -22,6 +22,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 the_title( '<h1 class="product_title entry-title">', '</h1>' );
 
-if ( get_field( 'author_name' ) ) {
-    echo '<p class="entry-meta">by ' . get_field( 'author_name' ) . '</p>';
-}
+abc_product_author();
