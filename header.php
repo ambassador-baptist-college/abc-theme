@@ -84,6 +84,8 @@
                 if ( is_front_page() ) {
                 } elseif ( is_home() ) {
                     echo 'News Archive';
+                } elseif ( is_post_type_archive( 'product' ) || is_taxonomy( 'product_cat' ) ) {
+                    echo 'Bookstore';
                 } elseif ( is_archive() ) {
                     echo apply_filters( 'custom_title', ucfirst( get_post_type() ) . ' Archive' );
                 } elseif ( is_404() ) {
