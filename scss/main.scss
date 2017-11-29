@@ -61,6 +61,10 @@ $color-yellow:                   #E4F300;
 $color-magenta:                  #AC0076;
 $color-gray:                     #D7D7D7;
 
+$font-weight-body:               500;
+$font-weight-body-heavy:         800;
+$font-weight-header:             400;
+
 %header-gradient {
     background: linear-gradient(to right,
         $color-blue 0%, $color-blue 20%,
@@ -141,7 +145,7 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 small {
@@ -274,7 +278,7 @@ textarea {
 }
 
 optgroup {
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 
@@ -299,7 +303,7 @@ optgroup {
     font-size: 1em;
     font-style: normal;
     font-variant: normal;
-    font-weight: normal;
+    font-weight: $font-weight-body;
     line-height: 1;
     speak: none;
     text-align: center;
@@ -336,7 +340,7 @@ h5,
 h6 {
     font-family: $font-stack-serif;
     clear: both;
-    font-weight: 400;
+    font-weight: $font-weight-header;
     margin: 0;
     text-rendering: optimizeLegibility;
 
@@ -408,7 +412,7 @@ blockquote cite {
 
 blockquote strong,
 blockquote b {
-    font-weight: 400;
+    font-weight: $font-weight-body;
 }
 
 blockquote > :last-child {
@@ -524,7 +528,7 @@ dl {
 }
 
 dt {
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 dd {
@@ -567,13 +571,13 @@ table {
 caption,
 th,
 td {
-    font-weight: normal;
+    font-weight: $font-weight-body;
     text-align: left;
 }
 
 th {
     border-width: 0 1px 1px 0;
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 td {
@@ -645,7 +649,7 @@ input[type="submit"],
         border-radius: 0.2rem;
         color: #fff;
         font-family: $font-stack-sans-serif;
-        font-weight: 400;
+        font-weight: $font-weight-body;
         letter-spacing: 0.046875em;
         line-height: 1;
         padding: 0.84375em 0.875em 0.78125em;
@@ -863,7 +867,7 @@ a {
 
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 .main-navigation ul ul {
@@ -1115,7 +1119,7 @@ a {
     display: inline;
     font-family: $font-stack-sans-serif;
     font-size: 1.4375em;
-    font-weight: 800;
+    font-weight: $font-weight-header;
     line-height: 1.2173913043;
     text-rendering: optimizeLegibility;
 }
@@ -1204,7 +1208,7 @@ a {
 
 .pagination .current {
     display: inline-block;
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 .pagination .prev,
@@ -1340,7 +1344,7 @@ a {
     display: block;
     font-family: $font-stack-sans-serif;
     font-size: 0.875em;
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
     left: -9999em;
     outline: none;
     padding: 15px 23px 14px;
@@ -1487,7 +1491,7 @@ blockquote:after,
 }
 
 .widget_calendar caption {
-    font-weight: 900;
+    font-weight: $font-weight-body-heavy;
     margin-bottom: 1.75em;
 }
 
@@ -1495,7 +1499,7 @@ blockquote:after,
     background-color: $color-blue;
     color: #fff;
     display: block;
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
 }
 
 .widget_calendar tbody a:hover,
@@ -1699,7 +1703,7 @@ section#text-2 p {
 .site-title {
     font-family: $font-stack-serif;
     font-size: 1.4375em;
-    font-weight: 800;
+    font-weight: $font-weight-header;
     line-height: 1.2173913043;
     margin: 0;
     text-align: center;
@@ -1724,7 +1728,7 @@ section#text-2 p {
     color: $color-body-text-secondary;
     display: none;
     font-size: 0.8125em;
-    font-weight: 400;
+    font-weight: $font-weight-header;
     line-height: 1.0769230769;
     margin: 0.538461538em 0 0;
 }
@@ -1861,7 +1865,7 @@ a.post-thumbnail:focus {
 .comment-content,
 .textwidget {
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 400;
+        font-weight: $font-weight-header;
 
         &:first-child { margin-top: 0; }
 
@@ -1942,7 +1946,7 @@ a.post-thumbnail:focus {
     line-height: 0.9;
     padding-right: 0.1em;
     font-family: $font-stack-serif;
-    font-weight: 700;
+    font-weight: $font-weight-body-heavy;
     margin-bottom: -0.1em;
 }
 
@@ -2050,7 +2054,7 @@ body:not(.search-results) .entry-summary > :last-child,
 .entry-content .author-title {
     clear: none;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: $font-weight-body;
     line-height: 1.75;
     margin: 0;
 }
@@ -2263,7 +2267,7 @@ body.search-no-results .page-header {
     border-top: 4px solid $color-body-text;
     font-family: $font-stack-serif;
     font-size: 1.4375em;
-    font-weight: 400;
+    font-weight: $font-weight-header;
     line-height: 1.3125;
     padding-top: 1.217391304em;
 }
@@ -2411,7 +2415,7 @@ body.search-no-results .page-header {
 .no-comments {
     border-top: 1px solid $color-gray;
     font-family: $font-stack-sans-serif;
-    font-weight: 800;
+    font-weight: $font-weight-body-heavy;
     margin: 0;
     padding-top: 1.75em;
 }
@@ -2504,7 +2508,7 @@ body.search-no-results .page-header {
 .site-info .site-title {
     font-family: inherit;
     font-size: inherit;
-    font-weight: 400;
+    font-weight: $font-weight-body;
 }
 
 .site-footer .widget {
@@ -2860,7 +2864,7 @@ body.search-no-results .page-header {
                 text-align: right;
                 margin: 0;
                 font-size: 2em;
-                font-weight: 300;
+                font-weight: $font-weight-body;
             }
 
             &.button-2 { border-bottom-color: $color-orange; }
@@ -3001,7 +3005,7 @@ ul.columns {
 
 .courses-container[class*="active"] {
     .cat-filter {
-        &.active { font-weight: 800; }
+        &.active { font-weight: $font-weight-body-heavy; }
 
         &:not(.active) {
             color: $color-body-text-secondary;
@@ -3033,7 +3037,7 @@ form[name="courses"] {
 .credit-hours {
     display: inline-block;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: $font-weight-body;
     background-color: $color-blue;
     color: white;
     padding: .5em 1em;
@@ -3530,7 +3534,7 @@ p > video {
 
 .widecolumn h2 {
     font-size: 1.4375em;
-    font-weight: 400;
+    font-weight: $font-weight-body;
     line-height: 1.2173913043;
     margin-bottom: 1.2173913043em;
 }
@@ -3548,7 +3552,7 @@ p > video {
     color: $color-body-text-secondary;
     font-family: $font-stack-sans-serif;
     font-size: 0.8125em;
-    font-weight: 400;
+    font-weight: $font-weight-body;
     letter-spacing: 0.076923077em;
     line-height: 1.6153846154;
     text-transform: uppercase;
@@ -3559,7 +3563,7 @@ p > video {
 }
 
 .widecolumn .mu_register label strong {
-    font-weight: 400;
+    font-weight: $font-weight-body;
 }
 
 .widecolumn #key,
