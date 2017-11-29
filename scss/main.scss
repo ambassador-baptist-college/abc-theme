@@ -627,6 +627,7 @@ input[type="reset"],
 input[type="submit"],
 .button {
     &, .entry-content & {
+        display: inline-block;
         border: 1px solid darken($color-blue, 20%);
 
         &, &:hover, &:focus { box-shadow: inset 0 0 0.2rem rgba(darken($color-blue, 20%), 0.5); }
