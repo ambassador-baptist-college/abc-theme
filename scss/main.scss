@@ -2437,9 +2437,11 @@ body.search-no-results .page-header {
 .required {
     color: $color-blue;
 
-    &:after {
-        display: inline-block;
-        content: ' *';
+    body:not(.woocommerce-checkout) & {
+        &:after {
+            display: inline-block;
+            content: ' *';
+        }
     }
 }
 
