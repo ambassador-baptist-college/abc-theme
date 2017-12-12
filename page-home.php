@@ -64,7 +64,7 @@ wp_enqueue_script( 'video-res' );
             if ( get_field( 'live_streaming' ) ) {
                 echo '<div class="teaser">' . get_field( 'live_streaming' ) . '</div>
                 <div class="streaming-frame-shade"></div>
-                <div class="streaming-frame"><span class="close">&times;</span>' . do_shortcode( '[youtube_live autoplay="false"]' ) . '</div>';
+                <div class="streaming-frame"><span class="close">&times;</span>' . do_shortcode( '[youtube_live autoplay="false" js_only="true"]' ) . '</div>';
             }
         ?>
         </section><!-- .video.streaming -->
