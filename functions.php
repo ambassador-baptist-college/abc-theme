@@ -313,7 +313,7 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'abc_product_author', 4 );
  */
 function abc_sermon_podcast_preacher( $content ) {
     if ( is_post_type_archive( 'wpfc_sermon' ) || is_tax( 'wpfc_preacher' ) || is_tax( 'wpfc_sermon_topics' ) || is_tax( 'wpfc_service_type' ) || is_tax( 'wpfc_sermon_series' ) || is_tax( 'wpfc_bible_book' ) ) {
-        $content = get_the_term_list( get_the_ID(), 'wpfc_preacher', 'Preached by ' ) . $content;
+        $content = get_the_term_list( get_the_ID(), 'wpfc_preacher', 'Preached by ' ) . ' on ' . get_the_date( 'l, F j, Y' ) . $content;
     }
     return $content;
 }
