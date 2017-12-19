@@ -306,4 +306,18 @@ function abc_product_author() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'abc_product_author', 4 );
 
+/**
+ * Add preacher name to podcast episodes
+ * @param  string $content feed item content
+ * @return string feed item content with preacher name appended
+ */
+function abc_sermon_podcast_preacher( $content ) {
+    if ( is_post_type_archive( 'wpfc_sermon' ) || is_tax( 'wpfc_preacher' ) || is_tax( 'wpfc_sermon_topics' ) || is_tax( 'wpfc_service_type' ) || is_tax( 'wpfc_sermon_series' ) || is_tax( 'wpfc_bible_book' ) ) {
+        $content = get_the_term_list( get_the_ID(), 'wpfc_preacher', 'Preached by ' ) . $content;
+    }
+    return $content;
+}
+add_filter( 'the_content_feed', 'abc_sermon_podcast_preacher', 15 );
+add_filter( 'the_excerpt_rss', 'abc_sermon_podcast_preacher', 15 );
+
 include( 'inc/shortcodes.php' );
