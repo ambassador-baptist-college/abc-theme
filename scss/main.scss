@@ -2635,7 +2635,7 @@ body.search-no-results .page-header {
 
         & > h2 { text-align: center; }
 
-        &.streaming {
+        &.streaming, &.cancellation {
             &.off-air { display: none; }
 
             color: white;

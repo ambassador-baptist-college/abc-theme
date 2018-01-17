@@ -59,6 +59,16 @@ wp_enqueue_script( 'video-res' );
         endwhile;
         ?>
 
+        <?php if ( get_field( 'show_cancellation_notice' ) ) { ?>
+            <section class="cancellation home-stripe">
+            <?php
+                if ( get_field( 'live_streaming' ) ) {
+                    echo '<div class="teaser">' . get_field( 'cancellation_notice' ) . '</div>';
+                }
+            ?>
+            </section><!-- .cancellation -->
+        <?php } ?>
+
         <section class="streaming home-stripe off-air">
         <?php
             if ( get_field( 'live_streaming' ) ) {
