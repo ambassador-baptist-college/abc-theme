@@ -320,4 +320,23 @@ function abc_sermon_podcast_preacher( $content ) {
 add_filter( 'the_content_feed', 'abc_sermon_podcast_preacher', 15 );
 add_filter( 'the_excerpt_rss', 'abc_sermon_podcast_preacher', 15 );
 
+/**
+ * Remove wpfc hook to add sermon to the_content
+ */
+remove_filter( 'the_content', 'add_wpfc_sermon_content' );
+
+/**
+ * Strip out content from sermons content since it’s displayed in the excerpt
+ * @param  string $content HTML content
+ * @return string HTML content
+ */
+function abc_strip_sermon_content( $content ) {
+    if ( 'wpfc_sermon' === get_post_type() ) {
+        $content = '';
+    }
+
+    return $content;
+}
+add_filter( 'the_content', 'abc_strip_sermon_content' );
+
 include( 'inc/shortcodes.php' );
