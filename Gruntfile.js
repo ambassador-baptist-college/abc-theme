@@ -62,7 +62,9 @@ module.exports = function (grunt) {
                 https: {
                     key: "/Users/andrew/github/dotfiles/local-dev.key",
                     cert: "/Users/andrew/github/dotfiles/local-dev.crt",
-                }
+                },
+                open: 'external',
+                host: 'andrews-macbook-pro.local'
             },
         },
     },
