@@ -79,6 +79,7 @@ function abc_custom_image_sizes() {
     add_image_size( 'home-square', 75, 75, true );
     add_image_size( 'highlighted-event-small', 600, 300, true );
     add_image_size( 'highlighted-event-medium', 900, 450, true );
+    add_image_size( 'open-graph', 1200, 630, true );
 }
 add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
 
