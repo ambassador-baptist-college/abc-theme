@@ -3300,6 +3300,11 @@ table#itinerary {
     }
 
     .product .price { color: $color-green; }
+
+    .coupon input#coupon_code {
+        min-width: 9em;
+        padding: 0.618em;
+    }
 }
 
 
