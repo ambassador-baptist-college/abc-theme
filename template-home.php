@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying pages
+ * Template Name: Home
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that
@@ -58,6 +58,8 @@ wp_enqueue_script( 'video-res' );
             <?php // End of the loop.
         endwhile;
         ?>
+
+        <?php if ( function_exists( 'get_field' ) ) : ?>
 
         <?php if ( get_field( 'show_cancellation_notice' ) ) { ?>
             <section class="cancellation home-stripe">
@@ -239,6 +241,7 @@ wp_enqueue_script( 'video-res' );
             }
         ?>
         </section>
+        <?php endif; ?>
     </main><!-- .site-main -->
 
 </div><!-- .content-area -->

@@ -12,6 +12,8 @@
     <header class="entry-header">
         <h1 class="entry-title">
             <?php
+            if ( function_exists( 'get_field' ) ) :
+
             if ( get_field( 'course_code' ) ) {
                 echo '<span class="course-code">' . get_field( 'course_code' ) . ':</span> ';
             }
@@ -25,6 +27,8 @@
                 }
                 echo '</span>';
             }
+
+            endif;
             ?>
         </h1>
     </header><!-- .entry-header -->

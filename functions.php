@@ -1,6 +1,6 @@
 <?php
 
-const ABC_THEME_VERSION = '1.0.6';
+const ABC_THEME_VERSION = '1.0.7';
 
 // add minified CSS
 function abc_minified_css() {

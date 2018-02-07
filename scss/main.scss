@@ -1615,7 +1615,7 @@ section#text-2 p {
 .site-main {
     margin-bottom: 3.5em;
 
-    .home & { margin-bottom: 0; }
+    .page-template-template-home & { margin-bottom: 0; }
 }
 
 .site-main > :last-child {
@@ -1680,7 +1680,7 @@ section#text-2 p {
         margin-bottom: -11em;
     }
 
-    .home & {
+    .page-template-template-home & {
         margin-bottom: -18em;
 
         @media screen and (max-width: $breakpoint-710) { margin-bottom: -15em; }
@@ -2534,7 +2534,7 @@ body.search-no-results .page-header {
 /**
  * 11.7 - Specific Content
  */
-.home {
+.page-template-template-home {
     &.on-air {
         margin-top: 400px;
 
@@ -2551,7 +2551,7 @@ body.search-no-results .page-header {
 
     &.tall .content-area { background-color: transparent; }
 
-    &-video-background {
+    .home-video-background {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -2793,7 +2793,7 @@ body.search-no-results .page-header {
         }
     }
 
-    &-features {
+    .home-features {
         &, a { color: white; }
 
         a:hover { color: $color-blue; }
@@ -3603,7 +3603,7 @@ p > video {
             margin-bottom: -15em;
         }
 
-        .home & { margin-bottom: -24em; }
+        .page-template-template-home & { margin-bottom: -24em; }
     }
 
     .site-branding {
@@ -3931,7 +3931,7 @@ p > video {
             margin-bottom: -15em;
         }
 
-        .home & { margin-bottom: -30em; }
+        .page-template-template-home & { margin-bottom: -30em; }
     }
 
     .content-area {
@@ -4227,7 +4227,7 @@ p > video {
             margin-bottom: -30em;
         }
 
-        .home & { margin-bottom: -40em; }
+        .page-template-template-home & { margin-bottom: -40em; }
     }
 
     .site-branding,

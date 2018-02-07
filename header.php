@@ -22,7 +22,7 @@
 </head>
 
 <?php
-    if ( 'page' == get_post_type() && get_field( 'tall_header_image' ) ) {
+    if ( 'page' == get_post_type() && function_exists( 'get_field' ) && get_field( 'tall_header_image' ) ) {
         $body_class_string = $post->post_name . ' tall';
     } elseif ( is_singular() ) {
         $body_class_string = $post->post_name;
