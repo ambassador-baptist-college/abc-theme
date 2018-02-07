@@ -41,7 +41,7 @@ function abc_add_assets() {
     wp_register_script( 'grad-offering', get_stylesheet_directory_uri() . '/js/grad-offering.min.js', array( 'jquery' ), ABC_THEME_VERSION, true );
 
     // homepage JS
-    if ( is_front_page() ) {
+    if ( is_page_template( 'template-home.php' ) ) {
         $json_videos = '';
         $videos = glob( get_stylesheet_directory() . '/video/*.mp4' );
         foreach ( $videos as $video ) {
