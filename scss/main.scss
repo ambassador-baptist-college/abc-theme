@@ -24,6 +24,7 @@
  *    11.7 - Specific content
  *    11.8 - Forms
  *    11.9 - WooCommerce
+ *    11.10 - Events
  * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
@@ -3306,6 +3307,15 @@ table#itinerary {
         min-width: 9em;
         padding: 0.618em;
     }
+}
+
+
+/**
+ * 11.10 - Events
+ */
+
+h4.tribe-event-title {
+    font-size: 1.25rem;
 }
 
 
