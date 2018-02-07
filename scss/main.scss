@@ -1307,13 +1307,14 @@ a {
 }
 
 @media screen and (min-width: $breakpoint-910) {
-    #menu-item-198 {
+    .menu-item-home {
         margin: 0 2%;
         min-width: 110px;
         flex-grow: 2;
 
         a {
             background: url('../img/ABC-logo.svg') no-repeat center / contain;
+            background-color: transparent !important;
             height: 8em;
         }
 
