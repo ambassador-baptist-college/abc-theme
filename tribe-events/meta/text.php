@@ -41,7 +41,7 @@ switch ( $field['label'] ) {
         $placeholder = 'Doe';
         break;
     case 'Box Number (students only)':
-        $placeholder = '4000';
+        $placeholder = '3000';
         break;
 }
 
