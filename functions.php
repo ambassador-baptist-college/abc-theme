@@ -1,6 +1,6 @@
 <?php
 
-const ABC_THEME_VERSION = '1.0.7';
+define( ABC_THEME_VERSION, wp_get_theme()->get( 'Version' ) );
 
 // add minified CSS
 function abc_minified_css() {
