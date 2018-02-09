@@ -40,9 +40,7 @@ $cart_classes = (array) apply_filters( 'tribe_events_tickets_woo_cart_class', ar
     enctype='multipart/form-data'
 >
 
-    <h2 class="tribe-events-tickets-title tribe--tickets">
-        <?php esc_html_e( 'Tickets', 'event-tickets-plus' ) ?>
-    </h2>
+    <h2 class="tribe-events-tickets-title tribe--tickets">Online Registration</h2>
 
     <table class="tribe-events-tickets">
         <?php
