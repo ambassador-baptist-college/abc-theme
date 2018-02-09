@@ -3318,6 +3318,14 @@ h4.tribe-event-title {
     font-size: 1.25rem;
 }
 
+h1.tribe-events-single-event-title,
+.tribe-events-schedule h2 {
+    margin-bottom: 0;
+}
+
+.tribe-events-schedule .tribe-events-cost {
+    display: block;
+}
 
 /**
  * 12.0 - Media
