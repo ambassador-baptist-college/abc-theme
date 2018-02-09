@@ -28,9 +28,7 @@ $now = current_time( 'timestamp' );
     method="post"
     enctype='multipart/form-data'
 >
-    <h2 class="tribe-events-tickets-title tribe--rsvp">
-        <?php echo esc_html_x( 'RSVP', 'form heading', 'event-tickets' ) ?>
-    </h2>
+    <h2 class="tribe-events-tickets-title tribe--rsvp">Online RSVP</h2>
 
     <div class="tribe-rsvp-messages">
         <?php
