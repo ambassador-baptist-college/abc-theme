@@ -372,4 +372,18 @@ function abc_autocomplete_virtual_orders( $order_status, $order_id ) {
 }
 add_filter( 'woocommerce_payment_complete_order_status', 'abc_autocomplete_virtual_orders', 10, 2 );
 
+/**
+ * Add link to registration form for Tribe Events
+ * @param  string $content HTML post content
+ * @return string HTML post content
+ */
+function abc_events_form_link( $content ) {
+    if ( is_singular( 'tribe_events' ) ) {
+        $content = '<p><a class="button" href="#register-form">Register Online<span class="dashicons dashicons-arrow-down-alt2"></span></a></p>' . $content;
+    }
+
+    return $content;
+}
+add_filter( 'the_content', 'abc_events_form_link' );
+
 include( 'inc/shortcodes.php' );

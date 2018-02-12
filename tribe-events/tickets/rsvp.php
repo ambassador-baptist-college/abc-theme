@@ -22,7 +22,7 @@ $now = current_time( 'timestamp' );
 ?>
 
 <form
-    id="rsvp-now"
+    id="register-form"
     action=""
     class="tribe-tickets-rsvp cart <?php echo esc_attr( $messages_class ); ?>"
     method="post"

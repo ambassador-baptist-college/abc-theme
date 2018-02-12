@@ -33,7 +33,7 @@ ob_start();
 $cart_classes = (array) apply_filters( 'tribe_events_tickets_woo_cart_class', array( 'cart' ) );
 ?>
 <form
-    id="buy-tickets"
+    id="register-form"
     action="<?php echo esc_url( wc_get_cart_url() ) ?>"
     class="<?php echo esc_attr( implode( ' ', $cart_classes ) ); ?>"
     method="post"
