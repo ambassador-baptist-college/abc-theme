@@ -545,7 +545,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-home.php"
+                "value": "template-home.php"
             }
         ]
     ],
@@ -557,5 +557,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1518036280
+    "modified": 1518712653
 }
