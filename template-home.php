@@ -155,7 +155,10 @@ get_header(); ?>
             $event_id = get_field( 'highlighted_event' );
             $event_link = get_permalink( $event_id );
             $event_excerpt = get_post_field( 'post_excerpt', $event_id );
-            if ( $event_excerpt ) {
+
+            if ( get_field( 'highlighted_event_use_manual_excerpt' ) ) {
+                $excerpt = get_field( 'highlighted_event_manual_excerpt' );
+            } elseif ( $event_excerpt ) {
                 $excerpt = apply_filters( 'the_excerpt', $event_excerpt );
             } else {
                 $excerpt = strip_shortcodes( get_post_field( 'post_content', $event_id ) );

@@ -251,7 +251,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "34",
                 "class": "",
                 "id": ""
             },
@@ -275,7 +275,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -288,6 +288,52 @@
             "multiple": 0,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_5a956badb04a4",
+            "label": "Highlighted Event Use Manual Excerpt",
+            "name": "highlighted_event_use_manual_excerpt",
+            "type": "true_false",
+            "instructions": "Add custom excerpt or use default excerpt?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Custom",
+            "ui_off_text": "Default"
+        },
+        {
+            "key": "field_5a956be7b04a5",
+            "label": "Highlighted Event Manual Excerpt",
+            "name": "highlighted_event_manual_excerpt",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a956badb04a4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_5796b500e04d0",
@@ -557,5 +603,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1518712653
+    "modified": 1519741975
 }
