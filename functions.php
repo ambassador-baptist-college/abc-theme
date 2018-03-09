@@ -341,6 +341,45 @@ function abc_strip_sermon_content( $content ) {
 add_filter( 'the_content', 'abc_strip_sermon_content' );
 
 /**
+ * Auto-complete virtual orders other than banquet tickets
+ * @param  string  $order_status current order status
+ * @param  integer $order_id     WooCommerce order ID
+ * @return string  order status
+ */
+function abc_autocomplete_virtual_orders( $order_status, $order_id ) {
+    $order = wc_get_order( $order_id );
+    if ( 'processing' === $order_status && ( 'on-hold' === $order_status || 'pending' === $order_status || 'failed' === $order_status ) ) {
+        $virtual_order = NULL;
+        if ( count( $order->get_items() ) > 0 ) {
+            foreach ( $order->get_items() as $item ) {
+                // check for banquets
+                foreach( get_the_terms( $item->get_product_id(), 'product_cat' ) as $term ) {
+                    if ( $term['slug'] === 'banquets' ) {
+                        break;
+                    }
+                }
+                // non-banquet tickets
+                if ( 'line_item' == $item['type'] ) {
+                    $_product = $order->get_product_from_item( $item );
+                    if ( ! $_product->is_virtual() ) {
+                        $virtual_order = false;
+                        break;
+                    } else {
+                        $virtual_order = true;
+                    }
+                }
+            }
+        }
+        if ( $virtual_order ) {
+            return 'completed';
+        }
+    }
+
+    return $order_status;
+}
+add_filter( 'woocommerce_payment_complete_order_status', 'abc_autocomplete_virtual_orders', 10, 2 );
+
+/**
  * Add link to registration form for Tribe Events
  * @param  string $content HTML post content
  * @return string HTML post content
