@@ -121,7 +121,7 @@ get_header(); ?>
                         add_filter( 'excerpt_length', function() { return 13; } );
 
                         echo '<article class="home-news-excerpt">';
-                            echo '<h3 class="entry-title"><a href="' . get_permalink() . '">' . wp_trim_words( get_the_title(), 4, '&hellip;') . '</a></h3>';
+                            echo '<h3 class="entry-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
                             the_excerpt();
                         echo '</article>' . "\n";
                     }
