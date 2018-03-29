@@ -6,7 +6,9 @@
             $('.streaming.off-air').removeClass('off-air').addClass('on-air');
         }
         window.addEventListener('wpYouTubeLiveStarted', function() {
-            $('.streaming.off-air').removeClass('off-air').addClass('on-air');
+            if ($('.wp-youtube-live').hasClass('live')) {
+                $('.streaming.off-air').removeClass('off-air').addClass('on-air');
+            }
         });
 
 
