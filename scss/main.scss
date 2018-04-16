@@ -2673,11 +2673,7 @@ body.search-no-results .page-header {
             & ~ .highlighted-event {
                 background: white;
 
-                .image {
-                    order: 2;
-
-                    img { border-color: white; }
-                }
+                .image { order: 2; }
 
                 .content {
                     order: 1;
