@@ -243,97 +243,46 @@
             "endpoint": 0
         },
         {
-            "key": "field_59b2feb5ca9f8",
-            "label": "Highlighted Event Image",
-            "name": "highlighted_event_image",
-            "type": "image",
-            "instructions": "If specified, used in place of the post’s thumbnail image. Recommended size: 750×460px",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "34",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "sermon_medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_59b2fe38ad12a",
-            "label": "Highlighted Event",
-            "name": "highlighted_event",
-            "type": "post_object",
-            "instructions": "Upcoming event to highlight",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "special_event",
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "id",
-            "ui": 1
-        },
-        {
-            "key": "field_5a956badb04a4",
-            "label": "Highlighted Event Use Manual Excerpt",
-            "name": "highlighted_event_use_manual_excerpt",
-            "type": "true_false",
-            "instructions": "Add custom excerpt or use default excerpt?",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "Custom",
-            "ui_off_text": "Default"
-        },
-        {
-            "key": "field_5a956be7b04a5",
-            "label": "Highlighted Event Manual Excerpt",
-            "name": "highlighted_event_manual_excerpt",
-            "type": "wysiwyg",
+            "key": "field_5ad0be2deb30d",
+            "label": "Highlighted Events",
+            "name": "highlighted_events",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a956badb04a4",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5ad0beb9a2859",
+                    "label": "Event",
+                    "name": "event",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5ad0bdce05477"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
             "key": "field_5796b500e04d0",
@@ -603,5 +552,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1519741975
+    "modified": 1523629883
 }

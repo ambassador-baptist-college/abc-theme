@@ -1,0 +1,117 @@
+{
+    "key": "group_5ad0bdce05477",
+    "title": "Home Page Highlighted Events",
+    "fields": [
+        {
+            "key": "field_5ad0bdce09f63",
+            "label": "Highlighted Event Image",
+            "name": "event_image",
+            "type": "image",
+            "instructions": "If specified, used in place of the post’s thumbnail image. Recommended size: 750×460px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "sermon_medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ad0bdce09f6b",
+            "label": "Highlighted Event",
+            "name": "id",
+            "type": "post_object",
+            "instructions": "Upcoming event to highlight",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "special_event",
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5ad0bdce09f72",
+            "label": "Highlighted Event Use Manual Excerpt",
+            "name": "use_manual_excerpt",
+            "type": "true_false",
+            "instructions": "Add custom excerpt or use default excerpt?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Custom",
+            "ui_off_text": "Default"
+        },
+        {
+            "key": "field_5ad0bdce09f7a",
+            "label": "Highlighted Event Manual Excerpt",
+            "name": "manual_excerpt",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ad0bdce09f72",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1523630228
+}

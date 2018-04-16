@@ -2670,6 +2670,21 @@ body.search-no-results .page-header {
         &.highlighted-event {
             background: url('/wp-content/themes/ABC/img/highlighted-event.jpg') no-repeat center center / cover;
 
+            & ~ .highlighted-event {
+                background: white;
+
+                .image {
+                    order: 2;
+
+                    img { border-color: white; }
+                }
+
+                .content {
+                    order: 1;
+                    text-align: left;
+                }
+            }
+
             .container {
                 display: flex;
                 justify-content: space-between;
