@@ -42,12 +42,13 @@ function abc_add_assets() {
 
     // homepage JS
     if ( is_page_template( 'template-home.php' ) ) {
-        $json_videos = '';
+        $json_videos = array();
         $videos = glob( get_stylesheet_directory() . '/video/*.mp4' );
         foreach ( $videos as $video ) {
             $basename = basename( $video, '.mp4' );
             $size_array = explode( 'x', $basename );
-            $json_videos[$size_array[1]] = array(
+            $width = $size_array[1];
+            $json_videos[$width] = array(
                 'width'     => $size_array[0],
                 'height'    => $size_array[1],
                 'url'       => get_stylesheet_directory_uri() . '/video/' . $basename . '.mp4',
