@@ -1,6 +1,9 @@
 <?php
 /**
  * Template Name: Full-Width
+ *
+ * @package WordPress
+ * @subpackage ABC_theme
  */
 
 get_header(); ?>
@@ -9,7 +12,8 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<?php
 		// Start the loop.
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) :
+			the_post();
 
 			// Include the page content template.
 			get_template_part( 'template-parts/content', 'page' );

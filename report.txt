@@ -1,0 +1,50 @@
+
+FILE: /Users/andrew/Sites/wordpress/wp-content/themes/ABC/functions.php
+-----------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------
+ 145 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress
+     |       | Developer Handbooks), found 'get_post_format_string'. (WordPress.XSS.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/andrew/Sites/wordpress/wp-content/themes/ABC/template-parts/content-course.php
+-----------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------------------------------
+ 26 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress
+    |       | Developer Handbooks), found '_n'. (WordPress.XSS.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/andrew/Sites/wordpress/wp-content/themes/ABC/tribe-events/tickets/rsvp.php
+-----------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 3 LINES
+-----------------------------------------------------------------------------------------------------------------
+ 223 | ERROR | [ ] All output should be run through an escaping function (see the Security sections in the WordPress
+     |       |     Developer Handbooks), found '$content'. (WordPress.XSS.EscapeOutput.OutputNotEscaped)
+ 230 | ERROR | [x] Inline control structures are not allowed
+     |       |     (Generic.ControlStructures.InlineControlStructure.NotAllowed)
+ 238 | ERROR | [ ] PHP syntax error: syntax error, unexpected end of file (Generic.PHP.Syntax.PHPSyntax)
+ 238 | ERROR | [x] Block comments must be ended with */ (Squiz.Commenting.BlockComment.WrongEnd)
+-----------------------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------------------------------
+
+
+FILE: /Users/andrew/Sites/wordpress/wp-content/themes/ABC/tribe-events/wootickets/tickets.php
+-----------------------------------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------------------------------
+ 138 | ERROR | Inline comments must end in full-stops, exclamation marks, or question marks
+     |       | (Squiz.Commenting.InlineComment.InvalidEndChar)
+ 151 | ERROR | A gettext call containing placeholders was found, but was not accompanied by a "translators:" comment
+     |       | on the line above to clarify the meaning of the placeholders.
+     |       | (WordPress.WP.I18n.MissingTranslatorsComment)
+ 178 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress
+     |       | Developer Handbooks), found '$ticket'. (WordPress.XSS.EscapeOutput.OutputNotEscaped)
+ 246 | ERROR | All output should be run through an escaping function (see the Security sections in the WordPress
+     |       | Developer Handbooks), found '$content'. (WordPress.XSS.EscapeOutput.OutputNotEscaped)
+-----------------------------------------------------------------------------------------------------------------
+
+
