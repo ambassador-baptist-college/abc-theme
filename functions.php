@@ -285,7 +285,7 @@ add_action( 'wp_head', 'abc_add_page_thumb' );
  * @return string Modified image string
  */
 function abc_header_image( $post_thumbnail_url ) {
-	return '<style type="text/css">.site-header, .tall .site-header { background-image: url(' . $post_thumbnail_url . '); }</style>';
+	return '<style type="text/css">.site-header, .tall .site-header { background-image: url(' . esc_url( $post_thumbnail_url ) . '); }</style>';
 }
 
 /**
@@ -299,7 +299,7 @@ function filter_sermon_page_title( $title, $id = null ) {
 	global $post;
 	if ( is_post_type_archive( 'wpfc_sermon' ) ) {
 		$title = 'Sermon Archive';
-	} elseif ( is_tax() && 'wpfc_sermon' == $post->post_type ) {
+	} elseif ( is_tax() && 'wpfc_sermon' === $post->post_type ) {
 		global $wp_query;
 		$term = $wp_query->get_queried_object();
 		$title = 'Sermons: ' . $term->name;

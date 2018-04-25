@@ -89,7 +89,7 @@ the_post();
 
 			<?php
 			if ( get_field( 'button_2_text' ) && get_field( 'button_2_link' ) && get_field( 'button_2_image' ) ) {
-				$home_feature_styles .= '.button-2 {background-image: url("' . get_field( 'button_2_image' ) . '");}';
+				$home_feature_styles .= '.button-2 {background-image: url("' . esc_url( get_field( 'button_2_image' ) ) . '");}';
 				?>
 			<section class="button-2 events">
 				<?php echo do_shortcode( '[calendar id="' . get_field( 'button_2_calendar' ) . '"]' ); ?>
@@ -99,7 +99,7 @@ the_post();
 
 			<?php
 			if ( get_field( 'button_1_text' ) && get_field( 'button_1_link' ) && get_field( 'button_1_image' ) ) {
-				$home_feature_styles .= '.button-1 {background-image: url("' . get_field( 'button_1_image' ) . '");}';
+				$home_feature_styles .= '.button-1 {background-image: url("' . esc_url( get_field( 'button_1_image' ) ) . '");}';
 				?>
 			<section class="button-1 students">
 				<h2 class="read-more"><a href="<?php the_field( 'button_1_link' ); ?>"><?php the_field( 'button_1_text' ); ?></a></h2>
@@ -108,7 +108,7 @@ the_post();
 
 			<?php
 			if ( get_field( 'button_3_text' ) && get_field( 'button_3_link' ) && get_field( 'button_3_image' ) ) {
-				$home_feature_styles .= '.button-3 {background-image: url("' . get_field( 'button_3_image' ) . '");}';
+				$home_feature_styles .= '.button-3 {background-image: url("' . esc_url( get_field( 'button_3_image' ) ) . '");}';
 				?>
 			<section class="button-3 news">
 				<?php
@@ -141,7 +141,7 @@ the_post();
 			if ( $home_feature_styles ) {
 			?>
 				<style type="text/css">
-					<?php echo esc_attr( $home_feature_styles ); ?>
+					<?php echo $home_feature_styles; // WPCS: XSS ok. ?>
 				</style>
 			<?php } ?>
 		</section><!-- .home-features -->
