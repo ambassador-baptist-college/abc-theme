@@ -94,6 +94,7 @@ add_action( 'after_setup_theme', 'abc_custom_image_sizes' );
  */
 function abc_custom_image_sizes() {
 	set_post_thumbnail_size( 2400, 600, true );
+	add_image_size( 'thumbnail-normal', 2400, 1280, true );
 	add_image_size( 'thumbnail-tall', 2400, 1280, true );
 	add_image_size( 'signature', 300, 60 );
 	add_image_size( 'home-square', 75, 75, true );
@@ -253,7 +254,7 @@ function abc_add_page_thumb() {
 
 	// If tax archive, check for category image first.
 	if ( function_exists( 'z_taxonomy_image_url' ) && strlen( z_taxonomy_image_url() ) > 0 ) {
-		echo abc_header_image( z_taxonomy_image_url() ); // WPCS: XSS ok.
+		echo abc_header_image( z_taxonomy_image_url() ); // WPCS: XSS ok because it’s escaped in the function.
 	} elseif ( function_exists( 'get_field' ) ) {
 		$cpt_headers = get_field( 'cpt_archive_headers', 'option' );
 		$cpts = array();
@@ -264,12 +265,12 @@ function abc_add_page_thumb() {
 		if ( is_archive() || is_home() ) {
 			foreach ( $cpt_headers as $cpt ) {
 				if ( is_string( get_post_type() ) && array_key_exists( get_post_type(), $cpts ) ) {
-					echo abc_header_image( $cpts[ get_post_type() ] ); // WPCS: XSS ok.
+					echo abc_header_image( $cpts[ get_post_type() ] ); // WPCS: XSS ok because it’s escaped in the function.
 				}
 			}
 		} elseif ( is_404() || in_array( get_post_type(), array( 'faculty', 'special_speaker' ) ) ) {
 			if ( array_key_exists( '404', $cpts ) ) {
-				echo abc_header_image( $cpts['404'] ); // WPCS: XSS ok.
+				echo abc_header_image( $cpts['404'] ); // WPCS: XSS ok because it’s escaped in the function.
 			}
 		} elseif ( is_singular() ) {
 			if ( has_post_thumbnail( $post->ID ) ) {
