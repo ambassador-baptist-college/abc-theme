@@ -233,14 +233,14 @@ function abc_semester_list_shortcode_handler() {
 function abc_cpt_archive_headers() {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page(
-			 array(
-				 'page_title'    => 'Custom Post Type Archive Headers',
-				 'menu_title'    => 'CPT Archive Headers',
-				 'menu_slug'     => 'cpt-archive-headers',
-				 'capability'    => 'manage_options',
-				 'redirect'      => false,
-			 )
-			);
+			array(
+				'page_title'    => 'Custom Post Type Archive Headers',
+				'menu_title'    => 'CPT Archive Headers',
+				'menu_slug'     => 'cpt-archive-headers',
+				'capability'    => 'manage_options',
+				'redirect'      => false,
+			)
+		);
 	}
 }
 add_action( 'init', 'abc_cpt_archive_headers' );
@@ -251,8 +251,10 @@ add_action( 'init', 'abc_cpt_archive_headers' );
 function abc_add_page_thumb() {
 	global $post;
 
-	// Get CPT archive options.
-	if ( function_exists( 'get_field' ) ) {
+	// If tax archive, check for category image first.
+	if ( function_exists( 'z_taxonomy_image_url' ) && strlen( z_taxonomy_image_url() ) > 0 ) {
+		echo abc_header_image( z_taxonomy_image_url() ); // WPCS: XSS ok.
+	} elseif ( function_exists( 'get_field' ) ) {
 		$cpt_headers = get_field( 'cpt_archive_headers', 'option' );
 		$cpts = array();
 		foreach ( $cpt_headers as $cpt ) {
