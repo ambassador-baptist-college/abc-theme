@@ -486,6 +486,26 @@ function abc_return_sermon_feed_post_count() {
 }
 
 /**
+ * Remove payment info before storing form data
+ *
+ * @param  array $form_data Submitted form data.
+ * @return array Modified form data
+ */
+function abc_cfdb7_before_save_data( $form_data ) {
+	// Remove credit card data.
+	unset( $form_data['credit-card'] );
+	unset( $form_data['cvv'] );
+	unset( $form_data['expiration-month'] );
+	unset( $form_data['expiration-year'] );
+
+	// Remove useless data.
+	unset( $form_data['g-recaptcha-response'] );
+
+	return $form_data;
+}
+add_filter( 'cfdb7_before_save_data', 'abc_cfdb7_before_save_data' );
+
+/**
  * Include shortcodes
  */
 include( 'inc/shortcodes.php' );
