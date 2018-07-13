@@ -3344,9 +3344,9 @@ h1.tribe-events-single-event-title,
 }
 
 .tribe-events-tickets .woocommerce.tribe-tickets-form-row {
-	border-bottom: none;
+	&, td { border-bottom: none; }
 
-	&:not(:first-child) { border-top: 1px solid #dfdfdf; }
+	&:not(:first-child) td { border-top: 1px solid #dfdfdf; }
 }
 
 /**
