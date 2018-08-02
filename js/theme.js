@@ -17,6 +17,14 @@
 
 			$('.delivery').hide();
 			$('.' + deliveryMethod).show();
+
+			if ('physical-mail' === deliveryMethod) {
+				$('.physical-mail input').attr('required', true);
+				$('.physical-mail label').addClass('required');
+			} else {
+				$('.physical-mail input').attr('required', false);
+				$('.physical-mail label').removeClass('required');
+			}
 		}
 	}
 
