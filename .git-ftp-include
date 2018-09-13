@@ -2,8 +2,8 @@ css/backend.min.css:scss/backend.scss
 
 css/chosen.min.css:scss/chosen.scss
 
-css/main.min.css:scss/main.scss
-css/main.min.css.map:scss/main.scss
+css/style.min.css:scss/style.scss
+css/style.min.css.map:scss/style.scss
 
 js/csr.min.js:js/csr.js
 
