@@ -3326,6 +3326,10 @@ table#itinerary {
  * 11.10 - Events
  */
 
+.single-tribe_events {
+	.tribe-events-nav-pagination { display: none; }
+}
+
 h4.tribe-event-title {
 	font-size: 1.25rem;
 }
