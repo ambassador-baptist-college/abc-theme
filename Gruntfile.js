@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             files: {
                 "css/backend.min.css" : "scss/backend.scss",
                 "css/chosen.min.css" : "scss/chosen.scss",
-                "css/main.min.css" : "scss/main.scss",
+                "css/style.min.css" : "scss/style.scss",
             }
         }
     },
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
             ]
         },
         dist: {
-            src: 'css/main.min.css',
+            src: 'css/style.min.css',
         }
     },
     uglify: {
