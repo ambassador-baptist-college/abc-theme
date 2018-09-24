@@ -273,7 +273,10 @@ function abc_add_page_thumb() {
 				echo abc_header_image( $cpts['404'] ); // WPCS: XSS ok because it’s escaped in the function.
 			}
 		} elseif ( is_singular() ) {
-			if ( has_post_thumbnail( $post->ID ) ) {
+			$bg_image = get_field( 'header_background_image', $post->ID );
+			if ( ! empty( $bg_image ) ) {
+				echo abc_header_image( $bg_image ); // WPCS: XSS ok.
+			} elseif ( has_post_thumbnail( $post->ID ) ) {
 				echo abc_header_image( get_the_post_thumbnail_url() ); // WPCS: XSS ok.
 			}
 		}
