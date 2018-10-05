@@ -42,6 +42,9 @@ module.exports = function (grunt) {
     },
     uglify: {
         custom: {
+			options: {
+				sourceMap: true
+			},
             files: {
                 'js/chosen.jquery.min.js': ['js/chosen.jquery.js'],
                 'js/csr.min.js': ['js/csr.js'],
