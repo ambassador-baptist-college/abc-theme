@@ -2669,12 +2669,23 @@ body.search-no-results .page-header {
 				padding: 1em;
 				text-align: center;
 
+				@media (min-width: 600px) {
+					&:not(:last-of-type) { border-right: 1px solid rgba(white, 0.3) }
+				}
+
+				@media (max-width: 600px) {
+					&:not(:last-of-type) { border-bottom: 1px solid rgba(white, 0.3) }
+				}
+
 				h2 {
 					margin-bottom: 0.3em;
 					font-size: 3em;
 				}
 
-				p { display: inline-block; }
+				p {
+					display: inline-block;
+					font-size: 1.15em;
+				}
 			}
 		}
 
