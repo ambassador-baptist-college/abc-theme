@@ -12,13 +12,8 @@
 		 p flag: Show progress of the run.
 		 s flag: Show sniff codes in all reports.
 		 v flag: Print verbose output.
-		 n flag: Do not print warnings.
 	-->
-	<arg value="psvn"/>
-
-	<!-- Exclude node modules and vendor code -->
-	<exclude-pattern>*/node_modules/*</exclude-pattern>
-	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<arg value="psv"/>
 
 	<!-- Only check the PHP, CSS and SCSS files. JS files are checked separately with JSCS and JSHint. -->
 	<arg name="extensions" value="php,css,scss/css"/>
@@ -26,11 +21,19 @@
 	<!-- Check all files in this directory and the directories below it. -->
 	<file>.</file>
 
+	<!-- Ignore vendor files. -->
+	<exclude-pattern>*/**.min.*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<!-- Include WPCS rules -->
+	<rule ref="WordPress-Core" />
+	<rule ref="WordPress-Docs" />
+	<rule ref="WordPress-Extra" />
+
 	<!-- Include the WordPress ruleset, with exclusions. -->
 	<rule ref="WordPress">
-		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
-		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
-		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
+		<!-- exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" / -->
 	</rule>
 
 	<!-- Verify that the text_domain is set to the desired text-domain.
@@ -54,11 +57,15 @@
 		 as set in the "Requires at least" tag in the readme.txt file. -->
 	<rule ref="WordPress.WP.DeprecatedFunctions">
 		<properties>
-			<property name="minimum_supported_version" value="4.0" />
+			<property name="minimum_supported_version" value="4.8" />
 		</properties>
 	</rule>
 
 	<!-- Include sniffs for PHP cross-version compatibility. -->
 	<config name="testVersion" value="5.2-99.0"/>
-	<rule ref="PHPCompatibility"/>
+
+	<!-- Include PHP rules. -->
+	<rule ref="PHPCompatibility" />
+	<rule ref="PHPCompatibilityWP" />
+
 </ruleset>
