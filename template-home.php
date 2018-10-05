@@ -247,7 +247,7 @@ get_header(); ?>
 						echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a>, preached by ';
 						// Preacher.
 						the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span>' );
-						echo '</p>' . ( function_exists( 'wpfc_sermon_media' ) ? wpfc_sermon_media() : '<a class="button" href="' . esc_url( get_permalink() ) . '">Listen here</a>' ); // WPCS: XSS ok.
+						echo '</p>' . ( function_exists( 'wpfc_render_audio' ) ? wpfc_render_audio( get_wpfc_sermon_meta( 'sermon_audio' ) ) : '<a class="button" href="' . esc_url( get_permalink() ) . '">Listen here</a>' ); // WPCS: XSS ok.
 					}
 				}
 				// Reset the query.
