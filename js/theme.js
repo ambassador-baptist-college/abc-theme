@@ -2,7 +2,7 @@
  * ABC theme functions.
  */
 
-/* global jQuery */
+/* global countUpTimers, jQuery */
 'use strict';
 (function($) {
 
@@ -26,6 +26,56 @@
 				$('.physical-mail label').removeClass('required');
 			}
 		}
+	}
+
+	/**
+	 * Handle debouncing.
+	 *
+	 * @param  {Function} func  Function to run.
+	 * @param  {int} wait       Number of milliseconds to wait.
+	 * @param  {bool} immediate Whether to run immediately or not.
+	 *
+	 * @return {Function}       Function to run.
+	 */
+	function debounce(func, wait, immediate) {
+		var timeout;
+
+		return function() {
+
+			var context = this,
+				args = arguments,
+				later = function() {
+					timeout = null;
+					if (! immediate) func.apply(context, args);
+				},
+				callNow = immediate && ! timeout;
+
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) {
+				func.apply(context, args);
+			}
+		};
+	}
+
+	/**
+	 * Detect whether element is completely in view.
+	 *
+	 * @param  {Object}  elem DOM element
+	 *
+	 * @returns {boolean}      Whether elem is completely in view or not.
+	 */
+	function isScrolledIntoView(elem) {
+		if (null === elem) {
+			return false;
+		}
+
+		var docViewTop = $(window).scrollTop(),
+			docViewBottom = docViewTop + $(window).height(),
+			elemTop = $(elem).offset().top,
+			elemBottom = elemTop + $(elem).height();
+
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 	}
 
 	$(document).ready(function() {
@@ -92,5 +142,32 @@
 		// handle transcript delivery method
 		$('select[name="delivery-type"]').on('change', updateDeliveryMethod);
 		updateDeliveryMethod();
+
+		/**
+		 * Start visible timers.
+		 *
+		 * @param  {function} anon The function.
+		 * @param  {int}      100  How many ms to wait before running the function.
+		 *
+		 * @return {void}     Starts visible timers.
+		 */
+		var runTimers = debounce(function() {
+			$.each(countUpTimers, function() {
+				if (isScrolledIntoView(this.d)) {
+					this.start(function() {
+						if (this.d.dataset.value !== this.d.dataset.finish) {
+							this.d.innerHTML = this.d.dataset.finish;
+						}
+					});
+				}
+			});
+		}, 100);
+
+		if ('undefined' !== typeof countUpTimers) {
+			window.addEventListener('load', runTimers);
+			window.addEventListener('resize', runTimers);
+			window.addEventListener('scroll', runTimers);
+		}
 	});
+
 }(jQuery));

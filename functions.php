@@ -52,8 +52,9 @@ add_action( 'wp_footer', 'abc_webfonts_add' );
  */
 function abc_add_assets() {
 	wp_enqueue_style( 'chosen', get_stylesheet_directory_uri() . '/css/chosen.min.css' );
-	wp_enqueue_script( 'chosen', get_stylesheet_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . '/js/theme.min.js', array( 'jquery', 'chosen' ), ABC_THEME_VERSION );
+	wp_enqueue_script( 'chosen', get_stylesheet_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ), null, true );
+	wp_enqueue_script( 'countup', get_stylesheet_directory_uri() . '/js/countup.min.js', array( 'jquery' ), ABC_THEME_VERSION, true );
+	wp_enqueue_script( 'theme', get_stylesheet_directory_uri() . '/js/theme.min.js', array( 'jquery', 'countup', 'chosen' ), ABC_THEME_VERSION, true );
 	wp_register_script( 'grad-offering', get_stylesheet_directory_uri() . '/js/grad-offering.min.js', array( 'jquery' ), ABC_THEME_VERSION, true );
 
 	// Handle homepage videos.

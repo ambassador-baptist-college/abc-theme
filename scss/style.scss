@@ -2655,6 +2655,29 @@ body.search-no-results .page-header {
 			p:last-child { margin-bottom: 0; }
 		}
 
+		&.ticker {
+			background-color: $color-blue;
+			color: white;
+
+			.container {
+				display: flex;
+
+				@media (max-width: 600px) { flex-wrap: wrap; }
+			}
+
+			.ticker-item {
+				padding: 1em;
+				text-align: center;
+
+				h2 {
+					margin-bottom: 0.3em;
+					font-size: 3em;
+				}
+
+				p { display: inline-block; }
+			}
+		}
+
 		&.apply {
 			display: flex;
 			flex-wrap: wrap;

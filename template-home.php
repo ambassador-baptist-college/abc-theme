@@ -139,14 +139,36 @@ get_header(); ?>
 					<?php
 				}
 				if ( $home_feature_styles ) {
+					echo '<style type="text/css">' . $home_feature_styles . '</style>'; // WPCS: XSS ok.
+				}
 				?>
-					<style type="text/css">
-						<?php
-						echo $home_feature_styles; // WPCS: XSS ok.
-						?>
-					</style>
-				<?php } ?>
 			</section><!-- .home-features -->
+
+			<section class="ticker home-stripe full-width">
+				<div class="container">
+				<?php
+				$tickers = get_field( 'ticker' );
+				if ( ! empty( $tickers ) ) {
+					$inline_script = 'var countUpTimers = {};';
+
+					foreach ( $tickers as $ticker ) {
+						$ticker_id     = md5( $ticker['value'] . '-' . $ticker['label'] );
+						$value         = $ticker['value'];
+						$numeric_value = absint( $value );
+
+						echo '<div class="ticker-item">
+							<h2 class="value" id="ticker_' . esc_attr( $ticker_id ) . '" data-value="' . esc_attr( $numeric_value ) . '" data-finish="' . esc_attr( $value ) . '">' . esc_attr( $ticker['value'] ) . '</h2>
+							<p>' . esc_html( $ticker['label'] ) . '</p>
+						</div>';
+
+						$inline_script .= 'countUpTimers.ticker_' . $ticker_id . ' = new CountUp("ticker_' . $ticker_id . '", 0, ' . esc_attr( $numeric_value ) . ', 0, 2.5, ' . $countup_options . ');';
+					}
+
+					wp_add_inline_script( 'countup', $inline_script );
+				}
+				?>
+				</div>
+			</section><!-- .ticker -->
 
 			<section class="apply home-stripe">
 			<?php
