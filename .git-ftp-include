@@ -6,13 +6,21 @@ css/style.min.css:scss/style.scss
 css/style.min.css.map:scss/style.scss
 
 js/csr.min.js:js/csr.js
+js/csr.min.js.map:js/csr.js
 
 js/chosen.min.js:js/chosen.js
+js/chosen.min.js.map:js/chosen.js
+
+js/countup.min.js:js/countup.js
+js/countup.min.js.map:js/countup.js
 
 js/grad-offering.min.js:js/grad-offering.js
+js/grad-offering.min.js.map:js/grad-offering.js
 
 js/theme.min.js:js/theme.js
+js/theme.min.js.map:js/theme.js
 
 js/video-res.min.js:js/video-res.js
+js/video-res.min.js.map:js/video-res.js
 
 img/mejs-controls.min.svg:img/mejs-controls.svg
