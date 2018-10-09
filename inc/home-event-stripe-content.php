@@ -22,7 +22,7 @@
 		</div>
 		<div class="content">
 			<h2 class="entry-title"><a href="<?php echo esc_url( $event_link ); ?>"><?php echo esc_attr( get_the_title( $event_id ) ); ?></a></h2>
-			<p class="excerpt"><?php $excerpt; // WPCS: XSS ok. ?></p>
+			<p class="excerpt"><?php echo wp_kses_post( $excerpt ); ?></p>
 			<p><a class="button" href="<?php echo esc_url( $event_link ); ?>">More Information</a></p>
 		</div>
 	</div>
