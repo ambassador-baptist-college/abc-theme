@@ -3,26 +3,49 @@
     "title": "Custom Post Type Archive Header",
     "fields": [
         {
+            "key": "field_5bbe0a918b872",
+            "label": "Fallback Image",
+            "name": "fallback_image",
+            "type": "image",
+            "instructions": "Default header background image; here is the priority order for determining what image to show:\r\n<ol>\r\n<li>Header Background image set on a post\/page\/CPT\/taxonomy term<\/li>\r\n<li>Post type-specific image set below<\/li>\r\n<li>Fallback image specified here<\/li>\r\n<\/ol>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "post-thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_58b456d7ed810",
+            "label": "Post Types",
+            "name": "cpt_archive_headers",
+            "type": "repeater",
+            "instructions": "Takes precedence over the fallback image specified above for specific post types.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "choices": {
-                        "post": "Posts",
-                        "course": "Courses",
-                        "faculty": "Faculty Members",
-                        "meeting": "Meetings",
-                        "master_module": "Master Modules",
-                        "special_event": "Special Events",
-                        "special_speaker": "Special Speakers",
-                        "wpfc_sermon": "Sermons",
-                        "404": "404 Page"
-                    },
-                    "default_value": [],
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "return_format": "value",
                     "key": "field_58b456e1ed811",
                     "label": "Post Type",
                     "name": "post_type",
@@ -34,19 +57,28 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "choices": {
+                        "post": "Posts",
+                        "page": "Pages",
+                        "course": "Courses",
+                        "faculty": "Faculty Members",
+                        "meeting": "Meetings",
+                        "master_module": "Master Modules",
+                        "special_event": "Special Events",
+                        "special_speaker": "Special Speakers",
+                        "wpfc_sermon": "Sermons",
+                        "404": "404 Page"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
-                    "return_format": "url",
-                    "preview_size": "post-thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
                     "key": "field_58b456f0ed812",
                     "label": "Archive Image",
                     "name": "archive_image",
@@ -58,26 +90,19 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    }
+                    },
+                    "return_format": "url",
+                    "preview_size": "post-thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 }
-            ],
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "collapsed": "",
-            "key": "field_58b456d7ed810",
-            "label": "Post Types",
-            "name": "cpt_archive_headers",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
+            ]
         }
     ],
     "location": [
@@ -97,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488232033
+    "modified": 1539182229
 }

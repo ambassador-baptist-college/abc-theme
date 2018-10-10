@@ -236,11 +236,11 @@ function abc_cpt_archive_headers() {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page(
 			array(
-				'page_title'    => 'Custom Post Type Archive Headers',
-				'menu_title'    => 'CPT Archive Headers',
-				'menu_slug'     => 'cpt-archive-headers',
-				'capability'    => 'manage_options',
-				'redirect'      => false,
+				'page_title' => 'Header Images',
+				'menu_title' => 'Header Images',
+				'menu_slug'  => 'cpt-archive-headers',
+				'capability' => 'manage_options',
+				'redirect'   => false,
 			)
 		);
 	}
@@ -251,37 +251,32 @@ add_action( 'init', 'abc_cpt_archive_headers' );
  * Add custom page header if specified
  */
 function abc_add_page_thumb() {
-	global $post;
 
 	// If tax archive, check for category image first.
-	if ( function_exists( 'z_taxonomy_image_url' ) && strlen( z_taxonomy_image_url() ) > 0 ) {
-		echo abc_header_image( z_taxonomy_image_url() ); // WPCS: XSS ok because it’s escaped in the function.
+	if ( function_exists( 'z_taxonomy_image_url' ) && ! empty( z_taxonomy_image_url() ) ) {
+		$bg_image = z_taxonomy_image_url();
 	} elseif ( function_exists( 'get_field' ) ) {
-		$cpt_headers = get_field( 'cpt_archive_headers', 'option' );
-		$cpts = array();
-		foreach ( $cpt_headers as $cpt ) {
-			$cpts[ $cpt['post_type'] ] = $cpt['archive_image'];
-		}
 
-		if ( is_archive() || is_home() ) {
-			foreach ( $cpt_headers as $cpt ) {
-				if ( is_string( get_post_type() ) && array_key_exists( get_post_type(), $cpts ) ) {
-					echo abc_header_image( $cpts[ get_post_type() ] ); // WPCS: XSS ok because it’s escaped in the function.
+		$bg_image = get_field( 'header_background_image' );
+		if ( empty( $bg_image ) ) {
+			$cpt_headers = get_field( 'cpt_archive_headers', 'option' );
+			if ( ! empty( $cpt_headers ) ) {
+				$cpts = array();
+				foreach ( $cpt_headers as $cpt ) {
+					if ( get_post_type() === $cpt['post_type'] ) {
+						$bg_image = $cpt['archive_image'];
+						break;
+					}
 				}
 			}
-		} elseif ( is_404() || in_array( get_post_type(), array( 'faculty', 'special_speaker' ) ) ) {
-			if ( array_key_exists( '404', $cpts ) ) {
-				echo abc_header_image( $cpts['404'] ); // WPCS: XSS ok because it’s escaped in the function.
-			}
-		} elseif ( is_singular() ) {
-			$bg_image = get_field( 'header_background_image', $post->ID );
-			if ( ! empty( $bg_image ) ) {
-				echo abc_header_image( $bg_image ); // WPCS: XSS ok.
-			} elseif ( has_post_thumbnail( $post->ID ) ) {
-				echo abc_header_image( get_the_post_thumbnail_url() ); // WPCS: XSS ok.
+
+			if ( empty( $bg_image ) ) {
+				$bg_image = get_field( 'fallback_image', 'option' );
 			}
 		}
 	}
+
+	echo abc_header_image( $bg_image ); // WPCS: XSS ok because it’s escaped in the function.
 }
 add_action( 'wp_head', 'abc_add_page_thumb' );
 
