@@ -2649,6 +2649,11 @@ body.search-no-results .page-header {
 				background-color: rgba($color-blue, 0.85);
 				padding: 1rem;
 
+				a {
+					color: white;
+					text-decoration: underline;
+				}
+
 				@media screen and (min-width: 48em) { padding: 2rem; }
 			}
 
