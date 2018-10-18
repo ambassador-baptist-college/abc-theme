@@ -2649,7 +2649,7 @@ body.search-no-results .page-header {
 				background-color: rgba($color-blue, 0.85);
 				padding: 1rem;
 
-				a {
+				a:not(.button) {
 					color: white;
 					text-decoration: underline;
 				}
