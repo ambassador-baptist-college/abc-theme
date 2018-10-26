@@ -451,10 +451,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5796b55ae04d5",
-            "label": "Video Content",
-            "name": "video_content",
-            "type": "wysiwyg",
+            "key": "field_5bd31f1b95a9a",
+            "label": "Video Repeater",
+            "name": "video_repeater",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -463,27 +463,48 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_5796b570e04d6",
-            "label": "Video",
-            "name": "video_link",
-            "type": "oembed",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "width": "",
-            "height": ""
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5bd31f9586346",
+                    "label": "Video Content",
+                    "name": "video_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5bd31faa86347",
+                    "label": "Video",
+                    "name": "video_link",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": "",
+                    "height": ""
+                }
+            ]
         },
         {
             "key": "field_5796b592e04d7",
@@ -627,5 +648,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538744987
+    "modified": 1540562883
 }

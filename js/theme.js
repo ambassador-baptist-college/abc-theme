@@ -35,7 +35,7 @@
 	 * @param  {int} wait       Number of milliseconds to wait.
 	 * @param  {bool} immediate Whether to run immediately or not.
 	 *
-	 * @return {Function}       Function to run.
+	 * @returns {Function}       Function to run.
 	 */
 	function debounce(func, wait, immediate) {
 		var timeout;

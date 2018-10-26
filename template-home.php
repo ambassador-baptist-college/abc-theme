@@ -66,11 +66,11 @@ get_header(); ?>
 
 			<?php if ( get_field( 'show_cancellation_notice' ) ) { ?>
 				<section class="cancellation home-stripe">
-				<?php
+					<?php
 					if ( get_field( 'live_streaming' ) ) {
-					echo '<div class="teaser">' . get_field( 'cancellation_notice' ) . '</div>'; // WPCS: XSS ok.
+						echo '<div class="teaser">' . wp_kses_post( get_field( 'cancellation_notice' ) ) . '</div>';
 					}
-				?>
+					?>
 				</section><!-- .cancellation -->
 			<?php } ?>
 
@@ -186,8 +186,8 @@ get_header(); ?>
 			if ( isset( $all_events ) ) {
 				foreach ( $all_events as $event ) {
 
-					$event_id = $event['event']['id'];
-					$event_link = get_permalink( $event_id );
+					$event_id      = $event['event']['id'];
+					$event_link    = get_permalink( $event_id );
 					$event_excerpt = get_post_field( 'post_excerpt', $event_id );
 
 					if ( $event['event']['use_manual_excerpt'] ) {
@@ -205,16 +205,19 @@ get_header(); ?>
 			?>
 
 			<section class="video home-stripe full-width">
-				<div class="container">
-			<?php
-				if ( get_field( 'video_content' ) ) {
-					echo '<div class="video-content">' . get_field( 'video_content' ) . '</div>'; // WPCS: XSS ok.
-				}
-				if ( get_field( 'video_link' ) ) {
-					echo '<div class="video-link">' . get_field( 'video_link' ) . '</div>'; // WPCS: XSS ok.
+				<?php
+				$video_repeater = get_field( 'video_repeater' );
+				if ( $video_repeater ) {
+					foreach ( $video_repeater as $video ) {
+						?>
+						<div class="container">
+							<div class="video-content"><?php echo wp_kses_post( $video['video_content'] ); ?></div>
+							<div class="video-link"><?php echo $video['video_link']; ?></div>
+						</div>
+						<?php
+					}
 				}
 				?>
-				</div>
 			</section><!-- .video -->
 
 			<section class="latest-sermon home-stripe">

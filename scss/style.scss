@@ -2767,7 +2767,18 @@ body.search-no-results .page-header {
 				justify-content: space-between;
 				flex-wrap: wrap;
 
-				@media screen and (min-width: 58.375em) { flex-wrap: nowrap; }
+				@media screen and (min-width: 58.375em) {
+					flex-wrap: nowrap;
+
+					&:nth-child(even) {
+						.video-content {
+							order: 2;
+							margin-left: 2rem;
+							margin-right: 0;
+						}
+						.video-link { order: 1; }
+					}
+				}
 			}
 
 			&, & * { color: white; }
