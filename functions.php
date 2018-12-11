@@ -363,19 +363,23 @@ function abc_product_author() {
 add_action( 'woocommerce_after_shop_loop_item_title', 'abc_product_author', 4 );
 
 /**
- * Add preacher name to podcast episodes
+ * Add preacher name to podcast episodes descriptions.
  *
- * @param  string $content Feed item content.
- * @return string feed item content with preacher name appended
+ * @param null   $check     Whether to proceed with retrieving metadata.
+ * @param int    $object_id Object ID.
+ * @param string $meta_key  Meta key.
+ * @param bool   $single    Whether to return single or not.
+ *
+ * @return string           Preacher name and date.
  */
-function abc_sermon_podcast_preacher( $content ) {
-	if ( is_post_type_archive( 'wpfc_sermon' ) || is_tax( 'wpfc_preacher' ) || is_tax( 'wpfc_sermon_topics' ) || is_tax( 'wpfc_service_type' ) || is_tax( 'wpfc_sermon_series' ) || is_tax( 'wpfc_bible_book' ) ) {
-		$content = get_the_term_list( get_the_ID(), 'wpfc_preacher', 'Preached by ' ) . ' on ' . get_the_date( 'l, F j, Y' ) . $content;
+function abc_sermon_podcast_preacher( $check, $object_id, $meta_key, $single ) {
+	if ( 'sermon_description' === $meta_key ) {
+		$terms = get_the_terms( get_the_ID(), 'wpfc_preacher' );
+		$check = 'Preached by ' . $terms[0]->name . ' on ' . get_the_date( 'l, F j, Y' );
 	}
-	return $content;
+	return $check;
 }
-add_filter( 'the_content_feed', 'abc_sermon_podcast_preacher', 15 );
-add_filter( 'the_excerpt_rss', 'abc_sermon_podcast_preacher', 15 );
+add_filter( 'get_post_metadata', 'abc_sermon_podcast_preacher', 15, 4 );
 
 /**
  * Remove wpfc hook to add sermon to the_content
@@ -486,4 +490,4 @@ add_filter( 'cfdb7_before_save_data', 'abc_cfdb7_before_save_data' );
 /**
  * Include shortcodes
  */
-include( 'inc/shortcodes.php' );
+require_once 'inc/shortcodes.php';
