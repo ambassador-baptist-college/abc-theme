@@ -373,7 +373,7 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'abc_product_author', 4 );
  * @return string           Preacher name and date.
  */
 function abc_sermon_podcast_preacher( $check, $object_id, $meta_key, $single ) {
-	if ( 'sermon_description' === $meta_key ) {
+	if ( is_feed() && 'sermon_description' === $meta_key ) {
 		$terms = get_the_terms( get_the_ID(), 'wpfc_preacher' );
 		$check = 'Preached by ' . $terms[0]->name . ' on ' . get_the_date( 'l, F j, Y' );
 	}
