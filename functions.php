@@ -351,18 +351,6 @@ function abc_trim_excerpt( $excerpt, $raw_excerpt ) {
 add_filter( 'wp_trim_excerpt', 'abc_trim_excerpt', 10, 2 );
 
 /**
- * Include 100 items in the podcast feed
- *
- * @param  object $query WP_Query.
- */
-function abc_sermons_podcast_length( $query ) {
-	if ( $query->is_feed() && 'wpfc_sermon' === $query->query['post_type'] ) {
-		add_filter( 'option_posts_per_rss', 'abc_return_sermon_feed_post_count' );
-	}
-}
-add_action( 'pre_get_posts', 'abc_sermons_podcast_length' );
-
-/**
  * Show product author name
  */
 function abc_product_author() {
@@ -473,15 +461,6 @@ add_filter( 'the_content', 'abc_events_form_link' );
  */
 function abc_return_news_excerpt_length() {
 	return 13;
-}
-
-/**
- * Return number of items for sermon podcast length
- *
- * @return integer Number of posts
- */
-function abc_return_sermon_feed_post_count() {
-	return 100;
 }
 
 /**
