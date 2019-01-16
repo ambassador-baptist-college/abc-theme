@@ -488,6 +488,25 @@ function abc_cfdb7_before_save_data( $form_data ) {
 add_filter( 'cfdb7_before_save_data', 'abc_cfdb7_before_save_data' );
 
 /**
+ * Remove recaptcha from [all-fields] output.
+ *
+ * @param string $value   Previous output.
+ * @param string $k       Field label.
+ * @param string $v       Value of the field.
+ * @param string $format  Either "html" or "text".
+ *
+ * @return string
+ */
+function abc_all_fields_exclude_captcha( $value, $k, $v, $format ) {
+	if ( 'G Recaptcha Response' === $k ) {
+		$value = '';
+	}
+
+	return $value;
+}
+add_filter( 'wpcf7_send_all_fields_format_item', 'abc_all_fields_exclude_captcha' );
+
+/**
  * Include shortcodes
  */
 require_once 'inc/shortcodes.php';
