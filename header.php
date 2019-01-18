@@ -22,19 +22,19 @@
 </head>
 
 <?php
-	if ( 'page' == get_post_type() && function_exists( 'get_field' ) && get_field( 'tall_header_image' ) ) {
+if ( 'page' === get_post_type() && function_exists( 'get_field' ) && get_field( 'tall_header_image' ) ) {
 	$body_class_string = $post->post_name . ' tall';
-	} elseif ( is_singular() ) {
+} elseif ( is_singular() ) {
 	$body_class_string = $post->post_name;
-	} else {
+} else {
 	$body_class_string = '';
-	}
+}
 
-	if ( is_front_page() ) {
+if ( is_front_page() ) {
 	$site_title_tag = 'h1';
-	} else {
+} else {
 	$site_title_tag = 'p';
-	}
+}
 ?>
 
 <body <?php body_class( $body_class_string ); ?>>
@@ -44,7 +44,7 @@
 		<div class="site-header-main site-inner site-content">
 			<div class="site-branding">
 				<<?php echo esc_attr( $site_title_tag ); ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Ambassador Baptist College" rel="home">
-					<?php include( get_stylesheet_directory() . '/img/ABC-logo.svg' ); ?>
+					<?php require get_stylesheet_directory() . '/img/ABC-logo.svg'; ?>
 				</a></<?php echo esc_attr( $site_title_tag ); ?>>
 			</div><!-- .site-branding -->
 
@@ -56,11 +56,11 @@
 						<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php echo esc_attr( 'Primary Menu', 'twentysixteen' ); ?>">
 							<?php
 								wp_nav_menu(
-									 array(
-										 'theme_location' => 'primary',
-										 'menu_class'     => 'primary-menu',
-									 )
-									);
+									array(
+										'theme_location' => 'primary',
+										'menu_class'     => 'primary-menu',
+									)
+								);
 							?>
 						</nav><!-- .main-navigation -->
 					<?php endif; ?>
@@ -69,14 +69,14 @@
 						<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php echo esc_attr( 'Social Links Menu', 'twentysixteen' ); ?>">
 							<?php
 								wp_nav_menu(
-									 array(
-										 'theme_location' => 'social',
-										 'menu_class'     => 'social-links-menu',
-										 'depth'          => 1,
-										 'link_before'    => '<span class="screen-reader-text">',
-										 'link_after'     => '</span>',
-									 )
-									);
+									array(
+										'theme_location' => 'social',
+										'menu_class'     => 'social-links-menu',
+										'depth'          => 1,
+										'link_before'    => '<span class="screen-reader-text">',
+										'link_after'     => '</span>',
+									)
+								);
 							?>
 						</nav><!-- .social-navigation -->
 					<?php endif; ?>
