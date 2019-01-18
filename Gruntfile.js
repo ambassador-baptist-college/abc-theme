@@ -62,10 +62,10 @@ module.exports = function (grunt) {
             },
             options: {
                 watchTask: true,
-                proxy: "https://dev.abc.dev",
+                proxy: "https://dev.abc.private",
                 https: {
-                    key: "/Users/andrew/github/dotfiles/local-dev.key",
-                    cert: "/Users/andrew/github/dotfiles/local-dev.crt",
+                    key: "/Users/andrew/.config/valet/Certificates/dev.abc.private.key",
+                    cert: "/Users/andrew/.config/valet/Certificates/dev.abc.private.crt",
                 },
                 open: 'external',
                 host: 'andrews-macbook-pro.local'
