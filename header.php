@@ -91,6 +91,8 @@
 					echo 'News Archive';
 				} elseif ( is_post_type_archive( 'product' ) || is_tax( 'product_cat' ) ) {
 					echo 'Bookstore';
+				} elseif ( is_tax( 'group-name' ) ) {
+					single_term_title();
 				} elseif ( is_archive() ) {
 					echo esc_attr( apply_filters( 'custom_title', ucfirst( get_post_type() ) . ' Archive' ) );
 				} elseif ( is_404() ) {
