@@ -3971,7 +3971,7 @@ p > video {
 		opacity: 1;
 	}
 
-	.main-navigation > li:nth-child(-n+3) {
+	.main-navigation li:nth-child(-n+3) {
 		&:hover > ul, &.focus > ul {
 			right: auto;
 			right: auto;
