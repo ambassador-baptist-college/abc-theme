@@ -188,6 +188,25 @@
             "elements": [
                 "featured_image"
             ]
+        },
+        {
+            "key": "field_5c49c1752483a",
+            "label": "Display Speakers in Sidebar",
+            "name": "display_speakers_in_sidebar",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Whether to display speakers in the sidebar or not.",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
         }
     ],
     "location": [
@@ -207,5 +226,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1504661175
+    "modified": 1548337670
 }
