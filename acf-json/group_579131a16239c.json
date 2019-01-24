@@ -191,8 +191,8 @@
         },
         {
             "key": "field_5c49c1752483a",
-            "label": "Display Speakers in Sidebar",
-            "name": "display_speakers_in_sidebar",
+            "label": "Show Left Sidebar",
+            "name": "show_sidebar",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -202,7 +202,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Whether to display speakers in the sidebar or not.",
+            "message": "Whether to display the left sidebar with event details.",
             "default_value": 1,
             "ui": 1,
             "ui_on_text": "Show",
@@ -226,5 +226,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548337670
+    "modified": 1548339898
 }

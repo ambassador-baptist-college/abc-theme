@@ -4404,6 +4404,8 @@ p > video {
 	body:not(.search-results) article:not(.type-page) .entry-content {
 		float: right;
 		width: 71.42857144%;
+
+		&.no-sidebar { width: 100%; }
 	}
 
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
