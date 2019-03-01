@@ -63,7 +63,7 @@ get_header(); ?>
 								$sermons_query->the_post();
 								?>
 
-								<h2><a id="latest_sermon_title" title="<?php echo esc_attr( get_the_title() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<h2><a id="latest_sermon_title" title="<?php echo wp_kses_post( get_the_title() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<p class="meta">
 									<?php
 									// Preacher.
@@ -167,7 +167,7 @@ get_header(); ?>
 								$sermons_query->the_post();
 								?>
 
-								<h2><a title="<?php echo esc_attr( get_the_title() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<h2><a title="<?php echo wp_kses_post( get_the_title() ); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<p class="meta">
 									<?php
 									// Preacher.

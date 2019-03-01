@@ -127,7 +127,7 @@ get_header(); ?>
 								add_filter( 'excerpt_length', 'abc_return_news_excerpt_length' );
 
 								echo '<article class="home-news-excerpt">';
-									echo '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">' . esc_attr( get_the_title() ) . '</a></h3>';
+									echo '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">' . wp_kses_post( get_the_title() ) . '</a></h3>';
 									the_excerpt();
 								echo '</article>' . "\n";
 							}
@@ -247,7 +247,7 @@ get_header(); ?>
 					while ( $sermons_query->have_posts() ) {
 						$sermons_query->the_post();
 
-						echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . esc_attr( get_the_title() ) . '" href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a>, preached by ';
+						echo '<p class="latest-sermon"><a id="latest_sermon_title" title="' . wp_kses_post( get_the_title() ) . '" href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a>, preached by ';
 						// Preacher.
 						the_terms( $post->ID, 'wpfc_preacher', '<span class="preacher">', ', ', '</span>' );
 						echo '</p>' . ( function_exists( 'wpfc_render_audio' ) ? wpfc_render_audio( get_wpfc_sermon_meta( 'sermon_audio' ) ) : '<a class="button" href="' . esc_url( get_permalink() ) . '">Listen here</a>' ); // WPCS: XSS ok.
