@@ -2710,7 +2710,7 @@ body.search-no-results .page-header {
 		&.highlighted-event {
 			background: url('/wp-content/themes/ABC/img/highlighted-event.jpg') no-repeat center center / cover;
 
-			& ~ .highlighted-event {
+			&:nth-of-type(even) {
 				background: white;
 
 				.image { order: 2; }
