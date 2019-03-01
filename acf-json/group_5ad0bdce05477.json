@@ -41,7 +41,8 @@
             },
             "post_type": [
                 "special_event",
-                "page"
+                "page",
+                "post"
             ],
             "taxonomy": [],
             "allow_null": 0,
@@ -113,5 +114,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1523630228
+    "modified": 1551446257
 }
