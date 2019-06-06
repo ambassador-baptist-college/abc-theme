@@ -4,5 +4,4 @@
 /bower_components/
 /node_modules/
 .sass-cache/*
-*.min.*
 /update-database-from-dev.sh

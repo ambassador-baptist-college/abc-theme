@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,2LAMc,CACb,OAAO,CAAE,IAAI",
+"sources": ["../scss/backend.scss"],
+"names": [],
+"file": "backend.min.css"
+}
