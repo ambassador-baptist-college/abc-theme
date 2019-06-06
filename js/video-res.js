@@ -30,7 +30,7 @@
             videoUrl = (motionQuery.matches ? videoRes[bestHeight].url.replace('video', 'video/low-motion') : videoRes[bestHeight].url),
             videoContainerClass = 'home-video-background',
             $videoContainer = container.children('.'+videoContainerClass),
-			videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video id="home-video-background" muted autoplay="true" loop="true" src="'+videoUrl+'" style="display: none;"></video></div>',
+			videoSrc = '<div class="'+videoContainerClass+'" data-current-size="'+videoUrl.toString()+'"><video id="home-video-background" muted="muted" autoplay="true" loop="true" src="'+videoUrl+'" type="video/mp4" style="display: none;"></video></div>',
 			promise;
 
         console.info('computed size: '+height.toString()+'×'+width.toString()+'; source with nearest height: '+bestHeight.toString()+'; URL: '+videoUrl.toString());
