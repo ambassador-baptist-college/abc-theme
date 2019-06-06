@@ -13,7 +13,7 @@ define( 'ABC_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
  */
 function abc_minified_css() {
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_directory_uri() . '/css/style.min.css', array(), ABC_THEME_VERSION );
-	wp_register_script( 'video-res', get_stylesheet_directory_uri() . '/js/video-res.min.js', array( 'jquery' ) );
+	wp_register_script( 'video-res', get_stylesheet_directory_uri() . '/js/video-res.min.js', array( 'jquery' ), ABC_THEME_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'abc_minified_css', 5 );
 
