@@ -2660,6 +2660,12 @@ body.search-no-results .page-header {
 			p:last-child { margin-bottom: 0; }
 		}
 
+		&.tagline {
+			background-color: $color-blue;
+			color: white;
+			text-align: center;
+		}
+
 		&.ticker {
 			background-color: $color-blue;
 			color: white;

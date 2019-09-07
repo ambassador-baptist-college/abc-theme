@@ -144,29 +144,9 @@ get_header(); ?>
 				?>
 			</section><!-- .home-features -->
 
-			<section class="ticker home-stripe full-width">
+			<section class="tagline home-stripe full-width">
 				<div class="container">
-				<?php
-				$tickers = get_field( 'ticker' );
-				if ( ! empty( $tickers ) ) {
-					$inline_script = 'var countUpTimers = {};';
-
-					foreach ( $tickers as $ticker ) {
-						$ticker_id     = md5( $ticker['value'] . '-' . $ticker['label'] );
-						$value         = $ticker['value'];
-						$numeric_value = absint( $value );
-
-						echo '<div class="ticker-item">
-							<h2 class="value" id="ticker_' . esc_attr( $ticker_id ) . '" data-value="' . esc_attr( $numeric_value ) . '" data-finish="' . esc_attr( $value ) . '">' . esc_attr( $ticker['value'] ) . '</h2>
-							<p>' . esc_html( $ticker['label'] ) . '</p>
-						</div>';
-
-						$inline_script .= 'countUpTimers.ticker_' . $ticker_id . ' = new CountUp("ticker_' . $ticker_id . '", 0, ' . esc_attr( $numeric_value ) . ', 0, 2.5, ' . $countup_options . ');';
-					}
-
-					wp_add_inline_script( 'countup', $inline_script );
-				}
-				?>
+					<h2>30 Years of Training God’s Servants for God’s Service</h2>
 				</div>
 			</section><!-- .ticker -->
 
