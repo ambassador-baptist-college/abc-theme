@@ -2664,6 +2664,8 @@ body.search-no-results .page-header {
 			background-color: $color-blue;
 			color: white;
 			text-align: center;
+
+			h2 { margin-bottom: 0; }
 		}
 
 		&.ticker {
