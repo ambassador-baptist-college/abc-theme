@@ -146,7 +146,11 @@ get_header(); ?>
 
 			<section class="tagline home-stripe full-width">
 				<div class="container">
-					<h2>30 Years of Training God’s Servants for God’s Service</h2>
+				<?php
+					if ( get_field( 'tagline' ) ) {
+						the_field( 'tagline' );
+					}
+				?>
 				</div>
 			</section><!-- .ticker -->
 
