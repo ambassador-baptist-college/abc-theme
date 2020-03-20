@@ -3765,6 +3765,12 @@ p > video {
 		margin-bottom: 5.25em;
 	}
 
+	.site-main .cancellation.home-stripe {
+		position: relative;
+		top: -5.25em;
+		margin-bottom: -5.25em;
+	}
+
 	.entry-content blockquote.alignleft,
 	.entry-content blockquote.alignright {
 		border-width: 4px 0 0 0;
@@ -4358,6 +4364,12 @@ p > video {
 		margin-bottom: 7.0em;
 	}
 
+	.site-main .cancellation.home-stripe {
+		position: relative;
+		top: -7em;
+		margin-bottom: -7em;
+	}
+
 	.home-stripe h2,
 	.entry-title {
 		font-size: 2.5em;
@@ -4824,6 +4836,12 @@ p > video {
 	.post-thumbnail,
 	.site-main > article {
 		margin-bottom: 3.5em;
+	}
+
+	.site-main .cancellation.home-stripe {
+		position: relative;
+		top: -3.5em;
+		margin-bottom: -3.5em;
 	}
 
 	.entry-content blockquote.alignleft,
