@@ -14,6 +14,9 @@ define( 'ABC_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 function abc_minified_css() {
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_directory_uri() . '/css/style.min.css', array(), ABC_THEME_VERSION );
 	wp_register_script( 'video-res', get_stylesheet_directory_uri() . '/js/video-res.min.js', array( 'jquery' ), ABC_THEME_VERSION );
+
+	// Zoom helpdesk.
+	wp_enqueue_script( 'zoomdesk', 'https://static.zdassets.com/ekr/snippet.js?key=92ac27ea-ac76-4ccf-9ecc-048f8db0ac7c', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'abc_minified_css', 5 );
 
