@@ -3413,6 +3413,20 @@ h1.tribe-events-single-event-title,
 .tribe-common {
 	.tribe-common-c-btn-link {
 		color: white !important;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.tribe-dialog__wrapper.tribe-modal__wrapper--ar .tribe-block__tickets__item__attendee__fields__footer__divider {
+		margin-left: 16px;
+	}
+
+	.tribe-tickets__item__quantity__add,
+	.tribe-tickets__item__quantity__remove {
+		padding: 3px 12px 6px;
+		border-radius: 50%;
+		width: 1.6em;
+		color: white;
 	}
 }
 
