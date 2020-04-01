@@ -3410,6 +3410,12 @@ h1.tribe-events-single-event-title,
 	&:not(:first-child) td { border-top: 1px solid #dfdfdf; }
 }
 
+.tribe-common {
+	.tribe-common-c-btn-link {
+		color: white !important;
+	}
+}
+
 /**
  * 12.0 - Media
  */
