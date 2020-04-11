@@ -450,7 +450,7 @@ add_filter( 'woocommerce_payment_complete_order_status', 'abc_autocomplete_virtu
 function abc_events_form_link( $content ) {
 	if ( 'tribe_events' === get_post_type() ) {
 		if ( tribe_events_has_tickets_on_sale( get_the_ID() ) ) {
-			$content = '<p><a class="button" href="#register-form">Register Online<span class="dashicons dashicons-arrow-down-alt2"></span></a></p>' . $content;
+			$content = '<p><a class="button" href="#tribe-tickets">Register Online<span class="dashicons dashicons-arrow-down-alt2"></span></a></p>' . $content;
 		}
 	}
 
