@@ -64,8 +64,5 @@
 </div><!-- .site -->
 
 <?php wp_footer(); ?>
-<!-- Start of ambassadorshelp Zendesk Widget script; can’t be enqueued because it needs the ID. -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=92ac27ea-ac76-4ccf-9ecc-048f8db0ac7c"> </script>
-<!-- End of ambassadorshelp Zendesk Widget script -->
 </body>
 </html>
