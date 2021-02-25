@@ -56,6 +56,7 @@ $font-stack-serif:               Rokkitt, Georgia, serif;
 $color-body-text:                #301b00;
 $color-body-text-secondary:      #9b9b9b;
 $color-blue:                     #2E5499;
+$color-red:                      #a21929;
 $color-orange:                   #B74C01;
 $color-green:                    #00B667;
 $color-yellow:                   #E4F300;
@@ -3263,9 +3264,9 @@ ul.subscribe {
 
 .thermometer-wrapper {
 	padding: 1em;
-	background-color: #477EB5;
+	background-color: transparent;
 	margin: 0 auto 1em;
-	color: white;
+	color: $color-body-text;
 	text-align: center;
 
 	svg {
@@ -3273,14 +3274,24 @@ ul.subscribe {
 		margin: 0 auto;
 	}
 
-	#chart path { fill: rgba(white, 0.66); }
+	#chart path { fill: #E2E7EC; }
 
 	#meter {
 		stroke-dasharray: 835;
 		stroke-dashoffset: 835;
-		stroke: rgba(2, 55, 87, .75);
+		stroke: #a21929;
 		stroke-width: 20px;
 		transition: stroke-dashoffset 2s ease;
+	}
+}
+
+#post-11432 .button {
+	border: 1px solid darken($color-red, 10%);
+	background: linear-gradient(to bottom, darken($color-red, 5%), darken($color-red, 12%));
+
+	&:hover, &:active, &:focus {
+		background: linear-gradient(to bottom, darken($color-red, 15%), darken($color-red, 22%));
+		box-shadow: inset 0 0 0.2rem rgba(darken($color-red, 20%), 0.5);
 	}
 }
 
